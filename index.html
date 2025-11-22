@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamil Dyczkowski | Operational Strategy & Digital Tools</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* --- SYSTEM CORE STYLES (Quiet Power DNA) --- */
+        .bg-deep-system {
+            background-color: #020617; 
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.10) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(15, 23, 42, 1) 0px, transparent 50%);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .grid-pattern {
+            position: absolute;
+            inset: 0;
+            background-size: 50px 50px;
+            background-image: 
+                linear-gradient(to right, rgba(30, 41, 59, 0.5) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(30, 41, 59, 0.5) 1px, transparent 1px);
+            mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .glow-effect {
+            position: absolute;
+            top: 20%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px; height: 600px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, rgba(2, 6, 23, 0) 70%);
+            z-index: -1;
+            filter: blur(80px);
+        }
+
+        .glass-panel {
+            background: rgba(2, 6, 23, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(30, 41, 59, 0.5);
+        }
+
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(30, 41, 59, 0.8);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .glass-card:hover {
+            border-color: rgba(59, 130, 246, 0.4);
+            background: rgba(15, 23, 42, 0.8);
+            transform: translateY(-2px);
+        }
+
+        /* Custom Bullet Points */
+        ul.tech-list li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        ul.tech-list li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+        }
+        
+        /* Additional style for friction lists inside cards */
+        ul.friction-list li {
+            position: relative;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            color: #94a3b8;
+        }
+        ul.friction-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #ef4444; /* Red/Warning color for friction points */
+        }
+    </style>
+</head>
+<body class="bg-deep-system text-slate-300 antialiased selection:bg-blue-500 selection:text-white">
+
+    <div class="grid-pattern"></div>
+    <div class="glow-effect"></div>
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 glass-panel">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex flex-col justify-center">
+                    <span class="font-bold text-lg tracking-tight text-white uppercase leading-none">Kamil Dyczkowski</span>
+                    <span class="text-[10px] text-blue-400 uppercase tracking-widest font-medium mt-1">Operational Strategy & Digital Tools</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#expertise" class="text-slate-400 hover:text-blue-400 transition text-sm uppercase tracking-wide">Expertise</a>
+                    <a href="#solutions" class="text-slate-400 hover:text-blue-400 transition text-sm uppercase tracking-wide">Solutions</a>
+                    <a href="#method" class="text-slate-400 hover:text-blue-400 transition text-sm uppercase tracking-wide">Method</a>
+                    <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-500 transition text-sm font-bold shadow-[0_0_15px_rgba(37,99,235,0.3)]">
+                        Contact
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO / ABOUT SECTION (Floated Layout) -->
+    <header class="pt-32 pb-20 md:pt-48 md:pb-32 relative z-10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- MAIN CONTENT BLOCK WITH FLOATED IMAGE -->
+            <div class="clearfix">
+                
+                <!-- FLOATED IMAGE CONTAINER -->
+                <div class="float-left mr-8 mb-6 relative group w-48 md:w-56">
+                    <!-- Decorative border/glow behind -->
+                    <div class="absolute -inset-2 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg blur opacity-20 group-hover:opacity-50 transition duration-500"></div>
+                    
+                    <div class="relative rounded-lg overflow-hidden border border-slate-700 shadow-2xl bg-slate-900">
+                        <img src="img.jpg" alt="Kamil Dyczkowski" class="w-full h-auto object-contain filter grayscale transition-all duration-500 ease-out group-hover:grayscale-0 group-hover:scale-110 transform origin-center">
+                    </div>
+                </div>
+
+                <!-- TEXT CONTENT FLOWING AROUND -->
+                <div class="text-left">
+                    <!-- Experience Badge -->
+                    <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 text-[10px] font-bold tracking-[0.2em] text-blue-400 uppercase bg-blue-950/30 border border-blue-800/50 rounded-full">
+                        <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                        Over 20 Years of Experience
+                    </div>
+
+                    <h1 class="text-3xl md:text-5xl font-bold text-white leading-tight mb-8 tracking-tight">
+                        An unparalleled ability to <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">identify inefficiency.</span>
+                    </h1>
+
+                    <div class="space-y-6 text-slate-400 text-lg leading-relaxed">
+                        <p>
+                            I do not rely on gut feeling. My methodology is built on data, rigourous observation, and over two decades of operational execution. In an industry where margins are thin, relying on instinct is a risk you cannot afford. I bring certainty.
+                        </p>
+                        <p>
+                            I possess an analytical ability to identify inefficiency, often invisible to the daily operator. I deconstruct complex processes into their atomic elements to isolate the single weak link that holds back performance—using hard evidence, not assumptions.
+                        </p>
+                        <p>
+                            Sometimes, a process requires a surgical adjustment; other times, it demands a complete redesign from the ground up. I operate at the intersection of logistics, data analysis, and human dynamics. My solutions are never theoretical; they are built to work on the shop floor and in the P&L statement.
+                        </p>
+                        <p>
+                            My work is built on a foundation of systems thinking. I replace guesswork with data-driven precision. I don't just patch problems; I build resilience into your operations. Whether it is a physical warehouse flow or a digital information loop, I ensure your resources are deployed with maximum efficiency.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 mt-10 clear-both">
+                        <a href="#contact" class="px-8 py-4 bg-white text-slate-950 rounded-md font-bold hover:bg-slate-200 transition shadow-[0_0_20px_rgba(255,255,255,0.1)] text-center">
+                            Discuss Your Challenge
+                        </a>
+                        <a href="#solutions" class="px-8 py-4 bg-transparent text-white border border-slate-700 rounded-md font-semibold hover:border-slate-500 hover:bg-slate-800/50 transition text-center">
+                            See My Offer
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: THE PROBLEMS (Expanded Operational Friction) -->
+    <section id="expertise" class="py-20 border-y border-slate-800/50 bg-slate-950/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold text-white mb-2">Operational Friction</h2>
+                <p class="text-slate-400">Do you recognize these symptoms in your business?</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Problem 1 -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-blue-400 mb-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Process Inefficiency</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                        You are hiring more people, but output remains flat. You are scaling chaos instead of scaling the business.
+                    </p>
+                    <ul class="friction-list">
+                        <li>High error rates requiring constant correction.</li>
+                        <li>Teams engaged in manual, low-value repetition.</li>
+                        <li>Confusion over roles and process ownership.</li>
+                        <li>"Firefighting" mode becomes the daily standard.</li>
+                    </ul>
+                </div>
+
+                <!-- Problem 2 -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-blue-400 mb-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Information Silos</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                        Management decisions are made on "gut feeling" or outdated reports, not real-time facts.
+                    </p>
+                    <ul class="friction-list">
+                        <li>Your WMS/ERP data contradicts physical stock.</li>
+                        <li>Critical info trapped in emails or Excel sheets.</li>
+                        <li>Lack of visibility on true operational costs.</li>
+                        <li>Departments working in isolation, not synchronization.</li>
+                    </ul>
+                </div>
+
+                <!-- Problem 3 -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-blue-400 mb-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Digital Disconnect</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                        The gap between "how you work" and "how your tools work" is where you lose money.
+                    </p>
+                    <ul class="friction-list">
+                        <li>Using expensive software that doesn't fit the workflow.</li>
+                        <li>Reliance on "Shadow IT" (rogue spreadsheets).</li>
+                        <li>No automation for simple, repetitive data entry.</li>
+                        <li>Processes built around tool limitations, not business needs.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: THE 3 PILLARS (Main Offer) -->
+    <section id="solutions" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center md:text-left">
+                <h2 class="text-3xl font-bold text-white mb-2">Core Services</h2>
+                <p class="text-slate-400">From strategic advice to tangible code.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1: Operational Consulting -->
+                <div class="p-8 rounded-2xl bg-slate-900/40 border border-slate-800 hover:border-blue-500/50 transition duration-300 group">
+                    <div class="w-12 h-12 bg-blue-900/20 rounded-lg flex items-center justify-center mb-6 text-blue-400 group-hover:scale-110 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Operational Consulting</h3>
+                    <p class="text-slate-400 mb-6 text-sm leading-relaxed min-h-[80px]">
+                        For companies that feel "stuck". I diagnose the root cause of inefficiency, audit your processes, and design a roadmap to recover time and resources.
+                    </p>
+                    <ul class="tech-list text-slate-300 text-sm font-mono space-y-2">
+                        <li>Process Audits</li>
+                        <li>Workflow Redesign</li>
+                        <li>Resource Optimization</li>
+                        <li>Bottleneck Identification</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2: Web Development -->
+                <div class="p-8 rounded-2xl bg-slate-900/40 border border-slate-800 hover:border-blue-500/50 transition duration-300 group">
+                    <div class="w-12 h-12 bg-blue-900/20 rounded-lg flex items-center justify-center mb-6 text-blue-400 group-hover:scale-110 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Websites</h3>
+                    <p class="text-slate-400 mb-6 text-sm leading-relaxed min-h-[80px]">
+                        Clean, fast, and functional websites for businesses that need to exist online. No over-engineering. Just clear communication of your offer.
+                    </p>
+                    <ul class="tech-list text-slate-300 text-sm font-mono space-y-2">
+                        <li>One-Page Business Cards</li>
+                        <li>Service Portfolios</li>
+                        <li>Local Business Landing Pages</li>
+                        <li>SEO-friendly & Mobile Ready</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3: Digital Tools -->
+                <div class="p-8 rounded-2xl bg-slate-900/40 border border-slate-800 hover:border-blue-500/50 transition duration-300 group">
+                    <div class="w-12 h-12 bg-blue-900/20 rounded-lg flex items-center justify-center mb-6 text-blue-400 group-hover:scale-110 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Custom Apps & Systems</h3>
+                    <p class="text-slate-400 mb-6 text-sm leading-relaxed min-h-[80px]">
+                        Bespoke digital tools to bridge the gap between your unique process and standard software. I build the "missing link" in your operations.
+                    </p>
+                    <ul class="tech-list text-slate-300 text-sm font-mono space-y-2">
+                        <li>Process Trackers</li>
+                        <li>Inventory & Asset Tools</li>
+                        <li>Validation Scripts</li>
+                        <li>Operational Dashboards</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: METHODOLOGY -->
+    <section id="method" class="py-24 bg-slate-900/30 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold text-white mb-6">Transparent Process</h2>
+                <p class="text-slate-400 text-lg leading-relaxed">
+                    My engagement model is modular. I don't lock you into open-ended contracts. 
+                    We proceed step-by-step, and you retain full control over the decision to move to the next phase. 
+                    Here is exactly what happens when we work together.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left relative">
+                <!-- Connecting Line (Desktop) -->
+                <div class="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-blue-900/50 to-transparent -z-10"></div>
+
+                <!-- Phase 1: Diagnosis -->
+                <div class="relative glass-card p-8 rounded-xl border border-slate-800 bg-deep-system">
+                    <div class="text-blue-500 font-bold text-xs tracking-widest uppercase mb-4 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-blue-500 rounded-full"></span> Phase 01
+                    </div>
+                    <h4 class="text-xl text-white font-bold mb-4">Deep Diagnosis</h4>
+                    <div class="space-y-3 text-sm text-slate-400 leading-relaxed">
+                        <p>We start with an <strong>initial consultation</strong> to define the friction points. I don't rely on assumptions.</p>
+                        <p>I conduct a thorough <strong>audit of key processes</strong> (on-site or remote) and interview your staff.</p>
+                        <p>Finally, I analyse the observation results to isolate the root cause, not just the symptoms.</p>
+                    </div>
+                </div>
+
+                <!-- Phase 2: The Blueprint (Decision Point) -->
+                <div class="relative glass-card p-8 rounded-xl border border-blue-900/30 bg-deep-system shadow-[0_0_30px_rgba(37,99,235,0.05)]">
+                    <div class="text-blue-400 font-bold text-xs tracking-widest uppercase mb-4 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span> Phase 02
+                    </div>
+                    <h4 class="text-xl text-white font-bold mb-4">Solution & Decision</h4>
+                    <div class="space-y-3 text-sm text-slate-400 leading-relaxed">
+                        <p>I prepare a comprehensive <strong>solution design</strong>. We discuss the roadmap, the tools needed, and the expected ROI.</p>
+                        <div class="p-3 bg-blue-900/20 border-l-2 border-blue-500 rounded-r text-xs text-blue-100 mt-4">
+                            <strong>The Choice Point:</strong><br>
+                            At this stage, you have the full roadmap. You can choose to implement the changes internally and end our cooperation here, or authorize me to execute the plan.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 3: Execution -->
+                <div class="relative glass-card p-8 rounded-xl border border-slate-800 bg-deep-system">
+                    <div class="text-emerald-500 font-bold text-xs tracking-widest uppercase mb-4 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-emerald-500 rounded-full"></span> Phase 03 (Optional)
+                    </div>
+                    <h4 class="text-xl text-white font-bold mb-4">Implementation</h4>
+                    <div class="space-y-3 text-sm text-slate-400 leading-relaxed">
+                        <p>If you choose to proceed, I take full ownership of the deployment.</p>
+                        <p>I build the tools, reconfigure the workflow, and train your team. I remain hands-on until the new process is stable and delivering the projected results.</p>
+                        <p>No theoretical advice—just a working system delivered to your business.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / CTA -->
+    <footer id="contact" class="bg-slate-950 border-t border-slate-800 py-20">
+        <div class="max-w-3xl mx-auto text-center px-4">
+            <h2 class="text-3xl font-bold text-white mb-6">Let's simplify your business.</h2>
+            <p class="text-slate-400 mb-10 text-lg">
+                Send me a short description of what you need – a consultation, a website, or a system. <br>
+                I will respond with an initial assessment within 24 hours.
+            </p>
+            
+            <div class="inline-block rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 p-[1px]">
+                <a href="mailto:dyczkowski.kamil@gmail.com" class="block px-10 py-4 bg-slate-900 text-white font-bold rounded-md hover:bg-slate-800 transition">
+                    dyczkowski.kamil@gmail.com
+                </a>
+            </div>
+            
+            <div class="mt-12 text-slate-600 text-sm">
+                &copy; 2025 Kamil Dyczkowski.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
