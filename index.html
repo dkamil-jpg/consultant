@@ -191,20 +191,21 @@
                 Operational Impact Delivered At
             </p>
             <div class="flex flex-wrap justify-center items-center gap-6 md:gap-12">
-                <div class="bg-white/95 p-3 rounded-lg hover:scale-105 transition duration-300 w-32 md:w-40 flex items-center justify-center h-16 md:h-20 shadow-lg shadow-black/50">
-                    <img src="morislogo.jpg" alt="Morrisons" class="max-h-full max-w-full object-contain">
+                 <!-- Placeholders for Logos if images fail -->
+                <div class="bg-white/95 p-3 rounded-lg hover:scale-105 transition duration-300 w-32 md:w-40 flex items-center justify-center h-16 md:h-20 shadow-lg shadow-black/50 overflow-hidden">
+                    <img src="morislogo.jpg" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'text-slate-900 font-bold text-xs\'>MORRISONS</span>'" alt="Morrisons" class="max-h-full max-w-full object-contain">
                 </div>
-                <div class="bg-white/95 p-3 rounded-lg hover:scale-105 transition duration-300 w-32 md:w-40 flex items-center justify-center h-16 md:h-20 shadow-lg shadow-black/50">
-                    <img src="jlrlogo.jpg" alt="Jaguar Land Rover" class="max-h-full max-w-full object-contain">
+                <div class="bg-white/95 p-3 rounded-lg hover:scale-105 transition duration-300 w-32 md:w-40 flex items-center justify-center h-16 md:h-20 shadow-lg shadow-black/50 overflow-hidden">
+                    <img src="jlrlogo.jpg" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'text-slate-900 font-bold text-xs\'>JLR</span>'" alt="Jaguar Land Rover" class="max-h-full max-w-full object-contain">
                 </div>
-                <div class="bg-white/95 p-3 rounded-lg hover:scale-105 transition duration-300 w-32 md:w-40 flex items-center justify-center h-16 md:h-20 shadow-lg shadow-black/50">
-                    <img src="xandlogo.jpg" alt="Xandor" class="max-h-full max-w-full object-contain filter invert">
+                <div class="bg-white/95 p-3 rounded-lg hover:scale-105 transition duration-300 w-32 md:w-40 flex items-center justify-center h-16 md:h-20 shadow-lg shadow-black/50 overflow-hidden">
+                    <img src="xandlogo.jpg" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'text-slate-900 font-bold text-xs\'>XANDOR</span>'" alt="Xandor" class="max-h-full max-w-full object-contain filter invert">
                 </div>
-                <div class="bg-white/95 p-3 rounded-lg hover:scale-105 transition duration-300 w-32 md:w-40 flex items-center justify-center h-16 md:h-20 shadow-lg shadow-black/50">
-                    <img src="CBlogo.jpg" alt="Cartwright & Butler" class="max-h-full max-w-full object-contain">
+                <div class="bg-white/95 p-3 rounded-lg hover:scale-105 transition duration-300 w-32 md:w-40 flex items-center justify-center h-16 md:h-20 shadow-lg shadow-black/50 overflow-hidden">
+                    <img src="CBlogo.jpg" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'text-slate-900 font-bold text-xs\'>CARTWRIGHT & BUTLER</span>'" alt="Cartwright & Butler" class="max-h-full max-w-full object-contain">
                 </div>
-                <div class="bg-white/95 p-3 rounded-lg hover:scale-105 transition duration-300 w-32 md:w-40 flex items-center justify-center h-16 md:h-20 shadow-lg shadow-black/50">
-                    <img src="proplogo.jpg" alt="Pro-Pak Foods" class="max-h-full max-w-full object-contain">
+                <div class="bg-white/95 p-3 rounded-lg hover:scale-105 transition duration-300 w-32 md:w-40 flex items-center justify-center h-16 md:h-20 shadow-lg shadow-black/50 overflow-hidden">
+                    <img src="proplogo.jpg" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'text-slate-900 font-bold text-xs\'>PRO-PAK</span>'" alt="Pro-Pak Foods" class="max-h-full max-w-full object-contain">
                 </div>
             </div>
         </div>
@@ -270,7 +271,7 @@
         </div>
     </section>
 
-    <!-- SELECTED PROJECT EXAMPLE (RE-DESIGNED LAYOUT V2) -->
+    <!-- SELECTED PROJECT EXAMPLE (RE-DESIGNED LAYOUT V2 - WITH RESTORED TEXTS & UPDATED KPIs) -->
     <section id="casestudy" class="py-24 border-b border-slate-800 relative overflow-hidden z-10">
         <div class="absolute inset-0 bg-blue-900/5 z-0"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -283,29 +284,39 @@
                 I build tools specifically designed for the problems I encounter. Below is <strong>one example</strong> of a custom validation protocol I designed and deployed to solve a critical Goods-In bottleneck.
             </p>
 
-            <!-- New Layout V2: Metrics Top Left, Laptop Below Metrics, Mobile Right -->
+            <!-- Layout: Metrics Top Left, Laptop Below, Mobile Right, Text Bottom -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
                 
                 <!-- Left Column Group (8 cols) -->
                 <div class="lg:col-span-8 flex flex-col gap-6">
                     
-                    <!-- Row 1: Metrics (ABOVE IMAGE) -->
-                    <div class="grid grid-cols-2 gap-4">
+                    <!-- Row 1: Metrics (UPDATED VALUES) -->
+                    <div class="grid grid-cols-3 gap-4">
                         <div class="glass-panel p-4 rounded-xl border-l-4 border-blue-500 bg-slate-900/80 flex flex-col justify-center">
                             <span class="text-slate-500 font-mono text-[10px] uppercase tracking-wider">Error Reduction</span>
-                            <div class="text-4xl font-bold text-white mt-1">90%</div>
+                            <div class="text-3xl font-bold text-white mt-1">97%</div>
                         </div>
                         
                         <div class="glass-panel p-4 rounded-xl border-l-4 border-emerald-500 bg-slate-900/80 flex flex-col justify-center">
                             <span class="text-slate-500 font-mono text-[10px] uppercase tracking-wider">Process Velocity</span>
-                            <div class="text-4xl font-bold text-white mt-1">+50%</div>
+                            <div class="text-3xl font-bold text-white mt-1">60%</div>
+                        </div>
+
+                        <!-- Capacity Recaptured -->
+                        <div class="glass-panel p-4 rounded-xl border-l-4 border-purple-500 bg-slate-900/80 flex flex-col justify-center">
+                            <span class="text-slate-500 font-mono text-[10px] uppercase tracking-wider">Capacity Recaptured</span>
+                            <div class="text-3xl font-bold text-white mt-1">&gt;2,000h</div>
                         </div>
                     </div>
 
                     <!-- Row 2: Main Laptop Visual -->
                     <div class="glass-panel rounded-2xl overflow-hidden group relative min-h-[350px] border border-slate-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-10"></div>
-                        <img src="12.png" alt="FirstStep Desktop Interface" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                         <!-- Placeholder for 12.png -->
+                        <div class="w-full h-full bg-slate-800 flex items-center justify-center text-slate-600">
+                             <span class="text-xs">Desktop UI Preview</span>
+                        </div>
+                        <img src="12.png" onerror="this.style.display='none'" alt="FirstStep Desktop Interface" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
                         
                         <div class="absolute bottom-0 left-0 p-8 z-20">
                             <div class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-bold uppercase rounded mb-3">
@@ -320,11 +331,16 @@
 
                 </div>
 
-                <!-- Right Column (4 cols): Mobile Image (Full Height of Left Col Stack approximately) -->
-                <div class="lg:col-span-4">
-                    <!-- Full bleed image, no padding (p-0), object-cover -->
-                    <div class="glass-panel rounded-2xl overflow-hidden relative h-full min-h-[400px] border border-slate-700 group p-0">
-                        <img src="13.png" alt="FirstStep Mobile Interface" class="w-full h-full object-cover transition group-hover:scale-105 duration-700">
+                <!-- Right Column (4 cols): Mobile Image + Validation Logic Image -->
+                <div class="lg:col-span-4 flex flex-col gap-6">
+                    
+                    <!-- Top: Mobile Image -->
+                    <div class="glass-panel rounded-2xl overflow-hidden relative flex-grow min-h-[300px] border border-slate-700 group p-0">
+                         <!-- Placeholder for 13.png -->
+                        <div class="w-full h-full bg-slate-800 flex items-center justify-center text-slate-600">
+                             <span class="text-xs">Mobile UI Preview</span>
+                        </div>
+                        <img src="13.png" onerror="this.style.display='none'" alt="FirstStep Mobile Interface" class="absolute inset-0 w-full h-full object-cover transition group-hover:scale-105 duration-700">
                         
                         <div class="absolute bottom-3 right-3 z-10">
                             <span class="px-2 py-1 border border-slate-600 rounded bg-black/80 text-[10px] text-slate-300 font-mono">
@@ -332,17 +348,54 @@
                             </span>
                         </div>
                     </div>
+
+                    <!-- Bottom: 14.PNG Image (Validation Logic) - CROPPED + OBJECT-LEFT -->
+                    <div class="glass-panel rounded-xl overflow-hidden border border-slate-700 group relative h-32 flex-shrink-0 p-0">
+                        <div class="absolute top-0 left-0 bg-slate-900/90 text-slate-400 text-[10px] font-mono px-3 py-1 border-b border-r border-slate-700 z-10">
+                            Logic: Real-time Feedback
+                        </div>
+                        <!-- Placeholder for 14.PNG -->
+                        <div class="w-full h-full bg-slate-800 flex items-center justify-center text-slate-600">
+                                <span class="text-xs">Validation Logic UI</span>
+                        </div>
+                        <!-- Added object-left to keep left edge visible -->
+                        <img src="14.PNG" onerror="this.style.display='none'" alt="Validation Feedback Loop" class="absolute inset-0 w-full h-full object-cover object-left transform group-hover:scale-105 transition duration-700">
+                    </div>
+
                 </div>
 
-                <!-- Bottom Row (12 cols): Advanced Logic Description -->
-                <div class="lg:col-span-12 glass-panel p-8 rounded-xl bg-slate-900/60 border border-slate-800">
-                    <h4 class="text-white font-bold mb-4 flex items-center gap-2 text-lg">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
-                        Advanced Validation Logic (VBA/SQL)
-                    </h4>
-                    <p class="text-slate-400 leading-relaxed max-w-4xl">
-                        The system runs a proprietary multi-factor algorithm that validates more than just quantity. It actively cross-references <strong>shelf-life constraints</strong> against BOM data, enforces <strong>batch & BBE uniqueness</strong>, and scans <strong>historical delivery logs</strong> to detect "silent" errors (e.g., conflicting expiry dates on previously received batches). It proactively alerts the operator to these irregularities before they contaminate the WMS.
-                    </p>
+                <!-- Bottom Row: RESTORED TEXT BLOCKS -->
+                <div class="lg:col-span-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <!-- Before Scenario -->
+                    <div class="glass-panel p-8 rounded-xl bg-slate-900/60 border border-slate-800">
+                        <h3 class="text-xl font-bold text-white mb-4">The "Before" Scenario</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            The original Goods-In process was heavily reliant on manual data entry. With an average of 10 deliveries per day, the system was fragile.
+                        </p>
+                        <ul class="friction-list space-y-2">
+                            <li><strong class="text-slate-300">High Failure Rate:</strong> 30-50% of all deliveries contained data entry errors requiring retrospective correction.</li>
+                            <li><strong class="text-slate-300">Time Sink:</strong> Processing a single delivery took 60-90 minutes, often creating backlogs on the shop floor.</li>
+                            <li><strong class="text-slate-300">Correction Cost:</strong> Significant management time was wasted investigating and fixing "silent" errors weeks after delivery.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Solution Impact -->
+                    <div class="glass-panel p-8 rounded-xl bg-slate-900/60 border border-slate-800">
+                        <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                            The Solution Impact
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            I implemented a bespoke VBA/SQL validation layer that acts as a firewall between the operator and the WMS.
+                        </p>
+                        <ul class="tech-list text-sm text-slate-300 space-y-2">
+                            <li><strong>Drastic Speed Increase:</strong> Validation time dropped to 20-30 minutes per delivery.</li>
+                            <li><strong>Error Elimination:</strong> The algorithm enforces logic (BBE, Shelf Life, Batch Uniqueness) preventing invalid data from ever entering the system.</li>
+                            <li><strong>Resource ROI:</strong> Calculating conservatively (50min saved per delivery × 10 deliveries × 250 days), we recaptured over 2,000 operational hours annually.</li>
+                        </ul>
+                    </div>
+
                 </div>
 
             </div>
@@ -399,7 +452,6 @@
                     <p class="text-slate-400 mb-6 text-sm leading-relaxed min-h-[80px]">
                         Bespoke digital tools to bridge the gap between your unique process and standard software. I build the "missing link" in your operations.
                     </p>
-                    <!-- BADGES REMOVED AS REQUESTED -->
                     <ul class="tech-list text-slate-300 text-sm font-mono space-y-2">
                         <li>Process Trackers</li>
                         <li>Inventory & Asset Tools</li>
