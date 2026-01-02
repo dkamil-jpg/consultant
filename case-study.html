@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Study: Goods-In Validation | Kamil Dyczkowski</title>
+    <title>Case Study: Eliminating Manual Transcription | Kamil Dyczkowski</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -56,15 +56,13 @@
         }
 
         .glass-card {
-            background: rgba(15, 23, 42, 0.6);
+            background: rgba(15, 23, 42, 0.4);
             backdrop-filter: blur(4px);
             border: 1px solid rgba(30, 41, 59, 0.8);
         }
 
-        .status-pill {
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            color: #60a5fa;
+        .highlight-text {
+            @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300;
         }
 
         ul.tech-list li {
@@ -84,6 +82,7 @@
 
     <div class="grid-pattern"></div>
 
+    <!-- NAVIGATION -->
     <nav class="fixed w-full z-50 glass-panel">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
@@ -93,7 +92,7 @@
                 </a>
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="index.html" class="text-slate-400 hover:text-blue-400 transition text-sm uppercase tracking-wide">Home</a>
-                    <a href="index.html#solutions" class="text-slate-400 hover:text-blue-400 transition text-sm uppercase tracking-wide">Back to Engagement</a>
+                    <a href="operational-diagnosis.html" class="text-slate-400 hover:text-blue-400 transition text-sm uppercase tracking-wide">Diagnosis</a>
                     <a href="mailto:dyczkowski.kamil@gmail.com" class="bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-500 transition text-sm font-bold shadow-[0_0_15px_rgba(37,99,235,0.3)]">
                         Request Diagnosis
                     </a>
@@ -102,128 +101,186 @@
         </div>
     </nav>
 
+    <!-- CASE STUDY CONTENT -->
     <main class="pt-32 pb-24 relative z-10">
         <div class="max-w-5xl mx-auto px-4">
             
-            <div class="mb-12 text-center md:text-left">
+            <!-- Hero Section -->
+            <div class="mb-16">
                 <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 text-[10px] font-bold tracking-[0.2em] text-blue-400 uppercase bg-blue-950/30 border border-blue-800/50 rounded-full">
-                    Case Study: Food & Beverage Sector
+                    Case Study: High-Volume F&B Operations
                 </div>
                 <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                    Eliminating Human Judgement from <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Goods-In</span>
+                    Eliminating Manual Transcription from <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Goods-In</span>
                 </h1>
-                <p class="text-xl text-slate-400 max-w-3xl leading-relaxed">
-                    How a deterministic validation layer blocked 97% of inbound errors and recaptured 2,000+ operational hours annually.
+                <p class="text-2xl text-blue-400 font-light mb-8 italic">
+                    Not by training people. By redesigning the system.
                 </p>
+                
+                <div class="glass-card p-8 rounded-2xl border border-blue-900/30 bg-blue-950/10 max-w-4xl">
+                    <h2 class="text-xs font-mono uppercase tracking-widest text-blue-500 mb-4 font-bold">Executive Summary</h2>
+                    <p class="text-lg text-slate-200 leading-relaxed mb-6">
+                        Before this solution was introduced, Goods-In relied on manual transcription. Operators read data from pallet labels, wrote it down by hand on paper, and then manually re-typed that same data into the system. 
+                    </p>
+                    <p class="text-slate-400 leading-relaxed">
+                        Every delivery required two human interpretation steps. Errors were not accidental—<span class="text-white font-semibold">they were structurally guaranteed.</span> I replaced this with a deterministic, mobile-first Goods-In system where data is captured once, validated automatically, and blocked if incorrect - before it ever reaches ERP.
+                    </p>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <!-- Impact Metrics -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
                 <div class="glass-card p-6 rounded-2xl border-l-4 border-blue-500">
                     <p class="text-xs font-mono uppercase tracking-widest text-slate-500 mb-2">Error Reduction</p>
                     <div class="text-4xl font-bold text-white mb-1">97%</div>
-                    <p class="text-sm text-slate-400 leading-tight">Drop in Goods-In data entry failures.</p>
+                    <p class="text-sm text-slate-400">Total elimination of transcription failures.</p>
                 </div>
                 <div class="glass-card p-6 rounded-2xl border-l-4 border-emerald-500">
-                    <p class="text-xs font-mono uppercase tracking-widest text-slate-500 mb-2">Efficiency Gain</p>
+                    <p class="text-xs font-mono uppercase tracking-widest text-slate-500 mb-2">Input Speed</p>
                     <div class="text-4xl font-bold text-white mb-1">60%</div>
-                    <p class="text-sm text-slate-400 leading-tight">Reduction in processing time per delivery.</p>
+                    <p class="text-sm text-slate-400">Reduction in end-to-end processing time.</p>
                 </div>
                 <div class="glass-card p-6 rounded-2xl border-l-4 border-purple-500">
-                    <p class="text-xs font-mono uppercase tracking-widest text-slate-500 mb-2">Resource Recovery</p>
-                    <div class="text-4xl font-bold text-white mb-1">2,000h</div>
-                    <p class="text-sm text-slate-400 leading-tight">Annualised operational hours recaptured.</p>
+                    <p class="text-xs font-mono uppercase tracking-widest text-slate-500 mb-2">Audit Stability</p>
+                    <div class="text-4xl font-bold text-white mb-1">100%</div>
+                    <p class="text-sm text-slate-400">Clean data trails at the moment of creation.</p>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <!-- Narrative Sections -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
                 
-                <div class="lg:col-span-7 space-y-12">
+                <div class="lg:col-span-8 space-y-20">
+                    
+                    <!-- Problem Section -->
                     <section>
-                        <h2 class="text-2xl font-bold text-white mb-4">The Context</h2>
-                        <p class="text-slate-400 leading-relaxed">
-                            A high-volume Food & Beverage operation in Yorkshire was struggling with inbound data integrity. The ERP was receiving "dirty data" daily, leading to incorrect Best Before dates (BBE), stock-count discrepancies, and failed audit trails.
-                        </p>
+                        <h3 class="text-2xl font-bold text-white mb-6">The real problem wasn’t people. It was transcription.</h3>
+                        <div class="space-y-6 text-slate-400 text-lg leading-relaxed">
+                            <p>
+                                The original Goods-In workflow looked simple on paper. In reality, it depended on handwriting under time pressure, memory between locations, later re-interpretation of notes, and manual re-entry of critical data (SKU, batch, BBE, quantities).
+                            </p>
+                            <p>
+                                This created a cycle of swapped values, incorrect BBE calculations, and delayed discovery of mistakes weeks later. Training did not help, because the process itself was flawed.
+                            </p>
+                            <div class="p-6 border-l-2 border-red-500 bg-red-950/10 rounded-r-xl">
+                                <p class="text-white font-semibold">
+                                    If a process requires humans to copy the same data twice, errors are not a risk. They are guaranteed.
+                                </p>
+                            </div>
+                        </div>
                     </section>
 
+                    <!-- The Shift Section -->
                     <section>
-                        <h2 class="text-2xl font-bold text-white mb-4 italic text-blue-400">The Problem: Heroics vs. Process</h2>
-                        <p class="text-slate-400 leading-relaxed mb-4">
-                            The original Goods-In process was <span class="text-slate-200">interpretative</span>. Operators had to manually decide if a batch was correct, manually calculate shelf-life, and manually enter data into the WMS.
-                        </p>
-                        <ul class="space-y-4">
-                            <li class="flex gap-3">
-                                <span class="text-red-500 font-bold">✕</span>
-                                <p class="text-sm text-slate-400"><strong class="text-slate-200 block mb-1">High Cognitive Load:</strong> Operators were making complex decisions under pressure, leading to a 30-50% error rate.</p>
-                            </li>
-                            <li class="flex gap-3">
-                                <span class="text-red-500 font-bold">✕</span>
-                                <p class="text-sm text-slate-400"><strong class="text-slate-200 block mb-1">Silent Costs:</strong> Errors were only caught weeks later during production or audits, requiring expensive retrospective correction.</p>
-                            </li>
-                        </ul>
+                        <h3 class="text-2xl font-bold text-white mb-6">The shift: From writing data to capturing signals</h3>
+                        <div class="space-y-6 text-slate-400 text-lg leading-relaxed">
+                            <p>
+                                The core change was architectural, not just technical. I removed manual transcription entirely. Instead of writing and re-typing, pallet data was captured once at source using a mobile device connected to a barcode scanner.
+                            </p>
+                            <p>
+                                From that moment on, data moved digitally, end-to-end, without being re-read, re-written, or re-interpreted by humans.
+                            </p>
+                        </div>
                     </section>
 
+                    <!-- Operator Role Section -->
                     <section>
-                        <h2 class="text-2xl font-bold text-white mb-4">The Solution: Deterministic Layer</h2>
-                        <p class="text-slate-400 leading-relaxed mb-6">
-                            I implemented a bespoke VBA/SQL integration that acts as a <span class="text-blue-400">hard firewall</span>. Instead of training people to "be more careful," we changed the environment so that it is physically impossible to submit invalid data.
-                        </p>
-                        <div class="glass-card p-6 rounded-xl border-slate-700">
-                            <h4 class="text-sm font-bold text-white mb-4 uppercase tracking-widest">Key Features:</h4>
-                            <ul class="tech-list text-sm space-y-2">
-                                <li>Real-time SQL validation against ERP purchase orders.</li>
-                                <li>Automatic BBE and Shelf-Life logic enforcement.</li>
-                                <li>Batch uniqueness checks at the point of scanning.</li>
-                                <li>Simplified UI focusing only on essential data signals.</li>
+                        <h3 class="text-2xl font-bold text-white mb-6">Operator role: Deliberately reduced</h3>
+                        <div class="space-y-6 text-slate-400 text-lg leading-relaxed">
+                            <p>
+                                The operator no longer “processed data”. Their responsibility ended at scanning the pallet and confirming quantities. No calculations. No judgment calls. No manual validation. 
+                            </p>
+                            <p class="text-white">
+                                The system decided. The operator executed.
+                            </p>
+                            <p>
+                                This was intentional. Reducing cognitive load was not a side effect—it was a design goal.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Validation Section -->
+                    <section>
+                        <h3 class="text-2xl font-bold text-white mb-6">The validation layer: A hard boundary, not a report</h3>
+                        <div class="space-y-6 text-slate-400 text-lg leading-relaxed">
+                            <p>
+                                Behind the mobile interface sat a deterministic validation engine. Built as a rule-based layer, it acted as a hard firewall between the shop floor and ERP. 
+                            </p>
+                            <ul class="tech-list text-slate-300">
+                                <li>Validated SKUs against live purchase orders.</li>
+                                <li>Enforced batch and BBE logic automatically.</li>
+                                <li>Blocked duplicate or invalid combinations instantly.</li>
+                                <li>Prevented incorrect data from being logged at all.</li>
                             </ul>
+                            <p>
+                                There was no “save anyway”. There was no “fix it later”. If the data was wrong, the process stopped.
+                            </p>
                         </div>
                     </section>
+
                 </div>
 
-                <div class="lg:col-span-5 space-y-8">
-                    <div class="glass-panel rounded-2xl overflow-hidden border border-slate-700">
-                        <div class="p-4 bg-slate-900 border-b border-slate-800">
-                            <span class="text-[10px] font-mono text-blue-400 uppercase tracking-widest font-bold">System Preview</span>
+                <!-- Sidebar / Summary column -->
+                <div class="lg:col-span-4">
+                    <div class="sticky top-32 space-y-8">
+                        
+                        <div class="glass-panel p-8 rounded-2xl border border-slate-800">
+                            <h4 class="text-white font-bold mb-4">Outcome</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                                Goods-In stopped being a human interpretation problem. It became a controlled system where errors were prevented, not detected later.
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+                                    <span class="text-xs font-mono uppercase text-slate-300">Clean ERP data by default</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+                                    <span class="text-xs font-mono uppercase text-slate-300">Zero re-keying required</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+                                    <span class="text-xs font-mono uppercase text-slate-300">Automated Audit trails</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="aspect-video bg-slate-800 relative flex items-center justify-center">
-                             <img src="12.png" alt="System Interface" class="object-cover w-full h-full opacity-80">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
-                        </div>
-                    </div>
 
-                    <div class="glass-panel p-6 rounded-2xl border border-slate-800">
-                        <h3 class="text-white font-bold mb-4">Technical Stack</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-slate-800 text-xs font-mono text-slate-300 rounded border border-slate-700">Excel/VBA</span>
-                            <span class="px-3 py-1 bg-slate-800 text-xs font-mono text-slate-300 rounded border border-slate-700">SQL Server</span>
-                            <span class="px-3 py-1 bg-slate-800 text-xs font-mono text-slate-300 rounded border border-slate-700">ERP Integration</span>
-                            <span class="px-3 py-1 bg-slate-800 text-xs font-mono text-slate-300 rounded border border-slate-700">Deterministic Logic</span>
+                        <div class="glass-panel p-8 rounded-2xl border border-blue-900/20 bg-blue-950/5">
+                            <h4 class="text-white font-bold mb-4">Architectural Insight</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">
+                                This was not an “Excel solution”. It was a system redesign that enforced correctness through structure, not discipline. I turn fragile, people-dependent processes into deterministic operational systems.
+                            </p>
                         </div>
-                    </div>
 
-                    <div class="p-6 rounded-2xl bg-blue-600/10 border border-blue-500/30">
-                        <p class="text-blue-400 font-bold text-sm mb-2 italic">"Control is the product."</p>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            The goal wasn't just to "speed up" Goods-In, but to ensure that the data flowing into the business was 100% trustworthy.
-                        </p>
                     </div>
                 </div>
+
             </div>
         </div>
     </main>
 
-    <footer class="bg-slate-950 border-t border-slate-800 py-16 relative z-10">
+    <!-- FOOTER / CTA -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-24 relative z-10">
         <div class="max-w-3xl mx-auto text-center px-4">
-            <h2 class="text-2xl font-bold text-white mb-6">Could your operations benefit from this level of control?</h2>
-            <p class="text-slate-400 mb-8">
-                Every business has "leaks" in its process. Diagnosis is the first step to plugging them.
+            <h2 class="text-3xl font-bold text-white mb-6">Redesign, don't retrain.</h2>
+            <p class="text-xl text-slate-400 mb-10 leading-relaxed">
+                If your operation relies on people copying data by hand, you don’t have a training problem. <br class="hidden md:block">
+                <span class="text-white font-semibold">You have a system design problem.</span>
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="mailto:dyczkowski.kamil@gmail.com" class="px-8 py-4 bg-white text-slate-950 rounded-md font-bold hover:bg-slate-200 transition">
-                    Request Diagnosis
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="mailto:dyczkowski.kamil@gmail.com" class="inline-block rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 p-[1px] shadow-2xl">
+                    <span class="block px-12 py-5 bg-slate-950 text-white font-bold rounded-md hover:bg-slate-900 transition">
+                        Request a Diagnosis
+                    </span>
                 </a>
-                <a href="index.html" class="px-8 py-4 bg-transparent text-white border border-slate-700 rounded-md font-semibold hover:bg-slate-800 transition">
+                <a href="index.html" class="px-8 py-5 border border-slate-700 rounded-md font-semibold text-white hover:bg-slate-900 transition">
                     Back to Homepage
                 </a>
+            </div>
+
+            <div class="mt-20 text-slate-700 text-[10px] font-mono tracking-widest uppercase">
+                &copy; 2026 Kamil Dyczkowski | Operational Process Architect
             </div>
         </div>
     </footer>
