@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & META TAGS -->
+    <title>Low-Noise Leadership | Kamil Dyczkowski</title>
+    <meta name="description" content="A practical operating system for introverted leaders. Discover how to use silence, analysis, and strategic depth as your greatest advantage in a noisy world. Available in two editions.">
+    <meta name="keywords" content="introverted leadership, quiet power, kamil dyczkowski, low-noise leadership, leadership strategy, business book">
+    <meta name="author" content="Kamil Dyczkowski">
+    
+    <!-- OPEN GRAPH (Social Media) -->
+    <meta property="og:title" content="Low-Noise Leadership | The Operating System for Introverted Leaders">
+    <meta property="og:description" content="Stop fighting your nature. Learn to lead with precision, not noise. Two editions available: Operational Handbook and Strategic System.">
+    <meta property="og:image" content="https://example.com/social-share-image.jpg"> <!-- TODO: Replace with actual image URL -->
+    <meta property="og:url" content="https://kamil-dyczkowski.com">
+    <meta property="og:type" content="book">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* GLOBALNE ZABEZPIECZENIE PRZED PRZEWIJANIEM W POZIOMIE */
+        html, body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+        /* --- BACKGROUND SYSTEM --- */
+        .bg-deep-system {
+            background-color: #020617;
+            background-image:
+                radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(15, 23, 42, 1) 0px, transparent 50%);
+            position: relative;
+        }
+
+        .grid-pattern {
+            position: absolute;
+            inset: 0;
+            background-size: 50px 50px;
+            /* ZMNIEJSZONA WIDOCZNOŚĆ SIATKI (0.3) */
+            background-image:
+                linear-gradient(to right, rgba(30, 41, 59, 0.3) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(30, 41, 59, 0.3) 1px, transparent 1px);
+            mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .glow-effect {
+            position: absolute;
+            top: 20%; left: 0;
+            width: 800px; height: 800px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, rgba(2, 6, 23, 0) 70%);
+            z-index: -1;
+            filter: blur(80px);
+            max-width: 100vw; /* Zabezpieczenie na mobile */
+        }
+
+        .glass-panel {
+            background: rgba(2, 6, 23, 0.95); /* Mocniejsze tło dla lepszej czytelności menu */
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(30, 41, 59, 0.5);
+        }
+
+        .fade-in { animation: fadeIn 0.6s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        html { scroll-behavior: smooth; }
+
+        /* --- STATS PANEL --- */
+        .stats-grid {
+            background-image: radial-gradient(rgba(30, 41, 59, 0.4) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        /* --- BOOK ROW STYLING --- */
+        .book-row-container {
+            border-bottom: 1px solid rgba(30, 41, 59, 0.6);
+            padding-bottom: 4rem;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 10;
+        }
+        .book-row-container:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .cover-placeholder {
+            width: 100%;
+            max-width: 320px;
+            aspect-ratio: 2/3;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5);
+            border-radius: 4px;
+            z-index: 20;
+        }
+        
+        .feature-bullet::before {
+            content: "▹";
+            color: #3b82f6;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: bold;
+        }
+        
+        section, header, footer {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Mobile Menu Transitions */
+        #mobile-menu {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        #mobile-menu.open {
+            max-height: 400px; /* Adjust based on content */
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-deep-system text-slate-300 antialiased selection:bg-blue-500 selection:text-white">
+    <div class="grid-pattern"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-panel">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <!-- ZMIANA: Mniejszy font na mobile (text-sm) - zapobiega rozpychaniu nawigacji -->
+                    <span class="font-bold text-sm sm:text-lg md:text-xl tracking-tight text-white uppercase truncate">
+                        <span class="lang-en">Low-Noise Leadership</span>
+                        <span class="lang-pl hidden">Low-Noise Leadership</span>
+                    </span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about-system" class="text-slate-400 hover:text-blue-400 transition font-medium text-sm uppercase tracking-wide">
+                        <span class="lang-en">The System</span>
+                        <span class="lang-pl hidden">O Systemie</span>
+                    </a>
+                    <a href="#author" class="text-slate-400 hover:text-blue-400 transition font-medium text-sm uppercase tracking-wide">
+                        <span class="lang-en">Author</span>
+                        <span class="lang-pl hidden">Autor</span>
+                    </a>
+
+                    <div class="flex items-center border border-slate-700 rounded-md overflow-hidden text-xs md:text-sm font-semibold">
+                        <button onclick="switchLang('en')" id="btn-en" class="px-3 py-1 bg-blue-600 text-white hover:bg-blue-700 transition">EN</button>
+                        <button onclick="switchLang('pl')" id="btn-pl" class="px-3 py-1 bg-slate-800 text-slate-400 hover:bg-slate-700 transition">PL</button>
+                    </div>
+
+                    <a href="#books" class="bg-white text-slate-900 px-6 py-2.5 rounded-md hover:bg-blue-50 transition text-sm font-bold shadow-[0_0_15px_rgba(255,255,255,0.15)]">
+                        <span class="lang-en">Buy Now</span>
+                        <span class="lang-pl hidden">Kup Teraz</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <!-- ZMIANA: gap-3 zamiast gap-4 dla oszczędności miejsca -->
+                <div class="flex items-center md:hidden gap-3">
+                     <!-- Lang Switcher on Mobile (Always visible) -->
+                    <div class="flex items-center border border-slate-700 rounded-md overflow-hidden text-xs font-semibold">
+                        <button onclick="switchLang('en')" id="btn-en-mob" class="px-2 py-1 bg-blue-600 text-white">EN</button>
+                        <button onclick="switchLang('pl')" id="btn-pl-mob" class="px-2 py-1 bg-slate-800 text-slate-400">PL</button>
+                    </div>
+
+                    <button id="mobile-menu-btn" class="text-white hover:text-blue-400 focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="md:hidden bg-slate-900 border-b border-slate-800">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="#about-system" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-slate-800 transition" onclick="toggleMobileMenu()">
+                    <span class="lang-en">The System</span>
+                    <span class="lang-pl hidden">O Systemie</span>
+                </a>
+                <a href="#author" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-slate-800 transition" onclick="toggleMobileMenu()">
+                    <span class="lang-en">Author</span>
+                    <span class="lang-pl hidden">Autor</span>
+                </a>
+                <a href="#books" class="block px-3 py-2 rounded-md text-base font-bold text-blue-400 hover:bg-slate-800 transition" onclick="toggleMobileMenu()">
+                    <span class="lang-en">Buy on Amazon</span>
+                    <span class="lang-pl hidden">Kup na Amazon</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="pt-28 pb-16 md:pt-32 md:pb-24 relative" id="books"> <!-- Reduced padding for mobile -->
+        <div class="glow-effect"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- MAIN HEADLINE (LEFT ALIGNED) -->
+            <div class="text-left mb-12 md:mb-20 fade-in">
+                <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-bold tracking-widest text-blue-400 uppercase bg-blue-900/30 border border-blue-800/50 rounded-full">
+                    <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+                    <span class="lang-en">Two Editions Available</span>
+                    <span class="lang-pl hidden">Dwie Edycje Dostępne</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-7xl font-bold text-white leading-tight mb-6 md:mb-8 tracking-tight">
+                    <span class="lang-en">Leadership without the <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Noise.</span></span>
+                    <span class="lang-pl hidden">Przywództwo bez <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Hałasu.</span></span>
+                </h1>
+
+                <!-- THE "TWO EDITIONS" EXPLAINER -->
+                <div class="max-w-5xl border-l-2 border-slate-700 pl-6 pt-2">
+                    <p class="text-lg md:text-xl text-slate-400 leading-relaxed">
+                        <!-- ENGLISH VERSION -->
+                        <span class="lang-en">
+                            <strong>One system. Two depths.</strong><br>
+                            This is not a motivational book and not a manifesto.<br><br>
+                            It is a practical operating system for the mind.<br>
+                            It was designed for people who think deeply, process information intensely, and operate under cognitive load - regardless of role, title, or position. For those who struggle not because they lack ability, but because their environment is loud, fragmented, and misaligned with how their brain actually works.<br><br>
+                            The system is presented in two depths.<br>
+                            The first is a concise, operational handbook. It gives you structure when attention is fractured, pressure is high, and energy is limited. It helps stabilise thinking, reduce cognitive noise, and regain control in real time.<br>
+                            The second is a deeper strategic layer. It rebuilds how you understand focus, energy, decision-making, and long-term impact. It explains what has been draining you, why brute-force adaptation fails, and how to turn depth of thought into a repeatable advantage rather than a private burden.<br><br>
+                            You do not need prior knowledge.<br>
+                            You do not need a title.<br>
+                            You do not need to become someone else.<br>
+                            You choose the depth based on your current capacity - not on ideology, personality labels, or trends.<br>
+                            This system meets you where you are and scales with you as you regain clarity, strength, and direction.
+                        </span>
+                        
+                        <!-- POLISH VERSION -->
+                        <span class="lang-pl hidden">
+                            <strong>Jeden system. Dwie głębokości.</strong><br>
+                            To nie jest książka motywacyjna ani manifest.<br><br>
+                            To praktyczny system operacyjny dla umysłu.<br>
+                            Został zaprojektowany dla ludzi, którzy myślą głęboko, intensywnie przetwarzają informacje i działają pod obciążeniem poznawczym – niezależnie od roli, tytułu czy stanowiska. Dla tych, którzy zmagają się z codziennością nie z braku umiejętności, ale dlatego, że ich środowisko jest głośne, sfragmentowane i niedopasowane do sposobu działania ich mózgu.<br><br>
+                            System prezentowany jest w dwóch głębokościach.<br>
+                            Pierwsza to zwięzły podręcznik operacyjny. Daje strukturę, gdy uwaga jest rozproszona, presja wysoka, a energia ograniczona. Pomaga ustabilizować myślenie, zredukować szum poznawczy i odzyskać kontrolę w czasie rzeczywistym.<br>
+                            Druga to głębsza warstwa strategiczna. Przebudowuje sposób rozumienia skupienia, energii, decyzyjności i długofalowego wpływu. Wyjaśnia źródła wyczerpania, dlaczego siłowa adaptacja zawodzi i jak zamienić głębię myślenia w powtarzalną przewagę, zamiast prywatnego ciężaru.<br><br>
+                            Nie potrzebujesz wcześniejszej wiedzy.<br>
+                            Nie potrzebujesz tytułu.<br>
+                            Nie musisz stawać się kimś innym.<br>
+                            Wybierasz głębokość w oparciu o swoje obecne możliwości – a nie ideologię, etykietki osobowości czy trendy.<br>
+                            Ten system spotyka Cię tam, gdzie jesteś, i skaluje się wraz z Tobą, gdy odzyskujesz jasność, siłę i kierunek.
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- BOOKS LIST (VERTICAL LAYOUT) -->
+            <div class="max-w-6xl mx-auto">
+                
+                <!-- PRODUCT 1: OPERATIONAL (TOP) -->
+                <div class="book-row-container flex flex-col md:flex-row gap-5 items-start fade-in">
+                    <!-- Left: Cover -->
+                    <div class="w-full md:w-1/3 flex justify-start flex-shrink-0">
+                        <!-- REPLACE IMG SRC BELOW -->
+                        <div class="cover-placeholder">
+                            <div class="text-center p-4">
+                                <p class="text-white font-bold text-lg mb-2">LOW-NOISE LEADERSHIP</p>
+                                <p class="text-blue-400 text-sm font-mono tracking-widest uppercase">Operational Edition</p>
+                                <p class="text-xs text-slate-600 mt-4">(320x480px Cover)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Content -->
+                    <div class="w-full md:w-2/3 pt-4 pl-0">
+                        <span class="text-blue-500 font-mono text-xs uppercase tracking-widest font-bold mb-2 block">
+                            <span class="lang-en">The Operational Handbook</span>
+                            <span class="lang-pl hidden">Podręcznik Operacyjny</span>
+                        </span>
+                        
+                        <h2 class="text-2xl md:text-4xl font-bold text-white mb-6 leading-tight">
+                            Low-Noise Leadership: <br>
+                            <span class="text-slate-400">A Practical System for Introverted Leaders</span>
+                        </h2>
+
+                        <div class="prose prose-lg text-slate-400 mb-8 leading-relaxed">
+                            <p class="lang-en">
+                                This is not a theoretical treatise. It is an <strong>operational handbook</strong> designed for leaders who are tired of noise and need a clear map of action. Instead of abstract concepts, you get protocols. 
+                                <br><br>
+                                This book reverses the perspective: introversion is not a flaw to be fixed, but an operating system to be mastered. It helps you manage "cognitive debt" in a loud office and regulate your energy in real-time.
+                            </p>
+                            <p class="lang-pl hidden">
+                                To nie jest traktat teoretyczny. To <strong>podręcznik operacyjny</strong> zaprojektowany dla liderów zmęczonych hałasem, którzy potrzebują jasnej mapy działania. Zamiast abstrakcyjnych koncepcji - otrzymujesz gotowe protokoły.
+                                <br><br>
+                                Ta książka odwraca perspektywę: introwersja to nie wada do naprawienia, ale system operacyjny do opanowania. Pozwoli Ci zarządzać "długiem poznawczym" w głośnym biurze i regulować energię w czasie rzeczywistym.
+                            </p>
+                        </div>
+
+                        <ul class="space-y-3 mb-8 text-slate-300">
+                            <li class="relative pl-6 feature-bullet">
+                                <span class="lang-en"><strong>The Lean Approach:</strong> Protocols for moments when you need a decision, not a lecture.</span>
+                                <span class="lang-pl hidden"><strong>Podejście Lean:</strong> Protokoły na momenty, gdy potrzebujesz decyzji, a nie wykładu.</span>
+                            </li>
+                            <li class="relative pl-6 feature-bullet">
+                                <span class="lang-en"><strong>Energy Regulation:</strong> Stop fighting your nervous system. Learn to use it.</span>
+                                <span class="lang-pl hidden"><strong>Regulacja Energii:</strong> Przestań walczyć ze swoim układem nerwowym. Naucz się go używać.</span>
+                            </li>
+                            <li class="relative pl-6 feature-bullet">
+                                <span class="lang-en"><strong>Sensory Audit:</strong> Tools to reduce cognitive load immediately.</span>
+                                <span class="lang-pl hidden"><strong>Audyt Sensoryczny:</strong> Narzędzia do natychmiastowej redukcji obciążenia poznawczego.</span>
+                            </li>
+                        </ul>
+
+                        <div class="flex gap-4">
+                            <a href="https://www.amazon.co.uk/" target="_blank" class="bg-blue-600 text-white px-8 py-4 rounded-md font-bold hover:bg-blue-500 transition shadow-lg shadow-blue-900/20">
+                                <span class="lang-en">Buy Practical System</span>
+                                <span class="lang-pl hidden">Kup Practical System</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 2: STRATEGIC (BOTTOM) -->
+                <div class="book-row-container flex flex-col md:flex-row gap-5 items-start fade-in">
+                    <!-- Left: Cover -->
+                    <div class="w-full md:w-1/3 flex justify-start flex-shrink-0">
+                         <!-- REPLACE IMG SRC BELOW -->
+                        <div class="cover-placeholder" style="border-color: rgba(16, 185, 129, 0.2);">
+                            <div class="text-center p-4">
+                                <p class="text-white font-bold text-lg mb-2">LOW-NOISE LEADERSHIP</p>
+                                <p class="text-emerald-400 text-sm font-mono tracking-widest uppercase">Strategic Edition</p>
+                                <p class="text-xs text-slate-600 mt-4">(320x480px Cover)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Content -->
+                    <div class="w-full md:w-2/3 pt-4 pl-0">
+                        <span class="text-emerald-500 font-mono text-xs uppercase tracking-widest font-bold mb-2 block">
+                            <span class="lang-en">The Strategic System</span>
+                            <span class="lang-pl hidden">Strategiczny System</span>
+                        </span>
+                        
+                        <h2 class="text-2xl md:text-4xl font-bold text-white mb-6 leading-tight">
+                            Low-Noise Leadership: <br>
+                            <span class="text-slate-400">The Expanded System for Introverted Leaders</span>
+                        </h2>
+
+                        <div class="prose prose-lg text-slate-400 mb-8 leading-relaxed">
+                            <p class="lang-en">
+                                The complete, expanded <strong>blueprint</strong> defining leadership in the AI and VUCA era. This book integrates <strong>deep neurobiology</strong> with advanced business strategy. 
+                                <br><br>
+                                It goes beyond "coping" to show you how to build an organization based on systems, not ego. From understanding the chemistry of your brain (dopamine vs. acetylcholine pathways) to the role of the "Quiet Architect" who uses AI as an extroversion exoskeleton.
+                            </p>
+                            <p class="lang-pl hidden">
+                                Kompletny, rozszerzony <strong>blueprint</strong> definiujący przywództwo w erze AI i świecie VUCA. Ta pozycja łączy <strong>głęboką neurobiologię</strong> z zaawansowaną strategią biznesową.
+                                <br><br>
+                                Wykracza poza "radzenie sobie", pokazując, jak budować organizacje oparte na systemach, a nie na ego. Od chemii mózgu (ścieżki dopaminy i acetylocholiny) po rolę "Cichego Architekta" wykorzystującego AI jako egzoszkielet ekstrawersji.
+                            </p>
+                        </div>
+
+                        <ul class="space-y-3 mb-8 text-slate-300">
+                            <li class="relative pl-6 feature-bullet" style="color: #e2e8f0;">
+                                <style>.feature-bullet.emerald::before { color: #10b981; }</style>
+                                <span class="feature-bullet emerald"></span>
+                                <span class="lang-en"><strong>Neurobiological Foundation:</strong> Deep dive into the mechanics of your focus and influence.</span>
+                                <span class="lang-pl hidden"><strong>Fundament Neurobiologiczny:</strong> Głębokie zrozumienie mechaniki Twojego skupienia i wpływu.</span>
+                            </li>
+                            <li class="relative pl-6 feature-bullet">
+                                <span class="feature-bullet emerald"></span>
+                                <span class="lang-en"><strong>The AI Advantage:</strong> Using technology to automate noise and scale your depth.</span>
+                                <span class="lang-pl hidden"><strong>Przewaga AI:</strong> Wykorzystanie technologii do automatyzacji szumu i skalowania głębi.</span>
+                            </li>
+                            <li class="relative pl-6 feature-bullet">
+                                <span class="feature-bullet emerald"></span>
+                                <span class="lang-en"><strong>Strategic Legacy:</strong> Building systems that last without your constant presence.</span>
+                                <span class="lang-pl hidden"><strong>Strategiczne Dziedzictwo:</strong> Budowanie systemów, które przetrwają bez Twojej ciągłej obecności.</span>
+                            </li>
+                        </ul>
+
+                        <div class="flex gap-4">
+                            <a href="https://www.amazon.co.uk/" target="_blank" class="bg-blue-600 text-white px-8 py-4 rounded-md font-bold hover:bg-blue-500 transition shadow-lg shadow-blue-900/20">
+                                <span class="lang-en">Buy Expanded System</span>
+                                <span class="lang-pl hidden">Kup Expanded System</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-left mt-8 max-w-6xl mx-auto">
+                 <p class="text-sm text-slate-500 font-mono">
+                    <span class="lang-en">*Links and covers will be updated upon official release.</span>
+                    <span class="lang-pl hidden">*Linki i okładki zostaną zaktualizowane w dniu premiery.</span>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- TARGET AUDIENCE SECTION -->
+    <section id="target-audience" class="py-24 bg-slate-950 border-y border-slate-800 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="p-8 md:p-12 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-blue-500/30 transition duration-500 text-center group">
+                <div class="inline-flex items-center justify-center p-4 bg-blue-900/20 rounded-full text-blue-400 mb-8 group-hover:scale-110 transition duration-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.2-2.858.578-4.18M12 18a2.99 2.99 0 01-3-2.99" />
+                    </svg>
+                </div>
+                
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                    <span class="lang-en">The Introvert</span>
+                    <span class="lang-pl hidden">Introwertyk</span>
+                </h2>
+
+                <div class="text-lg text-slate-300 leading-relaxed space-y-6">
+                    <!-- ENGLISH -->
+                    <div class="lang-en space-y-6">
+                        <p>
+                            You don’t fully understand your nature, so you try to correct it. You push yourself to be louder, faster, more visible – and slowly drain your energy in the process.
+                        </p>
+                        <p class="font-bold text-white">
+                            This system shows you why that instinct is backwards.
+                        </p>
+                        <p>
+                            Introversion is not a limitation to overcome. It is a different cognitive architecture – one built for depth, focus, pattern recognition, and sustained thinking. When misunderstood, it feels like friction. When forced to adapt, it becomes exhaustion. When properly understood, it turns into a disproportionate advantage.
+                        </p>
+                        <p>
+                            This book helps you stop fighting your biology and start working with it. It teaches you how to protect your energy, structure your environment, and use your natural depth as leverage – in work, thinking, and decision-making.
+                        </p>
+                        <p class="text-blue-400 font-bold border-l-2 border-blue-500 pl-4">
+                            Not by becoming louder. <br>
+                            But by becoming aligned.
+                        </p>
+                    </div>
+
+                    <!-- POLISH -->
+                    <div class="lang-pl hidden space-y-6">
+                        <p>
+                            Nie do końca rozumiesz swoją naturę, więc próbujesz ją naprawić. Zmuszasz się, by być głośniejszym, szybszym, bardziej widocznym – i w tym procesie powoli drenujesz swoją energię.
+                        </p>
+                        <p class="font-bold text-white">
+                            Ten system pokazuje, dlaczego ten instynkt jest błędny.
+                        </p>
+                        <p>
+                            Introwersja to nie ograniczenie do pokonania. To inna architektura poznawcza – stworzona do głębi, skupienia, rozpoznawania wzorców i długotrwałego myślenia. Gdy jest niezrozumiana, czujesz tarcie. Gdy jest zmuszana do adaptacji, staje się wyczerpaniem. Gdy jest właściwie zrozumiana, zmienia się w nieproporcjonalną przewagę.
+                        </p>
+                        <p>
+                            Ta książka pomaga Ci przestać walczyć z własną biologią i zacząć z nią współpracować. Uczy, jak chronić energię, strukturyzować otoczenie i wykorzystywać naturalną głębię jako dźwignię – w pracy, myśleniu i podejmowaniu decyzji.
+                        </p>
+                        <p class="text-blue-400 font-bold border-l-2 border-blue-500 pl-4">
+                            Nie przez stawanie się głośniejszym. <br>
+                            Ale przez osiągnięcie spójności.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SYSTEM / CHAPTERS SECTION -->
+    <section id="about-system" class="py-24 bg-slate-950/50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold text-white mb-6 lang-en fade-in">The System (Overview)</h2>
+                <h2 class="text-3xl font-bold text-white mb-6 lang-pl hidden fade-in">System (Przegląd)</h2>
+                <p class="text-slate-400 lang-en text-lg">A roadmap from self-recognition to strategic influence.</p>
+                <p class="text-slate-400 lang-pl hidden text-lg">Mapa drogowa od rozpoznania siebie do strategicznego wpływu.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Module 1 -->
+                <div class="p-8 bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition group rounded-xl">
+                    <div class="text-blue-500 text-xs font-bold uppercase tracking-widest mb-3">Module 01</div>
+                    <h3 class="text-xl font-bold text-white mb-3 lang-en">The Introvert's OS & Neurobiology</h3>
+                    <h3 class="text-xl font-bold text-white mb-3 lang-pl hidden">OS Introwertyka i Neurobiologia</h3>
+
+                    <div class="text-slate-400 text-sm leading-relaxed space-y-2 lang-en">
+                        <p>It's not a personality defect; it's a hardware difference.</p>
+                        <p>Discover why your brain's "default mode" is a strategic engine for complex problem-solving.</p>
+                        <p>Stop fixing yourself. Start optimizing your natural advantage.</p>
+                    </div>
+                    <div class="text-slate-400 text-sm leading-relaxed space-y-2 lang-pl hidden">
+                        <p>To nie wada osobowości, to różnica sprzętowa.</p>
+                        <p>Odkryj, dlaczego "tryb domyślny" Twojego mózgu jest strategicznym silnikiem.</p>
+                        <p>Przestań się naprawiać. Zacznij optymalizować przewagę.</p>
+                    </div>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="p-8 bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition group rounded-xl">
+                    <div class="text-blue-500 text-xs font-bold uppercase tracking-widest mb-3">Module 02</div>
+                    <h3 class="text-xl font-bold text-white mb-3 lang-en">Self-Awareness & The Insight Paradox</h3>
+                    <h3 class="text-xl font-bold text-white mb-3 lang-pl hidden">Samoświadomość i Paradoks Wglądu</h3>
+
+                    <div class="text-slate-400 text-sm leading-relaxed space-y-2 lang-en">
+                        <p>Most leaders operate blindly. This module helps you map your unique operating system.</p>
+                        <p>Identify exactly what drains your battery and what recharges it.</p>
+                        <p>This is a rigorous audit of your cognitive assets.</p>
+                    </div>
+                    <div class="text-slate-400 text-sm leading-relaxed space-y-2 lang-pl hidden">
+                        <p>Większość liderów działa na ślepo. Ten moduł pomoże Ci zmapować Twój system.</p>
+                        <p>Zidentyfikuj, co drenuje baterię, a co ją ładuje.</p>
+                        <p>To audyt Twoich zasobów poznawczych.</p>
+                    </div>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="p-8 bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition group rounded-xl">
+                    <div class="text-blue-500 text-xs font-bold uppercase tracking-widest mb-3">Module 03</div>
+                    <h3 class="text-xl font-bold text-white mb-3 lang-en">Boundaries Architecture</h3>
+                    <h3 class="text-xl font-bold text-white mb-3 lang-pl hidden">Architektura Granic</h3>
+
+                    <div class="text-slate-400 text-sm leading-relaxed space-y-2 lang-en">
+                        <p>Learn to build infrastructure around focus - without guilt.</p>
+                        <p>Reduce cognitive fragmentation caused by constant interruptions.</p>
+                        <p>Boundaries are not barriers; they are systems.</p>
+                    </div>
+                    <div class="text-slate-400 text-sm leading-relaxed space-y-2 lang-pl hidden">
+                        <p>Naucz się budować infrastrukturę wokół skupienia - bez poczucia winy.</p>
+                        <p>Ogranicz fragmentację poznawczą przez przerwania.</p>
+                        <p>Granice to nie bariery - to systemy.</p>
+                    </div>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="p-8 bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition group rounded-xl">
+                    <div class="text-blue-500 text-xs font-bold uppercase tracking-widest mb-3">Module 04</div>
+                    <h3 class="text-xl font-bold text-white mb-3 lang-en">Authentic Communication</h3>
+                    <h3 class="text-xl font-bold text-white mb-3 lang-pl hidden">Autentyczna Komunikacja</h3>
+
+                    <div class="text-slate-400 text-sm leading-relaxed space-y-2 lang-en">
+                        <p>You don't need to shout to be heard. Master asynchronous communication.</p>
+                        <p>Turn 1:1 meetings into your arena of influence.</p>
+                        <p>Replace noise with depth.</p>
+                    </div>
+                    <div class="text-slate-400 text-sm leading-relaxed space-y-2 lang-pl hidden">
+                        <p>Nie musisz krzyczeć, by Cię usłyszano. Opanuj komunikację asynchroniczną.</p>
+                        <p>Zmień spotkania 1:1 w arenę wpływu.</p>
+                        <p>Zastąp hałas głębią.</p>
+                    </div>
+                </div>
+
+                <!-- Module 5 -->
+                <div class="p-8 bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition group rounded-xl">
+                    <div class="text-blue-500 text-xs font-bold uppercase tracking-widest mb-3">Module 05</div>
+                    <h3 class="text-xl font-bold text-white mb-3 lang-en">Fuel & Resilience</h3>
+                    <h3 class="text-xl font-bold text-white mb-3 lang-pl hidden">Paliwo i Odporność</h3>
+
+                    <div class="text-slate-400 text-sm leading-relaxed space-y-2 lang-en">
+                        <p>Energy is your most limited currency. Build recovery that works.</p>
+                        <p>Reduce burnout risk by design, not willpower.</p>
+                        <p>Resilience is a protocol.</p>
+                    </div>
+                    <div class="text-slate-400 text-sm leading-relaxed space-y-2 lang-pl hidden">
+                        <p>Energia to Twoja najbardziej limitowana waluta. Zbuduj regenerację, która działa.</p>
+                        <p>Zmniejsz ryzyko wypalenia projektem, nie siłą woli.</p>
+                        <p>Odporność to protokół.</p>
+                    </div>
+                </div>
+
+                <!-- Module 6 -->
+                <div class="p-8 bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition group rounded-xl">
+                    <div class="text-blue-500 text-xs font-bold uppercase tracking-widest mb-3">Module 06</div>
+                    <h3 class="text-xl font-bold text-white mb-3 lang-en">The Quiet Strategist</h3>
+                    <h3 class="text-xl font-bold text-white mb-3 lang-pl hidden">Cichy Strateg</h3>
+
+                    <div class="text-slate-400 text-sm leading-relaxed space-y-2 lang-en">
+                        <p>Use "the pause" as a strategic tool.</p>
+                        <p>Make decisions based on signal, not pressure.</p>
+                        <p>Calm anchors teams.</p>
+                    </div>
+                    <div class="text-slate-400 text-sm leading-relaxed space-y-2 lang-pl hidden">
+                        <p>Używaj "pauzy" jako narzędzia strategicznego.</p>
+                        <p>Podejmuj decyzje na sygnale, nie presji.</p>
+                        <p>Spokój kotwiczy zespół.</p>
+                    </div>
+                </div>
+
+                <!-- Module 7 -->
+                <div class="p-8 bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition group rounded-xl">
+                    <div class="text-blue-500 text-xs font-bold uppercase tracking-widest mb-3">Module 07</div>
+                    <h3 class="text-xl font-bold text-white mb-3 lang-en">The Manifesto</h3>
+                    <h3 class="text-xl font-bold text-white mb-3 lang-pl hidden">Manifest</h3>
+
+                    <div class="text-slate-400 text-sm leading-relaxed space-y-2 lang-en">
+                        <p>Integration of all modules into a coherent leadership style.</p>
+                        <p>Create impact through systems, not charisma.</p>
+                        <p>Depth wins over volume.</p>
+                    </div>
+                    <div class="text-slate-400 text-sm leading-relaxed space-y-2 lang-pl hidden">
+                        <p>Integracja modułów w spójny styl przywództwa.</p>
+                        <p>Buduj wpływ systemami, nie charyzmą.</p>
+                        <p>Głębia wygrywa z głośnością.</p>
+                    </div>
+                </div>
+
+                <!-- Module 8 -->
+                <div class="p-8 bg-slate-900 border border-slate-800 hover:border-emerald-500/50 transition group rounded-xl">
+                    <div class="text-emerald-500 text-xs font-bold uppercase tracking-widest mb-3">Module 08 (Bonus)</div>
+                    <h3 class="text-xl font-bold text-white mb-3 lang-en">AI & The Quiet Architect</h3>
+                    <h3 class="text-xl font-bold text-white mb-3 lang-pl hidden">AI i Cichy Architekt</h3>
+
+                    <div class="text-slate-400 text-sm leading-relaxed space-y-2 lang-en">
+                        <p>Use AI to automate noise so you can focus on signal.</p>
+                        <p>Become the human-in-the-loop with precision and ethics.</p>
+                        <p>Prompting is introverted thinking at scale.</p>
+                    </div>
+                    <div class="text-slate-400 text-sm leading-relaxed space-y-2 lang-pl hidden">
+                        <p>Użyj AI, by zautomatyzować szum i skupić się na sygnale.</p>
+                        <p>Zostań człowiekiem w pętli - z precyzją i etyką.</p>
+                        <p>Promptowanie to introwertyczne myślenie w skali.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUTHOR SECTION -->
+    <section id="author" class="py-24 bg-slate-900/30 relative overflow-hidden border-t border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-6">
+                <div class="w-full md:w-1/3 flex justify-start">
+                    <div class="relative w-[85%] rounded-xl overflow-hidden border border-slate-700 shadow-2xl grayscale hover:grayscale-0 transition duration-700 group">
+                        <img src="img.jpg" alt="Kamil Dyczkowski" class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-blue-900/20 mix-blend-overlay group-hover:bg-transparent transition"></div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-2/3">
+                    <h2 class="text-4xl font-bold mb-4 text-white">Kamil Dyczkowski</h2>
+
+                    <h4 class="text-blue-400 text-lg font-bold mb-8 uppercase tracking-wider lang-en">
+                        Author | Process Architect | Strategist
+                    </h4>
+                    <h4 class="text-blue-400 text-lg font-bold mb-8 uppercase tracking-wider lang-pl hidden">
+                        Autor | Architekt Procesów | Strateg
+                    </h4>
+
+                    <div class="space-y-6 text-slate-300 leading-relaxed text-lg">
+                        <!-- ENGLISH CONTENT -->
+                        <div class="lang-en space-y-6">
+                            <p>
+                                I am neither a theorist nor a sideline commentator. I work daily in environments where complex processes, decision pressure, and team dynamics meet real operational consequences. My focus is <strong class="text-white">Continuous Improvement</strong> understood practically—as building predictable, resilient, and effective work systems based on data, not intuition or loud narratives.
+                            </p>
+                            <p>
+                                I think systematically. I use advanced analytics and engineering tools to separate signal from noise and understand what actually drives human and organizational effectiveness. This approach led me to the fundamental question that became the axis of my work: <em>how to maintain agency, clarity, and leadership effectiveness in a world of permanent information overload?</em>
+                            </p>
+                            <p class="italic text-slate-400 border-l-4 border-blue-500 pl-4">
+                                "Low-Noise Leadership" is the result of years of analyzing my own cognitive "hardware" and observing leaders operating under pressure. It is a map for those who understand that leadership strength comes not from volume, but from precision of thought, quality of decisions, and the ability to act beyond chaos.
+                            </p>
+                        </div>
+
+                        <!-- POLISH CONTENT (Currently Hidden) -->
+                        <div class="lang-pl hidden space-y-6">
+                            <p>
+                                Nie jestem teoretykiem ani komentatorem z boku. Na co dzień pracuję w środowiskach, gdzie złożone procesy, presja decyzyjna i dynamika zespołów spotykają się z realnymi konsekwencjami operacyjnymi. Moim obszarem jest <strong class="text-white">Continuous Improvement</strong> rozumiane praktycznie - jako budowanie przewidywalnych, odpornych i skutecznych systemów pracy opartych na danych, a nie intuicji czy głośnych narracjach.
+                            </p>
+                            <p>
+                                Myślę systemowo. Korzystam z zaawansowanej analityki i narzędzi inżynierskich, aby oddzielić sygnał od szumu i zrozumieć, co faktycznie napędza skuteczność ludzi i organizacji. To podejście doprowadziło mnie do fundamentalnego pytania, które stało się osią mojej pracy: <em>jak zachować sprawczość, klarowność i skuteczność przywódczą w świecie permanentnego przeciążenia informacyjnego?</em>
+                            </p>
+                            <p class="italic text-slate-400 border-l-4 border-blue-500 pl-4">
+                                „Low-Noise Leadership” jest rezultatem wieloletniej analizy własnego „hardware’u” poznawczego oraz obserwacji liderów funkcjonujących pod presją. To mapa dla tych, którzy rozumieją, że siła przywództwa nie wynika z głośności, lecz z precyzji myślenia, jakości decyzji i umiejętności działania poza chaosem.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-10 pt-10 border-t border-slate-800 flex gap-12">
+                        <div>
+                            <span class="block text-3xl font-bold text-white">Systemic</span>
+                            <span class="text-xs text-slate-500 uppercase tracking-widest">Mindset</span>
+                        </div>
+                        <div>
+                            <span class="block text-3xl font-bold text-white">100%</span>
+                            <span class="text-xs text-slate-500 uppercase tracking-widest">Zero Bullshit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Form Section -->
+    <footer id="contact" class="bg-slate-950 border-t border-slate-800 py-20">
+        <div class="max-w-3xl mx-auto text-center px-4">
+            <h2 class="text-3xl font-bold text-white mb-6 lang-en">Ready to buy on Amazon?</h2>
+            <h2 class="text-3xl font-bold text-white mb-6 lang-pl hidden">Gotowy kupić na Amazon?</h2>
+
+            <p class="text-slate-400 mb-10 lang-en text-lg">
+                Links will be updated when Amazon status changes to Live.
+            </p>
+            <p class="text-slate-400 mb-10 lang-pl hidden text-lg">
+                Linki podmienimy, gdy status na Amazon zmieni się na Live.
+            </p>
+
+            <form class="flex flex-col gap-4 max-w-lg mx-auto mb-12" id="signup-form">
+                <input type="email" name="email" placeholder="business@email.com" required
+                       class="w-full px-6 py-4 bg-slate-900 border border-slate-700 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition">
+
+                <textarea id="message-input" name="message" rows="3"
+                          placeholder="Your message (optional)"
+                          class="w-full px-6 py-4 bg-slate-900 border border-slate-700 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition resize-none"></textarea>
+
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_captcha" value="false">
+
+                <button type="submit" class="w-full px-8 py-4 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-500 transition shadow-lg shadow-blue-900/20">
+                    <span id="btn-text">
+                        <span class="lang-en">Send</span>
+                        <span class="lang-pl hidden">Wyślij</span>
+                    </span>
+                </button>
+            </form>
+
+            <div class="text-slate-600 text-sm">
+                &copy; 2026 Kamil Dyczkowski. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 1. CONFIGURATION
+        const FORM_EMAIL = "dyczkowski.kamil@gmail.com";
+
+        // 2. Language Switch Logic
+        function switchLang(lang) {
+            const enElements = document.querySelectorAll('.lang-en');
+            const plElements = document.querySelectorAll('.lang-pl');
+            
+            // Buttons Desktop
+            const btnEn = document.getElementById('btn-en');
+            const btnPl = document.getElementById('btn-pl');
+            
+            // Buttons Mobile
+            const btnEnMob = document.getElementById('btn-en-mob');
+            const btnPlMob = document.getElementById('btn-pl-mob');
+
+            const msgInput = document.getElementById('message-input');
+
+            if (lang === 'en') {
+                enElements.forEach(el => { el.classList.remove('hidden'); el.classList.add('fade-in'); });
+                plElements.forEach(el => el.classList.add('hidden'));
+                
+                // Style updates
+                if(btnEn) btnEn.className = "px-3 py-1 bg-blue-600 text-white hover:bg-blue-700 transition";
+                if(btnPl) btnPl.className = "px-3 py-1 bg-slate-800 text-slate-400 hover:bg-slate-700 transition";
+                
+                if(btnEnMob) btnEnMob.className = "px-2 py-1 bg-blue-600 text-white";
+                if(btnPlMob) btnPlMob.className = "px-2 py-1 bg-slate-800 text-slate-400";
+
+                document.documentElement.lang = 'en';
+                if (msgInput) msgInput.placeholder = "Your message (optional)";
+            } else {
+                plElements.forEach(el => { el.classList.remove('hidden'); el.classList.add('fade-in'); });
+                enElements.forEach(el => el.classList.add('hidden'));
+                
+                if(btnPl) btnPl.className = "px-3 py-1 bg-blue-600 text-white hover:bg-blue-700 transition";
+                if(btnEn) btnEn.className = "px-3 py-1 bg-slate-800 text-slate-400 hover:bg-slate-700 transition";
+
+                if(btnPlMob) btnPlMob.className = "px-2 py-1 bg-blue-600 text-white";
+                if(btnEnMob) btnEnMob.className = "px-2 py-1 bg-slate-800 text-slate-400";
+
+                document.documentElement.lang = 'pl';
+                if (msgInput) msgInput.placeholder = "Twoja wiadomość (opcjonalnie)";
+            }
+        }
+
+        // 3. Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if(mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                toggleMobileMenu();
+            });
+        }
+
+        function toggleMobileMenu() {
+            const isOpen = mobileMenu.classList.contains('open');
+            if (isOpen) {
+                mobileMenu.classList.remove('open');
+            } else {
+                mobileMenu.classList.add('open');
+            }
+        }
+
+        // 4. Auto-Detect Location
+        async function checkCountryAndSetLanguage() {
+            try {
+                const response = await fetch('https://api.country.is');
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data.country === 'PL') {
+                        switchLang('pl');
+                    }
+                }
+            } catch (error) {
+                // default EN
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            checkCountryAndSetLanguage();
+            // initCounters(); // REMOVED
+        });
+
+        // 5. FormSubmit Logic
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = e.target;
+            const emailInput = form.querySelector('input[name="email"]').value;
+            const messageInput = form.querySelector('textarea[name="message"]').value;
+            const btnText = document.getElementById('btn-text');
+            const originalContent = btnText.innerHTML;
+            
+            btnText.innerText = "...";
+
+            fetch(`https://formsubmit.co/ajax/${FORM_EMAIL}`, {
+                method: "POST",
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify({
+                    email: emailInput,
+                    message: messageInput,
+                    _subject: "Low-Noise Leadership - Message"
+                })
+            })
+            .then(response => response.json())
+            .then(() => {
+                const currentLang = document.documentElement.lang || 'en';
+                btnText.innerHTML = (currentLang === 'pl') ? "Wysłano" : "Sent";
+                switchLang(currentLang);
+                form.reset();
+                setTimeout(() => { btnText.innerHTML = originalContent; }, 1500);
+            })
+            .catch(() => {
+                btnText.innerHTML = originalContent;
+                alert("Error.");
+            });
+        });
+    </script>
+</body>
+</html>
