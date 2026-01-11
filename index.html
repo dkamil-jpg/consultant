@@ -4,34 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9K7WK7KBD9"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-9K7WK7KBD9');
-    </script>
-
-    <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KVJ5JFSX');</script>
-    <!-- End Google Tag Manager -->
-    
-    <!-- 1. META TAGS & SEO -->
     <title>Operational Control & Process Optimization | Consulting</title>
     <meta name="description" content="Restore operational control and eliminate process gaps. Diagnostic analysis, custom systems design, and full implementation for manufacturing and e-commerce operations.">
     <meta name="keywords" content="operational consulting, process optimization, business systems, manufacturing, e-commerce logistics">
     <meta name="author" content="Kamil">
 
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     
-    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -80,7 +64,6 @@
             pointer-events: none;
         }
 
-        /* Glassmorphism & Cards */
         .glass-panel {
             background: rgba(2, 6, 23, 0.9);
             backdrop-filter: blur(16px);
@@ -97,7 +80,6 @@
             border-color: rgba(59, 130, 246, 0.5);
         }
 
-        /* Buttons */
         .btn-primary {
             background: #ffffff; color: #0f172a; font-weight: 700;
             padding: 14px 28px; border-radius: 6px;
@@ -112,7 +94,6 @@
         }
         .btn-secondary:hover { background: rgba(30, 41, 59, 0.8); border-color: #94a3b8; transform: translateY(-1px); }
 
-        /* List Styles */
         ul.check-list li {
             position: relative; padding-left: 1.5rem; margin-bottom: 0.75rem;
         }
@@ -127,7 +108,6 @@
             content: "•"; position: absolute; left: 0; color: #ef4444; font-weight: bold;
         }
 
-        /* --- CHAOS MODULE STYLES --- */
         :root{ --card: rgba(15,23,42,.95); --card-strong: #0f172a; }
         
         .module-shell {
@@ -162,7 +142,6 @@
         .tile .t { font-weight: 700; color: #f1f5f9; font-size: 13px; margin-bottom: 4px; }
         .tile .d { font-size: 11px; line-height: 1.4; color: #94a3b8; }
         
-        /* Accents */
         .accent-red{ --accent: #ef4444; border-left-color: #ef4444; }
         .accent-amber{ --accent: #f59e0b; border-left-color: #f59e0b; }
         .accent-blue{ --accent: #3b82f6; border-left-color: #3b82f6; }
@@ -172,7 +151,6 @@
         .chaos .tile { cursor: grab; }
         .chaos .tile:active { cursor: grabbing; }
         
-        /* Control Stack Styles */
         .control .tile {
             width: 100%; max-width: 100%;
             cursor: default;
@@ -207,19 +185,14 @@
 
         @media (max-width: 1024px){ .control-wrap{ grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 640px){ .control-wrap{ grid-template-columns: 1fr; } .arena { height: 700px; } }
-
     </style>
 </head>
 <body class="bg-deep-system text-slate-300 selection:bg-blue-500 selection:text-white">
 
-    <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVJ5JFSX"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
     <div class="grid-pattern"></div>
 
-    <!-- NAV -->
     <nav class="fixed w-full z-50 glass-panel">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
@@ -244,7 +217,6 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <header class="pt-32 pb-20 md:pt-48 md:pb-28 relative z-10">
         <div class="max-w-5xl mx-auto px-4 text-center">
             
@@ -273,7 +245,6 @@
         </div>
     </header>
 
-    <!-- LOGOS -->
     <section class="border-y border-slate-800/60 bg-slate-950/40 relative z-20 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-4 py-12">
             <p class="text-center text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-10">
@@ -290,13 +261,11 @@
         </div>
     </section>
 
-    <!-- SECTION: ABOUT ME -->
     <section id="about" class="py-24 relative z-10 bg-slate-900/20">
         <div class="max-w-5xl mx-auto px-4">
             <div class="glass-card rounded-xl p-8 md:p-12 border border-slate-800/60">
                 <div class="flex flex-col md:flex-row gap-12 items-start">
                     
-                    <!-- PHOTO -->
                     <div class="w-full md:w-[300px] flex-shrink-0 flex flex-col gap-4">
                         <div class="w-full rounded-lg bg-slate-950 border border-slate-700 overflow-hidden relative shadow-2xl">
                             <img src="img.jpg" alt="Kamil Dyczkowski" class="w-full h-auto object-cover hover:scale-105 transition duration-700">
@@ -308,7 +277,6 @@
                         </div>
                     </div>
 
-                    <!-- THE MANIFESTO -->
                     <div class="flex-grow space-y-6 text-slate-300 leading-relaxed text-sm md:text-base">
                         <h2 class="text-2xl font-bold text-white mb-6">I don’t sell software.</h2>
                         
@@ -337,7 +305,6 @@
         </div>
     </section>
 
-    <!-- POSITIONING / CLARITY -->
     <section class="py-20 relative z-10 border-t border-slate-800/50">
         <div class="max-w-6xl mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -371,7 +338,6 @@
         </div>
     </section>
 
-    <!-- CHAOS MODULE -->
     <section id="chaos" class="py-24 relative z-10 bg-slate-900/30">
         <div class="max-w-6xl mx-auto px-4">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-8">
@@ -398,7 +364,6 @@
         </div>
     </section>
 
-    <!-- HOW IT WORKS -->
     <section id="how-it-works" class="py-24 relative z-10 border-t border-slate-800/50">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-16">
@@ -437,71 +402,6 @@
         </div>
     </section>
 
-    <!-- WHO FOR -->
-    <section id="who-for" class="py-20 relative z-10 border-t border-slate-800/50">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-                <div>
-                    <h2 class="text-2xl font-bold text-white mb-6">Who This Is For</h2>
-                    <p class="text-slate-400 mb-6">I typically work with businesses where:</p>
-                    <ul class="dot-list space-y-3">
-                        <li>off-the-shelf systems don’t fit how work is done</li>
-                        <li>staff rely on manual steps, notes, or memory</li>
-                        <li>data exists but cannot be trusted</li>
-                        <li>the owner knows “something is wrong”, but can’t clearly define it</li>
-                    </ul>
-                </div>
-                <div>
-                    <h2 class="text-2xl font-bold text-white mb-6">Specific Contexts</h2>
-                    <p class="text-slate-400 mb-6">This includes, but is not limited to:</p>
-                    <div class="space-y-4">
-                        <div class="p-4 bg-slate-900/40 border border-slate-800 rounded">
-                            <strong class="text-white block text-sm mb-1">Warehouses & Logistics</strong>
-                            <span class="text-slate-500 text-xs">Goods-in, stock, picking, shipping - blocking errors at entry.</span>
-                        </div>
-                        <div class="p-4 bg-slate-900/40 border border-slate-800 rounded">
-                            <strong class="text-white block text-sm mb-1">Clinics & Practices</strong>
-                            <span class="text-slate-500 text-xs">Cosmetic practices, physios - managing intake and flow without paper.</span>
-                        </div>
-                        <div class="p-4 bg-slate-900/40 border border-slate-800 rounded">
-                            <strong class="text-white block text-sm mb-1">Service-based SMEs</strong>
-                            <span class="text-slate-500 text-xs">Businesses running on ad-hoc tools that need a unified system.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- EXAMPLES -->
-    <section id="examples" class="py-20 relative z-10 bg-slate-900/20">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="mb-12">
-                <h2 class="text-2xl font-bold text-white">Examples of what this becomes</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="p-6 border border-slate-800 rounded bg-slate-900/20">
-                    <h4 class="text-white font-bold mb-2">Patient registration and intake</h4>
-                    <p class="text-sm text-slate-400">Systems that remove admin chaos and prevent missing info at entry.</p>
-                </div>
-                <div class="p-6 border border-slate-800 rounded bg-slate-900/20">
-                    <h4 class="text-white font-bold mb-2">Goods-in and warehouse movement</h4>
-                    <p class="text-sm text-slate-400">Tools that block errors at the point of entry, not during audits.</p>
-                </div>
-                <div class="p-6 border border-slate-800 rounded bg-slate-900/20">
-                    <h4 class="text-white font-bold mb-2">Internal dashboards</h4>
-                    <p class="text-sm text-slate-400">Replacing fragmented spreadsheets with a single operational truth.</p>
-                </div>
-                <div class="p-6 border border-slate-800 rounded bg-slate-900/20">
-                    <h4 class="text-white font-bold mb-2">Simple focused systems</h4>
-                    <p class="text-sm text-slate-400">Staff actually use them - without training fatigue.</p>
-                </div>
-            </div>
-            <p class="mt-8 text-center text-slate-500 font-bold">Different businesses. Same principle.</p>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
     <footer class="py-20 border-t border-slate-800 bg-slate-950 relative z-10">
         <div class="max-w-3xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold text-white mb-6">Let’s identify the gap first.</h2>
@@ -517,47 +417,33 @@
         </div>
     </footer>
 
-    <!-- LOGIC SCRIPT -->
     <script>
-        // CHAOS MODULE LOGIC - REWRITTEN FOR "SORTING" EFFECT
         (() => {
             const arena = document.getElementById('arena');
             const btnChaos = document.getElementById('btnChaos');
             const btnControl = document.getElementById('btnControl');
             
-            // Configuration
-            const cfg = { 
-                padding: 10, 
-                friction: 0.98, 
-                drift: 0.05, 
-                maxV: 15, 
-                impulse: 5, 
-                impulseRadius: 300 
-            };
+            const cfg = { padding: 10, friction: 0.98, drift: 0.05, maxV: 15, impulse: 5, impulseRadius: 300 };
 
             let isControl = false; 
             let rafId = null;
             let tiles = [];
 
-            // Data Definition
             const tilesSpec = [
                 { id:'1', group:'Information', cls:'accent-red', k:'NOTES', t:'Paper Fragments' },
                 { id:'2', group:'Information', cls:'accent-amber',k:'HANDOVERS', t:'Memory Based' },
                 { id:'3', group:'Information', cls:'accent-blue',k:'SPREADSHEET', t:'Version Drift' },
                 { id:'4', group:'Information', cls:'accent-blue',k:'DEFINITIONS', t:'Ambiguity' },
                 { id:'5', group:'Information', cls:'accent-amber',k:'DUPLICATES', t:'False Data' },
-                
                 { id:'6', group:'Execution', cls:'accent-emerald',k:'WORKFLOW', t:'Variance' },
                 { id:'7', group:'Execution', cls:'accent-red', k:'MISSED', t:'Late Discovery' },
                 { id:'8', group:'Execution', cls:'accent-violet',k:'SCHEDULING', t:'Bottlenecks' },
                 { id:'9', group:'Execution', cls:'accent-amber', k:'HANDOFFS', t:'Lost Tasks' },
                 { id:'10', group:'Execution', cls:'accent-emerald', k:'QUALITY', t:'Manual Checks' },
-                
                 { id:'11', group:'Inventory', cls:'accent-amber', k:'INVENTORY', t:'Guesswork' },
                 { id:'12', group:'Inventory', cls:'accent-blue',k:'CONSUMABLES', t:'Silent Waste' },
                 { id:'13', group:'Inventory', cls:'accent-violet',k:'SUPPLIERS', t:'Reactive' },
                 { id:'14', group:'Inventory', cls:'accent-emerald',k:'MOVEMENT', t:'Invisible Flow' },
-                
                 { id:'15', group:'Risk', cls:'accent-blue', k:'ALERTS', t:'Too Late' },
                 { id:'16', group:'Risk', cls:'accent-emerald',k:'AUDIT', t:'No Trace' },
                 { id:'17', group:'Risk', cls:'accent-amber',k:'BILLING', t:'Leaks' },
@@ -571,12 +457,9 @@
                 { key:'Risk', title:'RISK & MONEY' } 
             ];
 
-            // Helpers
             function rand(min,max){ return Math.random()*(max-min)+min; }
 
-            // Initialization
             function init(){
-                // Create Tiles
                 tilesSpec.forEach(spec => {
                     const el = document.createElement('div');
                     el.className = `tile ${spec.cls}`;
@@ -598,7 +481,6 @@
                     });
                 });
 
-                // Create Control Grid (Hidden initially)
                 const grid = document.createElement('div');
                 grid.className = 'control-wrap';
                 grid.id = 'controlGrid';
@@ -611,11 +493,9 @@
                 });
                 arena.appendChild(grid);
 
-                // Events
                 btnChaos.addEventListener('click', setChaos);
                 btnControl.addEventListener('click', setControl);
                 
-                // Mouse Interaction for Chaos
                 arena.addEventListener('mousemove', (e) => {
                     if(isControl) return;
                     const rect = arena.getBoundingClientRect();
@@ -636,7 +516,6 @@
                 startLoop();
             }
 
-            // Loop
             function startLoop(){
                 const loop = () => {
                     if(!isControl) updateChaos();
@@ -649,29 +528,19 @@
                 tiles.forEach(t => {
                     t.x += t.vx;
                     t.y += t.vy;
-                    
-                    // Bounce
                     if(t.x < 0 || t.x > arena.clientWidth - 260) t.vx *= -1;
                     if(t.y < 0 || t.y > arena.clientHeight - 80) t.vy *= -1;
-                    
-                    // Friction & Drift
                     t.vx *= 0.99; t.vy *= 0.99;
                     t.vx += rand(-0.02, 0.02); t.vy += rand(-0.02, 0.02);
-                    
                     t.rot += rand(-0.1, 0.1);
-
                     t.el.style.transform = `translate(${t.x}px, ${t.y}px) rotate(${t.rot}deg)`;
                 });
             }
-
-            // --- THE TRANSITION LOGIC ---
             
             function setControl(){
                 if(isControl) return;
                 isControl = true;
                 arena.classList.add('control');
-                
-                // 1. Calculate Destination for each tile
                 const grid = document.getElementById('controlGrid');
                 grid.style.opacity = '1';
                 grid.style.pointerEvents = 'auto';
@@ -682,12 +551,9 @@
                     colMap[g.key] = colBody;
                 });
 
-                // Animate One by One (Sorting Effect)
                 tiles.forEach((t, i) => {
                     setTimeout(() => {
                         const targetCol = colMap[t.spec.group];
-                        
-                        // Reset styles for list view
                         t.el.style.transform = 'none';
                         t.el.style.position = 'relative';
                         t.el.style.width = '100%';
@@ -695,19 +561,12 @@
                         t.el.style.left = 'auto';
                         t.el.style.marginBottom = '6px';
                         t.el.style.zIndex = 'auto';
-                        
                         targetCol.appendChild(t.el);
-                        
-                        // Animation: Slide in from bottom/fade
                         t.el.animate([
                             { transform: 'translateY(40px) scale(0.9)', opacity: 0 },
                             { transform: 'translateY(0) scale(1)', opacity: 1 }
-                        ], {
-                            duration: 400,
-                            easing: 'cubic-bezier(0.2, 0.8, 0.2, 1)'
-                        });
-
-                    }, i * 100); // 100ms delay stagger
+                        ], { duration: 400, easing: 'cubic-bezier(0.2, 0.8, 0.2, 1)' });
+                    }, i * 100);
                 });
             }
 
@@ -718,20 +577,16 @@
                 const grid = document.getElementById('controlGrid');
                 grid.style.opacity = '0';
                 grid.style.pointerEvents = 'none';
-
-                // Reset tiles to absolute
                 tiles.forEach(t => {
                     arena.appendChild(t.el);
                     t.el.style.position = 'absolute';
                     t.el.style.width = '260px';
-                    // Randomize slightly so they don't stack perfectly
                     t.x = rand(50, arena.clientWidth - 300);
                     t.y = rand(50, arena.clientHeight - 100);
                     t.el.style.transform = `translate(${t.x}px, ${t.y}px)`;
                     t.el.style.marginBottom = '0';
                 });
             }
-
             init();
         })();
     </script>
