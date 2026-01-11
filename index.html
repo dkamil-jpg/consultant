@@ -3,38 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kamil Dyczkowski | Operational Process Diagnosis for Manufacturing & Warehousing</title>
     
-    <!-- SEO & Indexing -->
-    <meta name="description" content="I help business owners regain operational control by diagnosing process bottlenecks, unreliable data and execution gaps across manufacturing, warehouse and e-commerce operations." />
-    <link rel="canonical" href="https://kamildyczkowski.com/" />
-    <meta name="robots" content="index,follow" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KVJ5JFSX');</script>
+    <!-- End Google Tag Manager -->
     
-    <meta property="og:title" content="Kamil Dyczkowski | Operational Process Architect" />
-    <meta property="og:description" content="Regain control when operations stop scaling. I bridge the gap between ERP strategy and floor reality." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://kamildyczkowski.com/" />
-    <meta property="og:image" content="https://kamildyczkowski.com/img.jpg" />
+    <!-- 1. META TAGS & SEO -->
+    <title>Operational Control & Process Optimization | Consulting</title>
+    <meta name="description" content="Restore operational control and eliminate process gaps. Diagnostic analysis, custom systems design, and full implementation for manufacturing and e-commerce operations.">
+    <meta name="keywords" content="operational consulting, process optimization, business systems, manufacturing, e-commerce logistics">
+    <meta name="author" content="Kamil">
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Kamil Dyczkowski",
-      "jobTitle": "Operational Process Architect",
-      "description": "Operational Strategy & Process Diagnosis for manufacturing and warehouse operations, focusing on Yorkshire and the UK.",
-      "url": "https://kamildyczkowski.com/",
-      "image": "https://kamildyczkowski.com/img.jpg",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Yorkshire",
-        "addressCountry": "UK"
-      }
-    }
-    </script>
-
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -44,23 +32,28 @@
                         mono: ['JetBrains Mono', 'monospace'],
                     },
                     colors: {
-                        slate: {
-                            850: '#151e2e',
-                            950: '#020617',
-                        }
+                        slate: { 850: '#151e2e', 950: '#020617' }
+                    },
+                    boxShadow: {
+                        glow: '0 0 25px rgba(37,99,235,0.2)',
+                        machine: 'inset 0 0 20px rgba(0,0,0,0.6)'
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     }
                 }
             }
         }
     </script>
+
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; color: #cbd5e1; background-color: #020617; }
         
         .bg-deep-system {
             background-color: #020617; 
             background-image: 
-                radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.10) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, rgba(15, 23, 42, 1) 0px, transparent 50%);
+                radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.08) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(15, 23, 42, 1) 0px, transparent 50%);
             position: relative;
             overflow-x: hidden;
         }
@@ -68,497 +61,669 @@
         .grid-pattern {
             position: absolute;
             inset: 0;
-            background-size: 50px 50px;
+            background-size: 40px 40px;
             background-image: 
-                linear-gradient(to right, rgba(30, 41, 59, 0.5) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(30, 41, 59, 0.5) 1px, transparent 1px);
-            mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
+                linear-gradient(to right, rgba(51, 65, 85, 0.2) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(51, 65, 85, 0.2) 1px, transparent 1px);
+            mask-image: linear-gradient(to bottom, black 10%, transparent 90%);
             z-index: 0;
             pointer-events: none;
         }
 
-        .glow-effect {
-            position: absolute;
-            top: 20%; left: 50%;
-            transform: translate(-50%, -50%);
-            width: 800px; height: 600px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, rgba(2, 6, 23, 0) 70%);
-            z-index: -1;
-            filter: blur(80px);
-        }
-
+        /* Glassmorphism & Cards */
         .glass-panel {
-            background: rgba(2, 6, 23, 0.85);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(30, 41, 59, 0.5);
+            background: rgba(2, 6, 23, 0.9);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(51, 65, 85, 0.4);
         }
 
         .glass-card {
-            background: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(4px);
-            border: 1px solid rgba(30, 41, 59, 0.8);
-            transition: all 0.3s ease;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(51, 65, 85, 0.5);
+            transition: border-color 0.2s ease;
         }
         .glass-card:hover {
-            border-color: rgba(59, 130, 246, 0.4);
-            background: rgba(15, 23, 42, 0.8);
-            transform: translateY(-2px);
+            border-color: rgba(59, 130, 246, 0.5);
         }
 
-        ul.tech-list li {
-            position: relative;
-            padding-left: 1.25rem;
-            margin-bottom: 0.5rem;
+        /* Buttons */
+        .btn-primary {
+            background: #ffffff; color: #0f172a; font-weight: 700;
+            padding: 14px 28px; border-radius: 6px;
+            transition: all 0.2s; letter-spacing: -0.01em; display: inline-flex; justify-content: center; align-items: center;
         }
-        ul.tech-list li::before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: #3b82f6;
+        .btn-primary:hover { background: #cbd5e1; transform: translateY(-1px); }
+
+        .btn-secondary {
+            background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(71, 85, 105, 0.6);
+            color: #e2e8f0; font-weight: 600; padding: 14px 28px; border-radius: 6px;
+            transition: all 0.2s; display: inline-flex; justify-content: center; align-items: center;
+        }
+        .btn-secondary:hover { background: rgba(30, 41, 59, 0.8); border-color: #94a3b8; transform: translateY(-1px); }
+
+        /* List Styles */
+        ul.check-list li {
+            position: relative; padding-left: 1.5rem; margin-bottom: 0.75rem;
+        }
+        ul.check-list li::before {
+            content: "✓"; position: absolute; left: 0; color: #3b82f6; font-weight: bold;
+        }
+
+        ul.dot-list li {
+            position: relative; padding-left: 1.25rem; margin-bottom: 0.5rem; color: #94a3b8; font-size: 0.95rem;
+        }
+        ul.dot-list li::before {
+            content: "•"; position: absolute; left: 0; color: #ef4444; font-weight: bold;
+        }
+
+        /* --- CHAOS MODULE STYLES --- */
+        :root{ --card: rgba(15,23,42,.95); --card-strong: #0f172a; }
+        
+        .module-shell {
+            position: relative; overflow: hidden; border-radius: 12px;
+            background: #020617;
+            border: 1px solid rgba(51, 65, 85, 0.6);
+            box-shadow: var(--machine);
+        }
+        .arena {
+            position: relative; height: 600px; border-radius: 8px; overflow: hidden;
+            background: radial-gradient(circle at 50% 50%, rgba(30, 41, 59, 0.2), rgba(2, 6, 23, 0.8));
+        }
+        .tile {
+            position:absolute; width: 260px; border-radius: 8px;
+            background: var(--card); border: 1px solid rgba(51, 65, 85, 0.8);
+            padding: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            user-select: none; touch-action: none; will-change: transform, opacity;
+            transform-style: preserve-3d; overflow: hidden;
+            z-index: 10;
+        }
+        .tile::before {
+            content:""; position:absolute; left:0; top:0; bottom: 0; width: 4px;
+            background: var(--accent, rgba(59,130,246,.9)); opacity: 1;
+        }
+        .tile .hdr {
+            position: relative; display:flex; align-items:center; justify-content: space-between; gap: 10px;
+            font-family: "JetBrains Mono", monospace; font-size: 10px; letter-spacing: .05em;
+            text-transform: uppercase; color: #94a3b8; font-weight: 700; margin-bottom: 8px; margin-left: 8px;
+        }
+        .tile .body { position: relative; margin-left: 8px; }
+        .tile .t { font-weight: 700; color: #f1f5f9; font-size: 13px; margin-bottom: 4px; }
+        .tile .d { font-size: 11px; line-height: 1.4; color: #94a3b8; }
+        
+        /* Accents */
+        .accent-red{ --accent: #ef4444; border-left-color: #ef4444; }
+        .accent-amber{ --accent: #f59e0b; border-left-color: #f59e0b; }
+        .accent-blue{ --accent: #3b82f6; border-left-color: #3b82f6; }
+        .accent-emerald{ --accent: #10b981; border-left-color: #10b981; }
+        .accent-violet{ --accent: #8b5cf6; border-left-color: #8b5cf6; }
+
+        .chaos .tile { cursor: grab; }
+        .chaos .tile:active { cursor: grabbing; }
+        
+        /* Control Stack Styles */
+        .control .tile {
+            width: 100%; max-width: 100%;
+            cursor: default;
+            background: rgba(15,23,42, 0.8); 
+            border: 1px solid rgba(51, 65, 85, 0.4);
+            border-left: 4px solid var(--accent);
+            box-shadow: none; padding: 8px 12px; margin-bottom: 6px;
+        }
+        .control .tile .d { display: none; } 
+        .control .tile:hover { background: #1e293b; z-index: 50; }
+        .control .tile:hover .d { display: block; margin-top: 6px; animation: fadeIn 0.2s; }
+        
+        @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+
+        .control-wrap {
+            position: absolute; inset: 16px; z-index: 5;
+            display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px;
+            align-items: start; opacity: 0; pointer-events: none;
+            transition: opacity 0.5s ease;
         }
         
-        ul.friction-list li {
-            position: relative;
-            padding-left: 1rem;
-            margin-bottom: 0.5rem;
-            font-size: 0.875rem;
-            color: #94a3b8;
+        .control-col {
+            background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(51, 65, 85, 0.5);
+            border-radius: 8px; height: 100%; display: flex; flex-direction: column; overflow: hidden;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
         }
-        ul.friction-list li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #ef4444; 
+        .control-head {
+            padding: 12px; border-bottom: 1px solid rgba(51, 65, 85, 0.5); background: rgba(2, 6, 23, 0.6);
+            font-family: "JetBrains Mono", monospace; font-size: 11px; font-weight: 700; color: #cbd5e1; text-transform: uppercase;
         }
+        .control-body { flex: 1; padding: 8px; overflow-y: auto; position: relative; }
+
+        @media (max-width: 1024px){ .control-wrap{ grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 640px){ .control-wrap{ grid-template-columns: 1fr; } .arena { height: 700px; } }
+
     </style>
 </head>
-<body class="bg-deep-system text-slate-300 antialiased selection:bg-blue-500 selection:text-white">
+<body class="bg-deep-system text-slate-300 selection:bg-blue-500 selection:text-white">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVJ5JFSX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <div class="grid-pattern"></div>
-    <div class="glow-effect"></div>
 
-    <!-- NAVIGATION -->
+    <!-- NAV -->
     <nav class="fixed w-full z-50 glass-panel">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
-                <div class="flex-shrink-0 flex flex-col justify-center">
-                    <span class="font-bold text-lg tracking-tight text-white uppercase leading-none">Kamil Dyczkowski</span>
-                    <span class="text-[10px] text-blue-400 uppercase tracking-widest font-medium mt-1">Operational Process Architect</span>
-                </div>
-
-                <!-- Desktop Nav -->
+                <a href="#" class="flex flex-col justify-center group">
+                    <span class="font-bold text-[15px] tracking-tight text-white leading-none uppercase">Kamil Dyczkowski</span>
+                    <span class="text-[10px] text-slate-500 uppercase tracking-widest font-bold mt-1 group-hover:text-blue-400 transition">Operational Solutions & Systems</span>
+                </a>
+                
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="text-slate-400 hover:text-blue-400 transition text-sm uppercase tracking-wide">About</a>
-                    <a href="case-study.html" class="text-slate-400 hover:text-blue-400 transition text-sm uppercase tracking-wide">Impact</a>
-                    <a href="operational-diagnosis.html" class="text-slate-400 hover:text-blue-400 transition text-sm uppercase tracking-wide">Diagnosis</a>
-                    <a href="#solutions" class="text-slate-400 hover:text-blue-400 transition text-sm uppercase tracking-wide">Engagement</a>
-                    <a href="mailto:dyczkowski.kamil@gmail.com" class="bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-500 transition text-sm font-bold shadow-[0_0_15px_rgba(37,99,235,0.3)]">
-                        Request Diagnosis
+                    <a href="#about" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest">About</a>
+                    <a href="#chaos" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest">Chaos/Control</a>
+                    <a href="#how-it-works" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest">Process</a>
+                    <a href="mailto:dyczkowski.kamil@gmail.com" class="px-5 py-2 rounded bg-blue-700 text-white font-bold hover:bg-blue-600 transition text-xs uppercase tracking-wide">
+                        Request Review
                     </a>
                 </div>
 
-                <!-- Mobile Hamburger Button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-toggle" class="text-slate-300 hover:text-white focus:outline-none">
-                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                            <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
+                   <a href="mailto:dyczkowski.kamil@gmail.com" class="text-blue-500 font-bold text-sm">Contact</a>
                 </div>
-            </div>
-        </div>
-
-        <!-- Mobile Nav Menu -->
-        <div id="mobile-menu" class="hidden md:hidden glass-panel border-t border-slate-800">
-            <div class="px-4 pt-4 pb-6 space-y-4">
-                <a href="#about" class="block text-slate-300 hover:text-blue-400 transition text-base uppercase tracking-wide py-2">About</a>
-                <a href="case-study.html" class="block text-slate-300 hover:text-blue-400 transition text-base uppercase tracking-wide py-2">Impact</a>
-                <a href="operational-diagnosis.html" class="block text-slate-300 hover:text-blue-400 transition text-base uppercase tracking-wide py-2">Diagnosis</a>
-                <a href="#solutions" class="block text-slate-300 hover:text-blue-400 transition text-base uppercase tracking-wide py-2">Engagement</a>
-                <a href="mailto:dyczkowski.kamil@gmail.com" class="block bg-blue-600 text-white px-4 py-3 rounded-md text-center font-bold">
-                    Request Diagnosis
-                </a>
             </div>
         </div>
     </nav>
 
-
     <!-- HERO SECTION -->
-    <header class="pt-32 pb-20 md:pt-48 md:pb-32 relative z-10">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+    <header class="pt-32 pb-20 md:pt-48 md:pb-28 relative z-10">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-[1.1] tracking-tight mb-8">
+                Operational systems<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">that fit how your business actually works</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-slate-400 leading-relaxed mb-10 max-w-3xl mx-auto font-light">
+                I don't start with code. <strong>I start with diagnosis.</strong>
+                First, I identify where your process breaks - where money and time leak through manual workarounds. Then, I fill that gap with exactly what's missing: a tailored control system or a clear operational blueprint.
+            </p>
+            
+            <p class="text-sm font-bold text-white mb-10 tracking-wide uppercase opacity-90">
+                No templates. No generic software. No guesswork.
+            </p>
 
-                <div class="lg:col-span-7 order-2 lg:order-1">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 text-[10px] font-bold tracking-[0.2em] text-blue-400 uppercase bg-blue-950/30 border border-blue-800/50 rounded-full">
-                        <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
-                        Control from reality, not assumptions
-                    </div>
-
-                    <h1 class="text-3xl md:text-5xl font-bold text-white leading-tight mb-8 tracking-tight">
-                        Operational control<br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-                            without guesswork
-                        </span>
-                    </h1>
-
-                    <div class="space-y-6 text-slate-400 text-lg leading-relaxed max-w-2xl">
-                        <p>
-                            When results stop scaling with revenue, the cause is rarely effort or competence. 
-                            It is almost always hidden inside everyday decisions - the small judgement calls that introduce delays, errors, rework, and unreliable data.
-                        </p>
-                        <p>
-                            I diagnose where operational control is leaking and rebuild the process so outcomes depend on explicit logic and clean signals, not interpretation or heroics.
-                        </p>
-                        <p class="text-sm text-slate-500">
-                            Focus: Yorkshire and wider UK manufacturing & warehouse operations.
-                        </p>
-                    </div>
-
-                    <div class="flex flex-col sm:flex-row gap-4 mt-10">
-                        <a href="mailto:dyczkowski.kamil@gmail.com" class="px-8 py-4 bg-white text-slate-950 rounded-md font-bold hover:bg-slate-200 transition shadow-[0_0_20px_rgba(255,255,255,0.1)] text-center">
-                            Request Operational Diagnosis
-                        </a>
-                        <a href="case-study.html" class="px-8 py-4 bg-transparent text-white border border-slate-700 rounded-md font-semibold hover:border-slate-500 hover:bg-slate-800/50 transition text-center">
-                            View Impact Study
-                        </a>
-                    </div>
-
-                    <p class="mt-6 text-sm text-slate-500 max-w-2xl">
-                        Not training. Not generic consulting. Diagnosis first - then structural, behavioural, or system-level fixes as required.
-                    </p>
-                </div>
-
-                <!-- IMAGE BLOCK -->
-                <div class="lg:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-end">
-                    <div class="relative group w-4/5">
-                        <div class="absolute -inset-2 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
-                        <div class="relative rounded-2xl overflow-hidden border border-slate-700 shadow-2xl bg-slate-900">
-                            <img src="img.jpg" alt="Kamil Dyczkowski - Operational Strategy Expert" class="w-full h-auto object-cover transition-all duration-700 ease-out group-hover:scale-[1.02] transform origin-center">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent"></div>
-                            <div class="absolute bottom-0 left-0 p-6">
-                                <p class="text-xs font-mono uppercase tracking-widest text-blue-300/80">Outcome</p>
-                                <p class="text-lg font-semibold text-white mt-1">
-                                    Control is the product - results you can scale.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="mailto:dyczkowski.kamil@gmail.com" class="btn-primary">
+                    Request Operational Review
+                </a>
+                <a href="#about" class="btn-secondary">
+                    See How It Works
+                </a>
             </div>
         </div>
     </header>
 
-
-    <!-- LOGO STRIP SECTION -->
-    <section class="py-10 border-y border-slate-800 bg-slate-950/50 relative z-20">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-8">
-                Key operational contributions delivered at
+    <!-- LOGOS -->
+    <section class="border-y border-slate-800/60 bg-slate-950/40 relative z-20 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 py-12">
+            <p class="text-center text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-10">
+                Operational impact delivered for
             </p>
-            <div class="flex flex-wrap justify-center items-center gap-6 md:gap-12">
-                <!-- Logos with fallbacks -->
-                <div class="bg-white/95 p-3 rounded-lg hover:scale-105 transition duration-300 w-32 md:w-40 flex items-center justify-center h-16 md:h-20 shadow-lg shadow-black/50 overflow-hidden">
-                    <img src="morislogo.jpg" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'text-slate-900 font-bold text-xs\'>MORRISONS</span>'" alt="Morrisons Logo" class="max-h-full max-w-full object-contain">
-                </div>
-                <div class="bg-white/95 p-3 rounded-lg hover:scale-105 transition duration-300 w-32 md:w-40 flex items-center justify-center h-16 md:h-20 shadow-lg shadow-black/50 overflow-hidden">
-                    <img src="jlrlogo.jpg" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'text-slate-900 font-bold text-xs\'>JLR</span>'" alt="Jaguar Land Rover Logo" class="max-h-full max-w-full object-contain">
-                </div>
-                <div class="bg-white/95 p-3 rounded-lg hover:scale-105 transition duration-300 w-32 md:w-40 flex items-center justify-center h-16 md:h-20 shadow-lg shadow-black/50 overflow-hidden">
-                    <img src="xandlogo.jpg" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'text-slate-900 font-bold text-xs\'>XANDOR</span>'" alt="Xandor Logo" class="max-h-full max-w-full object-contain">
-                </div>
-                <div class="bg-white/95 p-3 rounded-lg hover:scale-105 transition duration-300 w-32 md:w-40 flex items-center justify-center h-16 md:h-20 shadow-lg shadow-black/50 overflow-hidden">
-                    <img src="CBlogo.jpg" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'text-slate-900 font-bold text-xs\'>CARTWRIGHT & BUTLER</span>'" alt="Cartwright & Butler Logo" class="max-h-full max-w-full object-contain">
-                </div>
-                <div class="bg-white/95 p-3 rounded-lg hover:scale-105 transition duration-300 w-32 md:w-40 flex items-center justify-center h-16 md:h-20 shadow-lg shadow-black/50 overflow-hidden">
-                    <img src="proplogo.jpg" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'text-slate-900 font-bold text-xs\'>PRO-PAK</span>'" alt="Pro-Pak Foods Logo" class="max-h-full max-w-full object-contain">
-                </div>
-                <div class="bg-white/95 p-3 rounded-lg hover:scale-105 transition duration-300 w-32 md:w-40 flex items-center justify-center h-16 md:h-20 shadow-lg shadow-black/50 overflow-hidden">
-                    <img src="NSlogo.jpg" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'text-slate-900 font-bold text-xs\'>NETSUITE</span>'" alt="NetSuite Logo" class="max-h-full max-w-full object-contain">
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-14 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition duration-500">
+                <img src="morislogo.jpg" alt="Morrisons" class="h-8 md:h-10 w-auto object-contain">
+                <img src="jlrlogo.jpg" alt="JLR" class="h-8 md:h-10 w-auto object-contain">
+                <img src="xandlogo.jpg" alt="Xandor" class="h-8 md:h-10 w-auto object-contain">
+                <img src="CBlogo.jpg" alt="Cartwright & Butler" class="h-8 md:h-10 w-auto object-contain">
+                <img src="proplogo.jpg" alt="Pro-Pak" class="h-8 md:h-10 w-auto object-contain">
+                <img src="NSlogo.jpg" alt="NetSuite" class="h-8 md:h-10 w-auto object-contain">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: ABOUT ME -->
+    <section id="about" class="py-24 relative z-10 bg-slate-900/20">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="glass-card rounded-xl p-8 md:p-12 border border-slate-800/60">
+                <div class="flex flex-col md:flex-row gap-12 items-start">
+                    
+                    <!-- PHOTO -->
+                    <div class="w-full md:w-[300px] flex-shrink-0 flex flex-col gap-4">
+                        <div class="w-full rounded-lg bg-slate-950 border border-slate-700 overflow-hidden relative shadow-2xl">
+                            <img src="img.jpg" alt="Kamil Dyczkowski" class="w-full h-auto object-cover hover:scale-105 transition duration-700">
+                        </div>
+                        <div class="text-left pl-1">
+                            <h3 class="text-white font-bold text-lg">Kamil Dyczkowski</h3>
+                            <div class="text-blue-500 text-[11px] font-mono uppercase tracking-widest mt-1 font-bold">Process & Systems Architect</div>
+                            <div class="text-slate-500 text-[11px] mt-1 font-mono uppercase">Yorkshire, UK</div>
+                        </div>
+                    </div>
+
+                    <!-- THE MANIFESTO -->
+                    <div class="flex-grow space-y-6 text-slate-300 leading-relaxed text-sm md:text-base">
+                        <h2 class="text-2xl font-bold text-white mb-6">I don’t sell software.</h2>
+                        
+                        <p>
+                            I restore operational control. I sit between strategy and the shop floor - where most “digital transformations” quietly fail. Not because the tools are bad, but because no one designed <strong class="text-white">control</strong> into the process.
+                        </p>
+                        <p>
+                            For over 20 years, I have gone into real operations - from NPI programs to high-volume e-commerce logistics - and found where money, time, and trust leak out every day. Whether it's inventory drift masked as variance, handovers that rely on memory, or manual rework treated as "normal".
+                        </p>
+                        <p class="pl-4 border-l-2 border-blue-500 italic text-slate-400">
+                            I don’t automate chaos. I expose it, strip it down, and rebuild the process so outcomes are enforced, not hoped for.
+                        </p>
+                        <p>
+                            Code is just an instrument. The real work is designing a control layer that makes the right action unavoidable and the wrong one impossible.
+                        </p>
+                        <p>
+                            You don’t need another generic app, dashboard, or “best practice.” You need a system that reflects how your operation actually works.
+                        </p>
+                        <p class="font-bold text-white pt-2">
+                            That is what I build.
+                        </p>
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ABOUT ME SECTION -->
-    <section id="about" class="py-24 relative z-10 border-b border-slate-800/50">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-white mb-2 uppercase tracking-tight text-center">The Process Architect</h2>
-            <p class="text-blue-400 font-medium text-center mb-10 italic">I help business owners regain control when operations stop scaling with revenue.</p>
-            
-            <div class="space-y-8 text-slate-400 text-lg leading-relaxed">
-                <p>
-                    Most operations run on experience, memory, and good intentions. That works until scale, pressure, or change expose how fragile that model really is. In high-stakes manufacturing and warehouse environments, margins are rarely lost through single failures – they erode quietly through process friction and decisions made where structure should exist.
-                </p>
-                <p>
-                    I diagnose where operational control is leaking: where decisions are made without clear rules, where signals are ambiguous, and where ownership is implied rather than defined. I then rebuild the process so outcomes depend on explicit logic and clean signals, not interpretation or heroics.
-                </p>
-                <p>
-                    Decisions are made once, correctly, and for the right reason - regardless of who is on shift. Over the past 20 years, I have worked across the full operational chain – from NPI programs through production to high-volume e-commerce. Based in <span class="text-blue-300">Yorkshire</span>, I work with clients locally and across the UK where instability is expensive and guesswork is unacceptable.
-                </p>
+    <!-- POSITIONING / CLARITY -->
+    <section class="py-20 relative z-10 border-t border-slate-800/50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="text-[10px] font-mono text-blue-400 uppercase tracking-widest mb-4">The Gap</div>
+                    <h2 class="text-3xl font-bold text-white mb-6">Most businesses don’t have a “software problem”.</h2>
+                    <p class="text-slate-400 text-lg leading-relaxed mb-6">
+                        They have process gaps. Places where work relies on memory, interpretation, or workarounds. That’s where errors, delays, and frustration are created.
+                    </p>
+                    <p class="text-white font-bold text-lg border-l-4 border-blue-500 pl-4">
+                        I don’t start with tools. I start with how work really happens.
+                    </p>
+                </div>
                 
-                <div class="pt-6 border-t border-slate-800 mt-10">
-                    <p class="text-white font-bold text-center italic tracking-wide">
-                        The tools are secondary. <span class="text-blue-400">Control is the product.</span>
+                <div class="glass-card rounded-xl p-8 border border-slate-800/60">
+                    <h3 class="text-xl font-bold text-white mb-4">What you get is <span class="text-blue-400">control</span>.</h3>
+                    <p class="text-slate-400 text-sm mb-4">Depending on what we find during diagnosis, the solution might be:</p>
+                    <ul class="check-list text-slate-300 text-sm space-y-3">
+                        <li>a fully custom operational application (web or mobile)</li>
+                        <li>a lightweight internal system replacing spreadsheets</li>
+                        <li>a reporting layer that exposes the real problem</li>
+                        <li>or a clear improvement plan when software is not the solution</li>
+                    </ul>
+                    <div class="mt-6 pt-6 border-t border-slate-800/50 text-center">
+                        <p class="text-sm font-bold text-white italic">
+                            "The form follows the process - never the other way around."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAOS MODULE -->
+    <section id="chaos" class="py-24 relative z-10 bg-slate-900/30">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-8">
+                <div class="lg:col-span-8">
+                    <h2 class="text-3xl font-bold text-white">Visualising Control</h2>
+                    <p class="mt-4 text-slate-400 leading-relaxed max-w-2xl">
+                        When systems are disconnected, your operation relies on memory and manual checks. This creates noise. 
+                        A proper operational system acts as a <strong class="text-white">Logic Filter</strong> - catching errors instantly and sorting information into trusted stacks.
+                    </p>
+                </div>
+                <div class="lg:col-span-4 flex justify-start lg:justify-end gap-3">
+                    <button id="btnChaos" class="px-6 py-3 rounded bg-slate-800 text-slate-400 font-bold uppercase tracking-widest text-xs hover:bg-slate-700 transition border border-slate-700">
+                        Chaos Mode
+                    </button>
+                    <button id="btnControl" class="px-6 py-3 rounded bg-blue-700 text-white font-bold uppercase tracking-widest text-xs hover:bg-blue-600 transition shadow-glow">
+                        Activate Control
+                    </button>
+                </div>
+            </div>
+            
+            <div class="module-shell">
+                <div id="arena" class="arena chaos relative z-10"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="py-24 relative z-10 border-t border-slate-800/50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white">How It Works</h2>
+                <p class="text-slate-400 mt-2">Diagnosis first. Then the right outcome.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-xl border-t-4 border-t-slate-600">
+                    <div class="text-slate-500 font-mono text-xs uppercase tracking-widest font-bold mb-4">Step 1</div>
+                    <h3 class="text-xl font-bold text-white mb-4">Operational Review</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        I analyse how your process actually runs: inputs, decisions, handovers, failure points. This often reveals issues the business was not consciously aware of.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-xl border-t-4 border-t-blue-500">
+                    <div class="text-blue-500 font-mono text-xs uppercase tracking-widest font-bold mb-4">Step 2</div>
+                    <h3 class="text-xl font-bold text-white mb-4">Decision</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        You get a clear answer: where the real gap is, whether software will fix it, and what level of solution is justified.
+                    </p>
+                    <div class="text-white font-bold text-xs bg-blue-900/30 p-2 rounded inline-block">
+                        No pressure to build anything.
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-xl border-t-4 border-t-emerald-500">
+                    <div class="text-emerald-500 font-mono text-xs uppercase tracking-widest font-bold mb-4">Step 3</div>
+                    <h3 class="text-xl font-bold text-white mb-4">Targeted Solution</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Only if it makes sense, I design and build a fully custom application - branded to your business, tailored to your exact workflow, designed for the people who actually use it.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- WHAT LEADERS SAY -->
-    <section class="py-14 border-b border-slate-800 bg-slate-950/30 relative z-20">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center gap-4 mb-10">
-                <h2 class="text-2xl font-bold text-white">Market Feedback</h2>
-                <div class="h-px bg-slate-800 flex-grow"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="glass-panel p-6 rounded-xl border border-slate-800 bg-slate-900/40">
-                    <p class="text-slate-300 text-sm leading-relaxed italic">
-                        “The validation layer removed rework from our inbound flow. Errors were blocked at source, not corrected weeks later.”
-                    </p>
-                    <p class="text-xs text-slate-500 font-mono mt-4 uppercase tracking-widest">
-                        Head of Logistics - UK operation
-                    </p>
+    <!-- WHO FOR -->
+    <section id="who-for" class="py-20 relative z-10 border-t border-slate-800/50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-2xl font-bold text-white mb-6">Who This Is For</h2>
+                    <p class="text-slate-400 mb-6">I typically work with businesses where:</p>
+                    <ul class="dot-list space-y-3">
+                        <li>off-the-shelf systems don’t fit how work is done</li>
+                        <li>staff rely on manual steps, notes, or memory</li>
+                        <li>data exists but cannot be trusted</li>
+                        <li>the owner knows “something is wrong”, but can’t clearly define it</li>
+                    </ul>
                 </div>
-
-                <div class="glass-panel p-6 rounded-xl border border-slate-800 bg-slate-900/40">
-                    <p class="text-slate-300 text-sm leading-relaxed italic">
-                        “Clear diagnosis, clear execution. The process stopped relying on individual judgement and became predictable.”
-                    </p>
-                    <p class="text-xs text-slate-500 font-mono mt-4 uppercase tracking-widest">
-                        Site Manager - Yorkshire F&B
-                    </p>
-                </div>
-
-                <div class="glass-panel p-6 rounded-xl border border-slate-800 bg-slate-900/40">
-                    <p class="text-slate-300 text-sm leading-relaxed italic">
-                        “Operational reporting became trustworthy. We reduced manual admin time and improved auditability.”
-                    </p>
-                    <p class="text-xs text-slate-500 font-mono mt-4 uppercase tracking-widest">
-                        Operations Lead - Warehouse
-                    </p>
+                <div>
+                    <h2 class="text-2xl font-bold text-white mb-6">Specific Contexts</h2>
+                    <p class="text-slate-400 mb-6">This includes, but is not limited to:</p>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-slate-900/40 border border-slate-800 rounded">
+                            <strong class="text-white block text-sm mb-1">Warehouses & Logistics</strong>
+                            <span class="text-slate-500 text-xs">Goods-in, stock, picking, shipping - blocking errors at entry.</span>
+                        </div>
+                        <div class="p-4 bg-slate-900/40 border border-slate-800 rounded">
+                            <strong class="text-white block text-sm mb-1">Clinics & Practices</strong>
+                            <span class="text-slate-500 text-xs">Cosmetic practices, physios - managing intake and flow without paper.</span>
+                        </div>
+                        <div class="p-4 bg-slate-900/40 border border-slate-800 rounded">
+                            <strong class="text-white block text-sm mb-1">Service-based SMEs</strong>
+                            <span class="text-slate-500 text-xs">Businesses running on ad-hoc tools that need a unified system.</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- SECTION: THE PROBLEMS -->
-    <section id="expertise" class="py-20 border-b border-slate-800/50 bg-slate-950/30 relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- EXAMPLES -->
+    <section id="examples" class="py-20 relative z-10 bg-slate-900/20">
+        <div class="max-w-6xl mx-auto px-4">
             <div class="mb-12">
-                <h2 class="text-2xl font-bold text-white mb-2">Operational Friction</h2>
-                <p class="text-slate-400">Do you recognize these symptoms in your business?</p>
-                <p class="text-slate-500 text-sm mt-3 max-w-2xl">Root cause: decisions made where rules should exist.</p>
+                <h2 class="text-2xl font-bold text-white">Examples of what this becomes</h2>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="glass-card p-8 rounded-xl">
-                    <div class="text-blue-400 mb-5">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-4">Process Inefficiency</h3>
-                    <ul class="friction-list">
-                        <li>High error rates requiring constant correction.</li>
-                        <li>Teams engaged in manual, low-value repetition.</li>
-                        <li>Confusion over roles and ownership.</li>
-                        <li>"Firefighting" becomes the daily standard.</li>
-                    </ul>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-6 border border-slate-800 rounded bg-slate-900/20">
+                    <h4 class="text-white font-bold mb-2">Patient registration and intake</h4>
+                    <p class="text-sm text-slate-400">Systems that remove admin chaos and prevent missing info at entry.</p>
                 </div>
-
-                <div class="glass-card p-8 rounded-xl">
-                    <div class="text-blue-400 mb-5">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-4">Information Silos</h3>
-                    <ul class="friction-list">
-                        <li>ERP data contradicts physical stock.</li>
-                        <li>Critical info trapped in emails/spreadsheets.</li>
-                        <li>Lack of visibility on true operational costs.</li>
-                        <li>Departments working in isolation.</li>
-                    </ul>
+                <div class="p-6 border border-slate-800 rounded bg-slate-900/20">
+                    <h4 class="text-white font-bold mb-2">Goods-in and warehouse movement</h4>
+                    <p class="text-sm text-slate-400">Tools that block errors at the point of entry, not during audits.</p>
                 </div>
-
-                <div class="glass-card p-8 rounded-xl">
-                    <div class="text-blue-400 mb-5">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-4">Digital Disconnect</h3>
-                    <ul class="friction-list">
-                        <li>Software that doesn't fit the floor workflow.</li>
-                        <li>Reliance on "Shadow IT" (unmanaged tools).</li>
-                        <li>No automation for repetitive data entry.</li>
-                        <li>Built around tool limits, not business needs.</li>
-                    </ul>
+                <div class="p-6 border border-slate-800 rounded bg-slate-900/20">
+                    <h4 class="text-white font-bold mb-2">Internal dashboards</h4>
+                    <p class="text-sm text-slate-400">Replacing fragmented spreadsheets with a single operational truth.</p>
+                </div>
+                <div class="p-6 border border-slate-800 rounded bg-slate-900/20">
+                    <h4 class="text-white font-bold mb-2">Simple focused systems</h4>
+                    <p class="text-sm text-slate-400">Staff actually use them - without training fatigue.</p>
                 </div>
             </div>
-            
-            <div class="mt-12 text-center">
-                <a href="case-study.html" class="inline-flex items-center gap-2 text-blue-400 font-bold hover:text-blue-300 transition uppercase tracking-widest text-xs">
-                    See how I solve these problems 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                </a>
-            </div>
+            <p class="mt-8 text-center text-slate-500 font-bold">Different businesses. Same principle.</p>
         </div>
     </section>
 
-    <!-- SECTION: ENGAGEMENT -->
-    <section id="solutions" class="py-24 relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-16 text-center md:text-left">
-                <h2 class="text-3xl font-bold text-white mb-2">Engagement</h2>
-                <p class="text-slate-400">One entry point. Clear scope. Diagnosis first.</p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div class="p-8 rounded-2xl bg-slate-900/40 border border-slate-800 hover:border-blue-500/50 transition duration-300 group">
-                    <div class="w-12 h-12 bg-blue-900/20 rounded-lg flex items-center justify-center mb-6 text-blue-400 group-hover:scale-110 transition">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2a4 4 0 014-4h2m-6 6h6m2 0a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2-2v8a2 2 0 00-2 2h2" /></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-4">Operational Diagnosis</h3>
-                    <p class="text-slate-400 mb-6 text-sm leading-relaxed">
-                        I examine how work flows, where decisions create cost, and why data becomes unreliable.
-                        You receive a practical blueprint: what to enforce, redesign, or instrument - with a clear ROI hypothesis.
-                    </p>
-                    <ul class="tech-list text-slate-300 text-sm font-mono space-y-2">
-                        <li>On-site or remote discovery</li>
-                        <li>Decision points map</li>
-                        <li>Root-cause findings</li>
-                        <li>Blueprint + implementation options</li>
-                    </ul>
-                </div>
-
-                <div class="p-8 rounded-2xl bg-slate-900/40 border border-slate-800 hover:border-blue-500/50 transition duration-300 group">
-                    <div class="w-12 h-12 bg-emerald-900/20 rounded-lg flex items-center justify-center mb-6 text-emerald-400 group-hover:scale-110 transition">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-4">Implementation (Optional)</h3>
-                    <p class="text-slate-400 mb-6 text-sm leading-relaxed">
-                        Leading the stabilisation: process redesign, SOP + ownership, and industrial-grade validation layers that block errors at entry.
-                        Tools are an outcome, not a starting assumption.
-                    </p>
-                    <ul class="tech-list text-slate-300 text-sm font-mono space-y-2">
-                        <li>Process layout redesign</li>
-                        <li>Clear SOPs + ownership model</li>
-                        <li>Proactive signals & controls</li>
-                        <li>Validation systems implementation</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- SECTION: METHODOLOGY -->
-    <section id="method" class="py-24 bg-slate-900/30 border-t border-slate-800 relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 max-w-3xl mx-auto">
-                <h2 class="text-3xl font-bold text-white mb-6">Audit-to-Implementation</h2>
-                <p class="text-slate-400 text-lg leading-relaxed">
-                    Modular engagement. No open-ended contracts. You retain full control over the decision to move to the next phase.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left relative">
-                <div class="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-blue-900/50 to-transparent -z-10"></div>
-
-                <div class="relative glass-card p-8 rounded-xl border border-slate-800 bg-deep-system">
-                    <div class="text-blue-500 font-bold text-xs tracking-widest uppercase mb-4 flex items-center gap-2">
-                        <span class="w-2 h-2 bg-blue-500 rounded-full"></span> Phase 01
-                    </div>
-                    <h4 class="text-xl text-white font-bold mb-4">Operational Blueprint</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">
-                        Audit of key processes and stakeholder interviews. Analysis isolates root causes, not just symptoms.
-                    </p>
-                </div>
-
-                <div class="relative glass-card p-8 rounded-xl border border-blue-900/30 bg-deep-system">
-                    <div class="text-blue-400 font-bold text-xs tracking-widest uppercase mb-4 flex items-center gap-2">
-                        <span class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span> Phase 02
-                    </div>
-                    <h4 class="text-xl text-white font-bold mb-4">Deterministic Design</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed mb-4">
-                        Comprehensive solution design, roadmap, and ROI hypothesis. You get a complete blueprint.
-                    </p>
-                    <div class="p-3 bg-blue-900/20 border-l-2 border-blue-500 rounded-r text-[10px] text-blue-100 uppercase tracking-wide">
-                        The Decision Point
-                    </div>
-                </div>
-
-                <div class="relative glass-card p-8 rounded-xl border border-slate-800 bg-deep-system">
-                    <div class="text-emerald-500 font-bold text-xs tracking-widest uppercase mb-4 flex items-center gap-2">
-                        <span class="w-2 h-2 bg-emerald-500 rounded-full"></span> Phase 03
-                    </div>
-                    <h4 class="text-xl text-white font-bold mb-4">Stabilisation</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">
-                        Full ownership of deployment. Building tools, training teams, and hands-on stabilisation until results are delivered.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER / CTA -->
-    <footer id="contact" class="bg-slate-950 border-t border-slate-800 py-20 relative z-10">
-        <div class="max-w-3xl mx-auto text-center px-4">
-            <h2 class="text-3xl font-bold text-white mb-6 italic">Let's remove uncertainty.</h2>
+    <!-- FOOTER -->
+    <footer class="py-20 border-t border-slate-800 bg-slate-950 relative z-10">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">Let’s identify the gap first.</h2>
             <p class="text-slate-400 mb-10 text-lg">
-                I deliver process reliability. If your profit is leaking through manual processes, I will tell you how to stop it.
+                If you feel your business is running on workarounds, I will help you understand where control is leaking - and whether a custom system is the right fix.
             </p>
-            
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
-                <a href="mailto:dyczkowski.kamil@gmail.com" class="inline-block rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 p-[1px] shadow-2xl">
-                    <span class="block px-12 py-5 bg-slate-950 text-white font-bold rounded-md hover:bg-slate-900 transition">
-                        Request Diagnosis
-                    </span>
-                </a>
-            </div>
-
-            <div class="mt-20 text-slate-600 text-sm font-mono tracking-widest uppercase">
-                &copy; 2026 Kamil Dyczkowski | Yorkshire & UK Operational Process Architect
-            </div>
-            <div class="mt-2">
-                <a href="https://kamildyczkowski.com/low-noise-leadership" class="text-[10px] text-slate-900 hover:text-slate-800 transition-colors uppercase tracking-[0.3em]">Low Noise Leadership</a>
-            </div>
+            <a href="mailto:dyczkowski.kamil@gmail.com" class="inline-block px-12 py-5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-lg transition shadow-glow text-lg">
+                Request Operational Review
+            </a>
+            <p class="mt-16 text-[10px] text-slate-600 font-mono uppercase tracking-widest">
+                © 2026 Kamil Dyczkowski | Yorkshire, UK
+            </p>
         </div>
     </footer>
 
-    <!-- MOBILE MENU SCRIPT -->
+    <!-- LOGIC SCRIPT -->
     <script>
-        const btn = document.getElementById('mobile-menu-toggle');
-        const menu = document.getElementById('mobile-menu');
-        const hamburgerIcon = document.getElementById('hamburger-icon');
-        const closeIcon = document.getElementById('close-icon');
+        // CHAOS MODULE LOGIC - REWRITTEN FOR "SORTING" EFFECT
+        (() => {
+            const arena = document.getElementById('arena');
+            const btnChaos = document.getElementById('btnChaos');
+            const btnControl = document.getElementById('btnControl');
+            
+            // Configuration
+            const cfg = { 
+                padding: 10, 
+                friction: 0.98, 
+                drift: 0.05, 
+                maxV: 15, 
+                impulse: 5, 
+                impulseRadius: 300 
+            };
 
-        btn.addEventListener('click', () => {
-            const isHidden = menu.classList.contains('hidden');
-            if (isHidden) {
-                menu.classList.remove('hidden');
-                hamburgerIcon.classList.add('hidden');
-                closeIcon.classList.remove('hidden');
-            } else {
-                menu.classList.add('hidden');
-                hamburgerIcon.classList.remove('hidden');
-                closeIcon.classList.add('hidden');
+            let isControl = false; 
+            let rafId = null;
+            let tiles = [];
+
+            // Data Definition
+            const tilesSpec = [
+                { id:'1', group:'Information', cls:'accent-red', k:'NOTES', t:'Paper Fragments' },
+                { id:'2', group:'Information', cls:'accent-amber',k:'HANDOVERS', t:'Memory Based' },
+                { id:'3', group:'Information', cls:'accent-blue',k:'SPREADSHEET', t:'Version Drift' },
+                { id:'4', group:'Information', cls:'accent-blue',k:'DEFINITIONS', t:'Ambiguity' },
+                { id:'5', group:'Information', cls:'accent-amber',k:'DUPLICATES', t:'False Data' },
+                
+                { id:'6', group:'Execution', cls:'accent-emerald',k:'WORKFLOW', t:'Variance' },
+                { id:'7', group:'Execution', cls:'accent-red', k:'MISSED', t:'Late Discovery' },
+                { id:'8', group:'Execution', cls:'accent-violet',k:'SCHEDULING', t:'Bottlenecks' },
+                { id:'9', group:'Execution', cls:'accent-amber', k:'HANDOFFS', t:'Lost Tasks' },
+                { id:'10', group:'Execution', cls:'accent-emerald', k:'QUALITY', t:'Manual Checks' },
+                
+                { id:'11', group:'Inventory', cls:'accent-amber', k:'INVENTORY', t:'Guesswork' },
+                { id:'12', group:'Inventory', cls:'accent-blue',k:'CONSUMABLES', t:'Silent Waste' },
+                { id:'13', group:'Inventory', cls:'accent-violet',k:'SUPPLIERS', t:'Reactive' },
+                { id:'14', group:'Inventory', cls:'accent-emerald',k:'MOVEMENT', t:'Invisible Flow' },
+                
+                { id:'15', group:'Risk', cls:'accent-blue', k:'ALERTS', t:'Too Late' },
+                { id:'16', group:'Risk', cls:'accent-emerald',k:'AUDIT', t:'No Trace' },
+                { id:'17', group:'Risk', cls:'accent-amber',k:'BILLING', t:'Leaks' },
+                { id:'18', group:'Risk', cls:'accent-red',k:'COMPLIANCE', t:'Informal' }
+            ];
+
+            const groups = [ 
+                { key:'Information', title:'INFORMATION' }, 
+                { key:'Execution', title:'EXECUTION' }, 
+                { key:'Inventory', title:'INVENTORY' }, 
+                { key:'Risk', title:'RISK & MONEY' } 
+            ];
+
+            // Helpers
+            function rand(min,max){ return Math.random()*(max-min)+min; }
+
+            // Initialization
+            function init(){
+                // Create Tiles
+                tilesSpec.forEach(spec => {
+                    const el = document.createElement('div');
+                    el.className = `tile ${spec.cls}`;
+                    el.innerHTML = `
+                        <div class="hdr">${spec.k}</div>
+                        <div class="body">
+                            <div class="t">${spec.t}</div>
+                            <div class="d">Normalized & Verified</div>
+                        </div>
+                    `;
+                    arena.appendChild(el);
+                    
+                    tiles.push({
+                        el, spec,
+                        x: rand(20, arena.clientWidth - 280),
+                        y: rand(20, arena.clientHeight - 100),
+                        vx: rand(-4,4), vy: rand(-4,4),
+                        rot: rand(-15, 15)
+                    });
+                });
+
+                // Create Control Grid (Hidden initially)
+                const grid = document.createElement('div');
+                grid.className = 'control-wrap';
+                grid.id = 'controlGrid';
+                
+                groups.forEach(g => {
+                    const col = document.createElement('div');
+                    col.className = 'control-col';
+                    col.innerHTML = `<div class="control-head">${g.title}</div><div class="control-body" id="grp-${g.key}"></div>`;
+                    grid.appendChild(col);
+                });
+                arena.appendChild(grid);
+
+                // Events
+                btnChaos.addEventListener('click', setChaos);
+                btnControl.addEventListener('click', setControl);
+                
+                // Mouse Interaction for Chaos
+                arena.addEventListener('mousemove', (e) => {
+                    if(isControl) return;
+                    const rect = arena.getBoundingClientRect();
+                    const mx = e.clientX - rect.left;
+                    const my = e.clientY - rect.top;
+                    
+                    tiles.forEach(t => {
+                        const dx = (t.x + 130) - mx;
+                        const dy = (t.y + 40) - my;
+                        const dist = Math.sqrt(dx*dx + dy*dy);
+                        if(dist < 150) {
+                            t.vx += (dx/dist) * 0.8;
+                            t.vy += (dy/dist) * 0.8;
+                        }
+                    });
+                });
+
+                startLoop();
             }
-        });
 
-        const menuLinks = menu.querySelectorAll('a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-                hamburgerIcon.classList.remove('hidden');
-                closeIcon.classList.add('hidden');
-            });
-        });
+            // Loop
+            function startLoop(){
+                const loop = () => {
+                    if(!isControl) updateChaos();
+                    rafId = requestAnimationFrame(loop);
+                };
+                rafId = requestAnimationFrame(loop);
+            }
+
+            function updateChaos(){
+                tiles.forEach(t => {
+                    t.x += t.vx;
+                    t.y += t.vy;
+                    
+                    // Bounce
+                    if(t.x < 0 || t.x > arena.clientWidth - 260) t.vx *= -1;
+                    if(t.y < 0 || t.y > arena.clientHeight - 80) t.vy *= -1;
+                    
+                    // Friction & Drift
+                    t.vx *= 0.99; t.vy *= 0.99;
+                    t.vx += rand(-0.02, 0.02); t.vy += rand(-0.02, 0.02);
+                    
+                    t.rot += rand(-0.1, 0.1);
+
+                    t.el.style.transform = `translate(${t.x}px, ${t.y}px) rotate(${t.rot}deg)`;
+                });
+            }
+
+            // --- THE TRANSITION LOGIC ---
+            
+            function setControl(){
+                if(isControl) return;
+                isControl = true;
+                arena.classList.add('control');
+                
+                // 1. Calculate Destination for each tile
+                const grid = document.getElementById('controlGrid');
+                grid.style.opacity = '1';
+                grid.style.pointerEvents = 'auto';
+
+                const colMap = {};
+                groups.forEach(g => {
+                    const colBody = document.getElementById(`grp-${g.key}`);
+                    colMap[g.key] = colBody;
+                });
+
+                // Animate One by One (Sorting Effect)
+                tiles.forEach((t, i) => {
+                    setTimeout(() => {
+                        const targetCol = colMap[t.spec.group];
+                        
+                        // Reset styles for list view
+                        t.el.style.transform = 'none';
+                        t.el.style.position = 'relative';
+                        t.el.style.width = '100%';
+                        t.el.style.top = 'auto';
+                        t.el.style.left = 'auto';
+                        t.el.style.marginBottom = '6px';
+                        t.el.style.zIndex = 'auto';
+                        
+                        targetCol.appendChild(t.el);
+                        
+                        // Animation: Slide in from bottom/fade
+                        t.el.animate([
+                            { transform: 'translateY(40px) scale(0.9)', opacity: 0 },
+                            { transform: 'translateY(0) scale(1)', opacity: 1 }
+                        ], {
+                            duration: 400,
+                            easing: 'cubic-bezier(0.2, 0.8, 0.2, 1)'
+                        });
+
+                    }, i * 100); // 100ms delay stagger
+                });
+            }
+
+            function setChaos(){
+                if(!isControl) return;
+                isControl = false;
+                arena.classList.remove('control');
+                const grid = document.getElementById('controlGrid');
+                grid.style.opacity = '0';
+                grid.style.pointerEvents = 'none';
+
+                // Reset tiles to absolute
+                tiles.forEach(t => {
+                    arena.appendChild(t.el);
+                    t.el.style.position = 'absolute';
+                    t.el.style.width = '260px';
+                    // Randomize slightly so they don't stack perfectly
+                    t.x = rand(50, arena.clientWidth - 300);
+                    t.y = rand(50, arena.clientHeight - 100);
+                    t.el.style.transform = `translate(${t.x}px, ${t.y}px)`;
+                    t.el.style.marginBottom = '0';
+                });
+            }
+
+            init();
+        })();
     </script>
-
 </body>
 </html>
