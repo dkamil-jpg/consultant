@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KVJ5JFSX');</script>
+    <!-- Google tag (gtag.js) - Direct GA4 Implementation -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZRZ1ZF5RW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9ZRZ1ZF5RW');
+    </script>
+    
     <title>Operational Control & Process Optimization | Consulting</title>
     <meta name="description" content="Restore operational control and eliminate process gaps. Diagnostic analysis, custom systems design, and full implementation for manufacturing and e-commerce operations.">
     <meta name="keywords" content="operational consulting, process optimization, business systems, manufacturing, e-commerce logistics">
-    <meta name="author" content="Kamil">
+    <meta name="author" content="Kamil Dyczkowski">
 
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -101,13 +108,6 @@
             content: "✓"; position: absolute; left: 0; color: #3b82f6; font-weight: bold;
         }
 
-        ul.dot-list li {
-            position: relative; padding-left: 1.25rem; margin-bottom: 0.5rem; color: #94a3b8; font-size: 0.95rem;
-        }
-        ul.dot-list li::before {
-            content: "•"; position: absolute; left: 0; color: #ef4444; font-weight: bold;
-        }
-
         :root{ --card: rgba(15,23,42,.95); --card-strong: #0f172a; }
         
         .module-shell {
@@ -189,8 +189,6 @@
 </head>
 <body class="bg-deep-system text-slate-300 selection:bg-blue-500 selection:text-white">
 
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVJ5JFSX"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="grid-pattern"></div>
 
     <nav class="fixed w-full z-50 glass-panel">
@@ -202,9 +200,9 @@
                 </a>
                 
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest">About</a>
-                    <a href="#chaos" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest">Chaos/Control</a>
-                    <a href="#how-it-works" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest">Process</a>
+                    <a href="#about" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">About</a>
+                    <a href="#chaos" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Chaos/Control</a>
+                    <a href="#how-it-works" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Process</a>
                     <a href="mailto:dyczkowski.kamil@gmail.com" class="px-5 py-2 rounded bg-blue-700 text-white font-bold hover:bg-blue-600 transition text-xs uppercase tracking-wide">
                         Request Review
                     </a>
