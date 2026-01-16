@@ -1,592 +1,599 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Google tag (gtag.js) - Direct GA4 Implementation -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZRZ1ZF5RW"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      gtag('config', 'G-9ZRZ1ZF5RW');
-    </script>
-    
-    <title>Operational Control & Process Optimization | Consulting</title>
-    <meta name="description" content="Restore operational control and eliminate process gaps. Diagnostic analysis, custom systems design, and full implementation for manufacturing and e-commerce operations.">
-    <meta name="keywords" content="operational consulting, process optimization, business systems, manufacturing, e-commerce logistics">
-    <meta name="author" content="Kamil Dyczkowski">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZRZ1ZF5RW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9ZRZ1ZF5RW');
+  </script>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        slate: { 850: '#151e2e', 950: '#020617' }
-                    },
-                    boxShadow: {
-                        glow: '0 0 25px rgba(37,99,235,0.2)',
-                        machine: 'inset 0 0 20px rgba(0,0,0,0.6)'
-                    },
-                    animation: {
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    }
-                }
-            }
-        }
-    </script>
+  <title>Business Solutions & Systems | Kamil Dyczkowski</title>
+  <meta name="description" content="Operator-level diagnosis, system design, and process enforcement for SMEs across manufacturing, warehouses, and appointment-driven service operations." />
+  <meta name="author" content="Kamil Dyczkowski" />
 
-    <style>
-        body { font-family: 'Inter', sans-serif; color: #cbd5e1; background-color: #020617; }
-        
-        .bg-deep-system {
-            background-color: #020617; 
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.08) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(15, 23, 42, 1) 0px, transparent 50%);
-            position: relative;
-            overflow-x: hidden;
-        }
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
-        .grid-pattern {
-            position: absolute;
-            inset: 0;
-            background-size: 40px 40px;
-            background-image: 
-                linear-gradient(to right, rgba(51, 65, 85, 0.2) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(51, 65, 85, 0.2) 1px, transparent 1px);
-            mask-image: linear-gradient(to bottom, black 10%, transparent 90%);
-            z-index: 0;
-            pointer-events: none;
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            slate: { 850: '#151e2e', 950: '#020617' }
+          },
+          boxShadow: {
+            glow: '0 0 25px rgba(37,99,235,0.2)',
+            machine: 'inset 0 0 20px rgba(0,0,0,0.6)'
+          }
         }
+      }
+    }
+  </script>
 
-        .glass-panel {
-            background: rgba(2, 6, 23, 0.9);
-            backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(51, 65, 85, 0.4);
-        }
+  <style>
+    body { font-family: 'Inter', sans-serif; color: #cbd5e1; background-color: #020617; }
 
-        .glass-card {
-            background: rgba(15, 23, 42, 0.4);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(51, 65, 85, 0.5);
-            transition: border-color 0.2s ease;
-        }
-        .glass-card:hover {
-            border-color: rgba(59, 130, 246, 0.5);
-        }
+    .bg-deep-system {
+      background-color: #020617;
+      background-image:
+        radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.08) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(15, 23, 42, 1) 0px, transparent 50%);
+      position: relative;
+      overflow-x: hidden;
+    }
 
-        .btn-primary {
-            background: #ffffff; color: #0f172a; font-weight: 700;
-            padding: 14px 28px; border-radius: 6px;
-            transition: all 0.2s; letter-spacing: -0.01em; display: inline-flex; justify-content: center; align-items: center;
-        }
-        .btn-primary:hover { background: #cbd5e1; transform: translateY(-1px); }
+    .grid-pattern {
+      position: absolute;
+      inset: 0;
+      background-size: 40px 40px;
+      background-image:
+        linear-gradient(to right, rgba(51, 65, 85, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(51, 65, 85, 0.1) 1px, transparent 1px);
+      mask-image: linear-gradient(to bottom, black 10%, transparent 90%);
+      z-index: 0;
+      pointer-events: none;
+    }
 
-        .btn-secondary {
-            background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(71, 85, 105, 0.6);
-            color: #e2e8f0; font-weight: 600; padding: 14px 28px; border-radius: 6px;
-            transition: all 0.2s; display: inline-flex; justify-content: center; align-items: center;
-        }
-        .btn-secondary:hover { background: rgba(30, 41, 59, 0.8); border-color: #94a3b8; transform: translateY(-1px); }
+    .glass-panel {
+      background: rgba(2, 6, 23, 0.9);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(51, 65, 85, 0.4);
+    }
 
-        ul.check-list li {
-            position: relative; padding-left: 1.5rem; margin-bottom: 0.75rem;
-        }
-        ul.check-list li::before {
-            content: "✓"; position: absolute; left: 0; color: #3b82f6; font-weight: bold;
-        }
+    .glass-card {
+      background: rgba(15, 23, 42, 0.4);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(51, 65, 85, 0.5);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .glass-card:hover {
+      border-color: rgba(59, 130, 246, 0.5);
+      background: rgba(30, 41, 59, 0.4);
+    }
 
-        :root{ --card: rgba(15,23,42,.95); --card-strong: #0f172a; }
-        
-        .module-shell {
-            position: relative; overflow: hidden; border-radius: 12px;
-            background: #020617;
-            border: 1px solid rgba(51, 65, 85, 0.6);
-            box-shadow: var(--machine);
-        }
-        .arena {
-            position: relative; height: 600px; border-radius: 8px; overflow: hidden;
-            background: radial-gradient(circle at 50% 50%, rgba(30, 41, 59, 0.2), rgba(2, 6, 23, 0.8));
-        }
-        .tile {
-            position:absolute; width: 260px; border-radius: 8px;
-            background: var(--card); border: 1px solid rgba(51, 65, 85, 0.8);
-            padding: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-            user-select: none; touch-action: none; will-change: transform, opacity;
-            transform-style: preserve-3d; overflow: hidden;
-            z-index: 10;
-        }
-        .tile::before {
-            content:""; position:absolute; left:0; top:0; bottom: 0; width: 4px;
-            background: var(--accent, rgba(59,130,246,.9)); opacity: 1;
-        }
-        .tile .hdr {
-            position: relative; display:flex; align-items:center; justify-content: space-between; gap: 10px;
-            font-family: "JetBrains Mono", monospace; font-size: 10px; letter-spacing: .05em;
-            text-transform: uppercase; color: #94a3b8; font-weight: 700; margin-bottom: 8px; margin-left: 8px;
-        }
-        .tile .body { position: relative; margin-left: 8px; }
-        .tile .t { font-weight: 700; color: #f1f5f9; font-size: 13px; margin-bottom: 4px; }
-        .tile .d { font-size: 11px; line-height: 1.4; color: #94a3b8; }
-        
-        .accent-red{ --accent: #ef4444; border-left-color: #ef4444; }
-        .accent-amber{ --accent: #f59e0b; border-left-color: #f59e0b; }
-        .accent-blue{ --accent: #3b82f6; border-left-color: #3b82f6; }
-        .accent-emerald{ --accent: #10b981; border-left-color: #10b981; }
-        .accent-violet{ --accent: #8b5cf6; border-left-color: #8b5cf6; }
+    .btn-primary {
+      background: #ffffff;
+      color: #0f172a;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 6px;
+      transition: all 0.2s;
+      letter-spacing: -0.01em;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .btn-primary:hover { background: #cbd5e1; transform: translateY(-1px); }
 
-        .chaos .tile { cursor: grab; }
-        .chaos .tile:active { cursor: grabbing; }
-        
-        .control .tile {
-            width: 100%; max-width: 100%;
-            cursor: default;
-            background: rgba(15,23,42, 0.8); 
-            border: 1px solid rgba(51, 65, 85, 0.4);
-            border-left: 4px solid var(--accent);
-            box-shadow: none; padding: 8px 12px; margin-bottom: 6px;
-        }
-        .control .tile .d { display: none; } 
-        .control .tile:hover { background: #1e293b; z-index: 50; }
-        .control .tile:hover .d { display: block; margin-top: 6px; animation: fadeIn 0.2s; }
-        
-        @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+    ul.check-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+    ul.check-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #3b82f6;
+      font-weight: bold;
+    }
 
-        .control-wrap {
-            position: absolute; inset: 16px; z-index: 5;
-            display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px;
-            align-items: start; opacity: 0; pointer-events: none;
-            transition: opacity 0.5s ease;
-        }
-        
-        .control-col {
-            background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(51, 65, 85, 0.5);
-            border-radius: 8px; height: 100%; display: flex; flex-direction: column; overflow: hidden;
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
-        }
-        .control-head {
-            padding: 12px; border-bottom: 1px solid rgba(51, 65, 85, 0.5); background: rgba(2, 6, 23, 0.6);
-            font-family: "JetBrains Mono", monospace; font-size: 11px; font-weight: 700; color: #cbd5e1; text-transform: uppercase;
-        }
-        .control-body { flex: 1; padding: 8px; overflow-y: auto; position: relative; }
+    .logo-item { cursor: pointer; transition: all 0.3s; opacity: 0.5; filter: grayscale(100%); }
+    .logo-item:hover { opacity: 1; filter: grayscale(0%); transform: scale(1.05); }
+    .impact-text { display: none; }
+    .impact-text.active { display: block; animation: fadeIn 0.4s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
 
-        @media (max-width: 1024px){ .control-wrap{ grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 640px){ .control-wrap{ grid-template-columns: 1fr; } .arena { height: 700px; } }
-    </style>
+    .reveal-btn {
+      cursor: pointer;
+      color: #3b82f6;
+      font-weight: bold;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+    .reveal-btn:hover { text-decoration: underline; }
+
+    /* FAQ */
+    details { border: 1px solid rgba(51, 65, 85, 0.5); border-radius: 10px; background: rgba(15, 23, 42, 0.35); }
+    details[open] { border-color: rgba(59, 130, 246, 0.45); background: rgba(30, 41, 59, 0.35); }
+    summary { cursor: pointer; list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+  </style>
 </head>
+
 <body class="bg-deep-system text-slate-300 selection:bg-blue-500 selection:text-white">
+  <div class="grid-pattern"></div>
 
-    <div class="grid-pattern"></div>
+  <nav class="fixed w-full z-50 glass-panel">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20 items-center">
+        <a href="#" class="flex flex-col justify-center group">
+          <span class="font-bold text-[15px] tracking-tight text-white leading-none uppercase">Kamil Dyczkowski</span>
+          <span class="text-[10px] text-slate-500 uppercase tracking-widest font-bold mt-1 group-hover:text-blue-400 transition">Business Solutions</span>
+        </a>
 
-    <nav class="fixed w-full z-50 glass-panel">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <a href="#" class="flex flex-col justify-center group">
-                    <span class="font-bold text-[15px] tracking-tight text-white leading-none uppercase">Kamil Dyczkowski</span>
-                    <span class="text-[10px] text-slate-500 uppercase tracking-widest font-bold mt-1 group-hover:text-blue-400 transition">Operational Solutions & Systems</span>
-                </a>
-                
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">About</a>
-                    <a href="#chaos" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Chaos/Control</a>
-                    <a href="#how-it-works" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Process</a>
-                    <a href="mailto:dyczkowski.kamil@gmail.com" class="px-5 py-2 rounded bg-blue-700 text-white font-bold hover:bg-blue-600 transition text-xs uppercase tracking-wide">
-                        Request Review
-                    </a>
-                </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#symptoms" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Symptoms</a>
+          <a href="#roadmap" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Roadmap</a>
+          <a href="#levels" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Offers</a>
+          <a href="#about" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">About</a>
 
-                <div class="md:hidden flex items-center">
-                   <a href="mailto:dyczkowski.kamil@gmail.com" class="text-blue-500 font-bold text-sm">Contact</a>
-                </div>
-            </div>
+          <span id="phone-container" class="reveal-btn" onclick="revealPhone()">[ Request Direct Line ]</span>
+
+          <a href="mailto:dyczkowski.kamil@gmail.com" class="px-5 py-2 rounded bg-blue-700 text-white font-bold hover:bg-blue-600 transition text-xs uppercase tracking-wide">Contact</a>
         </div>
-    </nav>
 
-    <header class="pt-32 pb-20 md:pt-48 md:pb-28 relative z-10">
-        <div class="max-w-5xl mx-auto px-4 text-center">
-            
-            <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-[1.1] tracking-tight mb-8">
-                Operational systems<br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">that fit how your business actually works</span>
-            </h1>
-            
-            <p class="text-lg md:text-xl text-slate-400 leading-relaxed mb-10 max-w-3xl mx-auto font-light">
-                I don't start with code. <strong>I start with diagnosis.</strong>
-                First, I identify where your process breaks - where money and time leak through manual workarounds. Then, I fill that gap with exactly what's missing: a tailored control system or a clear operational blueprint.
+        <div class="md:hidden flex items-center">
+          <a href="mailto:dyczkowski.kamil@gmail.com" class="text-blue-500 font-bold text-sm">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="pt-32 pb-16 md:pt-48 md:pb-18 relative z-10">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight mb-8">
+        Business systems that remove<br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">reliance on memory.</span>
+      </h1>
+
+      <div class="max-w-3xl mx-auto space-y-6 text-slate-400 text-base md:text-lg font-light leading-relaxed mb-10">
+        <p>
+          When turnover grows but revenue stays flat, or your schedule is so packed you are forced to turn away new clients,
+          <strong class="text-white">you have hit a ceiling.</strong>
+        </p>
+        <p>
+          That ceiling rarely comes from effort. It comes from fragmentation: disconnected tools, inconsistent handovers,
+          and workflows that only work when the right person remembers the right thing at the right time.
+        </p>
+        <p>
+          I build business solutions that restore order without flipping your operation upside down.
+          The outcome is comfort: clear priorities, a single source of truth, and fewer exceptions.
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="mailto:dyczkowski.kamil@gmail.com?subject=Request Operational Audit" class="btn-primary">Request Operational Audit</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ANCHOR -->
+  <section class="pb-14 md:pb-20 relative z-10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="glass-card rounded-2xl p-8 md:p-10 border border-slate-800/60">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <div class="md:col-span-1">
+            <div class="text-slate-500 font-mono text-[10px] uppercase tracking-widest font-bold mb-3">Positioning</div>
+            <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight leading-tight">
+              Process-first.<br />
+              System-second.
+            </h2>
+            <p class="mt-4 text-sm text-slate-400 leading-relaxed">
+              Operator-level architecture delivered with best-practice discipline.
+              Comfort and order are the outcome.
             </p>
-            
-            <p class="text-sm font-bold text-white mb-10 tracking-wide uppercase opacity-90">
-                No templates. No generic software. No guesswork.
+          </div>
+
+          <div class="md:col-span-2 space-y-4 text-slate-300 leading-relaxed">
+            <p class="text-sm md:text-base">
+              I am not a consultant who delivers a report, and not a typical developer who starts with tools.
+              I enter when process integrity has reached its limit and the business is capped by internal chaos.
+            </p>
+            <p class="text-sm md:text-base">
+              My work is a straight line: <strong class="text-white">diagnosis</strong>, <strong class="text-white">system design</strong>, and implementation of a
+              <strong class="text-white">strict enforcement layer</strong>.
+              Enforcement is not about controlling people. It protects the process so teams cannot accidentally create errors,
+              and nobody has to rely on memory to keep work correct.
             </p>
 
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="mailto:dyczkowski.kamil@gmail.com" class="btn-primary">
-                    Request Operational Review
-                </a>
-                <a href="#about" class="btn-secondary">
-                    See How It Works
-                </a>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+              <div class="glass-card p-4 rounded-xl border border-slate-800/60">
+                <div class="text-blue-400 font-mono text-[10px] uppercase tracking-widest font-bold mb-2">Diagnosis</div>
+                <div class="text-sm text-slate-300">Identify real failure points, not symptoms.</div>
+              </div>
+              <div class="glass-card p-4 rounded-xl border border-slate-800/60">
+                <div class="text-blue-400 font-mono text-[10px] uppercase tracking-widest font-bold mb-2">Design</div>
+                <div class="text-sm text-slate-300">Rebuild workflow logic using proven patterns.</div>
+              </div>
+              <div class="glass-card p-4 rounded-xl border border-slate-800/60">
+                <div class="text-blue-400 font-mono text-[10px] uppercase tracking-widest font-bold mb-2">Enforcement</div>
+                <div class="text-sm text-slate-300">Make correct actions unavoidable.</div>
+              </div>
             </div>
-        </div>
-    </header>
 
-    <section class="border-y border-slate-800/60 bg-slate-950/40 relative z-20 backdrop-blur-sm">
-        <div class="max-w-7xl mx-auto px-4 py-12">
-            <p class="text-center text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-10">
-                Operational impact delivered for
+            <p class="text-xs text-slate-500">
+              Delivery is fast by design. Timelines depend on scope, constraints, and how much of the operation must be stabilized.
             </p>
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-14 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition duration-500">
-                <img src="morislogo.jpg" alt="Morrisons" class="h-8 md:h-10 w-auto object-contain">
-                <img src="jlrlogo.jpg" alt="JLR" class="h-8 md:h-10 w-auto object-contain">
-                <img src="xandlogo.jpg" alt="Xandor" class="h-8 md:h-10 w-auto object-contain">
-                <img src="CBlogo.jpg" alt="Cartwright & Butler" class="h-8 md:h-10 w-auto object-contain">
-                <img src="proplogo.jpg" alt="Pro-Pak" class="h-8 md:h-10 w-auto object-contain">
-                <img src="NSlogo.jpg" alt="NetSuite" class="h-8 md:h-10 w-auto object-contain">
-            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="about" class="py-24 relative z-10 bg-slate-900/20">
-        <div class="max-w-5xl mx-auto px-4">
-            <div class="glass-card rounded-xl p-8 md:p-12 border border-slate-800/60">
-                <div class="flex flex-col md:flex-row gap-12 items-start">
-                    
-                    <div class="w-full md:w-[300px] flex-shrink-0 flex flex-col gap-4">
-                        <div class="w-full rounded-lg bg-slate-950 border border-slate-700 overflow-hidden relative shadow-2xl">
-                            <img src="img.jpg" alt="Kamil Dyczkowski" class="w-full h-auto object-cover hover:scale-105 transition duration-700">
-                        </div>
-                        <div class="text-left pl-1">
-                            <h3 class="text-white font-bold text-lg">Kamil Dyczkowski</h3>
-                            <div class="text-blue-500 text-[11px] font-mono uppercase tracking-widest mt-1 font-bold">Process & Systems Architect</div>
-                            <div class="text-slate-500 text-[11px] mt-1 font-mono uppercase">Yorkshire, UK</div>
-                        </div>
-                    </div>
+  <!-- SYMPTOMS -->
+  <section id="symptoms" class="py-20 relative z-10 border-y border-slate-800/60 bg-slate-950/40 backdrop-blur-sm">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-white mb-4">Why Your Current Setup is Failing You</h2>
+        <p class="text-slate-500 font-mono text-sm uppercase tracking-widest">Identify the leak in your operation</p>
+      </div>
 
-                    <div class="flex-grow space-y-6 text-slate-300 leading-relaxed text-sm md:text-base">
-                        <h2 class="text-2xl font-bold text-white mb-6">I don’t sell software.</h2>
-                        
-                        <p>
-                            I restore operational control. I sit between strategy and the shop floor - where most “digital transformations” quietly fail. Not because the tools are bad, but because no one designed <strong class="text-white">control</strong> into the process.
-                        </p>
-                        <p>
-                            For over 20 years, I have gone into real operations - from NPI programs to high-volume e-commerce logistics - and found where money, time, and trust leak out every day. Whether it's inventory drift masked as variance, handovers that rely on memory, or manual rework treated as "normal".
-                        </p>
-                        <p class="pl-4 border-l-2 border-blue-500 italic text-slate-400">
-                            I don’t automate chaos. I expose it, strip it down, and rebuild the process so outcomes are enforced, not hoped for.
-                        </p>
-                        <p>
-                            Code is just an instrument. The real work is designing a control layer that makes the right action unavoidable and the wrong one impossible.
-                        </p>
-                        <p>
-                            You don’t need another generic app, dashboard, or “best practice.” You need a system that reflects how your operation actually works.
-                        </p>
-                        <p class="font-bold text-white pt-2">
-                            That is what I build.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="glass-card p-8 rounded-xl border-t-4 border-t-blue-500 h-full">
+          <h3 class="text-xl font-bold text-white mb-4">1. Warehouse and inventory control</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            If your warehouse relies on memory and paper, you are not just slow, you are leaking money.
+            I implement lifecycle control from Goods-In and stock movement to counts, write-offs, and smart alerts.
+          </p>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Shelf-life (BBE) tracking, picking logic, scan-based validation, and exception handling are enforced by the system,
+            not managed by memory.
+          </p>
         </div>
-    </section>
 
-    <section class="py-20 relative z-10 border-t border-slate-800/50">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <div class="text-[10px] font-mono text-blue-400 uppercase tracking-widest mb-4">The Gap</div>
-                    <h2 class="text-3xl font-bold text-white mb-6">Most businesses don’t have a “software problem”.</h2>
-                    <p class="text-slate-400 text-lg leading-relaxed mb-6">
-                        They have process gaps. Places where work relies on memory, interpretation, or workarounds. That’s where errors, delays, and frustration are created.
-                    </p>
-                    <p class="text-white font-bold text-lg border-l-4 border-blue-500 pl-4">
-                        I don’t start with tools. I start with how work really happens.
-                    </p>
-                </div>
-                
-                <div class="glass-card rounded-xl p-8 border border-slate-800/60">
-                    <h3 class="text-xl font-bold text-white mb-4">What you get is <span class="text-blue-400">control</span>.</h3>
-                    <p class="text-slate-400 text-sm mb-4">Depending on what we find during diagnosis, the solution might be:</p>
-                    <ul class="check-list text-slate-300 text-sm space-y-3">
-                        <li>a fully custom operational application (web or mobile)</li>
-                        <li>a lightweight internal system replacing spreadsheets</li>
-                        <li>a reporting layer that exposes the real problem</li>
-                        <li>or a clear improvement plan when software is not the solution</li>
-                    </ul>
-                    <div class="mt-6 pt-6 border-t border-slate-800/50 text-center">
-                        <p class="text-sm font-bold text-white italic">
-                            "The form follows the process - never the other way around."
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <div class="glass-card p-8 rounded-xl border-t-4 border-t-emerald-500 h-full">
+          <h3 class="text-xl font-bold text-white mb-4">2. Data integrity and compliance</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            Fragmented spreadsheets, calendars, and notes do not create a source of truth.
+            They create contradictions, blind spots, and liability. My solutions replace informal workarounds with structured data.
+          </p>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Systems can be designed to align with <strong class="text-white">UK GDPR</strong> and sensible retention practices.
+            Privacy is a design constraint, not an afterthought.
+          </p>
         </div>
-    </section>
 
-    <section id="chaos" class="py-24 relative z-10 bg-slate-900/30">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-8">
-                <div class="lg:col-span-8">
-                    <h2 class="text-3xl font-bold text-white">Visualising Control</h2>
-                    <p class="mt-4 text-slate-400 leading-relaxed max-w-2xl">
-                        When systems are disconnected, your operation relies on memory and manual checks. This creates noise. 
-                        A proper operational system acts as a <strong class="text-white">Logic Filter</strong> - catching errors instantly and sorting information into trusted stacks.
-                    </p>
-                </div>
-                <div class="lg:col-span-4 flex justify-start lg:justify-end gap-3">
-                    <button id="btnChaos" class="px-6 py-3 rounded bg-slate-800 text-slate-400 font-bold uppercase tracking-widest text-xs hover:bg-slate-700 transition border border-slate-700">
-                        Chaos Mode
-                    </button>
-                    <button id="btnControl" class="px-6 py-3 rounded bg-blue-700 text-white font-bold uppercase tracking-widest text-xs hover:bg-blue-600 transition shadow-glow">
-                        Activate Control
-                    </button>
-                </div>
-            </div>
-            
-            <div class="module-shell">
-                <div id="arena" class="arena chaos relative z-10"></div>
-            </div>
+        <div class="glass-card p-8 rounded-xl border-t-4 border-t-slate-600 h-full">
+          <h3 class="text-xl font-bold text-white mb-4">3. Off-the-shelf compromise</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            Generic software rarely fits the reality of your operation.
+            It forces workarounds, and every workaround becomes a leak.
+          </p>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            I apply best-practice patterns, then tailor the logic to your workflow so the tool supports the work
+            rather than bending it.
+          </p>
         </div>
-    </section>
 
-    <section id="how-it-works" class="py-24 relative z-10 border-t border-slate-800/50">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-white">How It Works</h2>
-                <p class="text-slate-400 mt-2">Diagnosis first. Then the right outcome.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="glass-card p-8 rounded-xl border-t-4 border-t-slate-600">
-                    <div class="text-slate-500 font-mono text-xs uppercase tracking-widest font-bold mb-4">Step 1</div>
-                    <h3 class="text-xl font-bold text-white mb-4">Operational Review</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        I analyse how your process actually runs: inputs, decisions, handovers, failure points. This often reveals issues the business was not consciously aware of.
-                    </p>
-                </div>
-
-                <div class="glass-card p-8 rounded-xl border-t-4 border-t-blue-500">
-                    <div class="text-blue-500 font-mono text-xs uppercase tracking-widest font-bold mb-4">Step 2</div>
-                    <h3 class="text-xl font-bold text-white mb-4">Decision</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                        You get a clear answer: where the real gap is, whether software will fix it, and what level of solution is justified.
-                    </p>
-                    <div class="text-white font-bold text-xs bg-blue-900/30 p-2 rounded inline-block">
-                        No pressure to build anything.
-                    </div>
-                </div>
-
-                <div class="glass-card p-8 rounded-xl border-t-4 border-t-emerald-500">
-                    <div class="text-emerald-500 font-mono text-xs uppercase tracking-widest font-bold mb-4">Step 3</div>
-                    <h3 class="text-xl font-bold text-white mb-4">Targeted Solution</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Only if it makes sense, I design and build a fully custom application - branded to your business, tailored to your exact workflow, designed for the people who actually use it.
-                    </p>
-                </div>
-            </div>
+        <div class="glass-card p-8 rounded-xl border-t-4 border-t-amber-500 h-full">
+          <h3 class="text-xl font-bold text-white mb-4">4. Workflow logic and priorities</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            Most bottlenecks are not caused by effort. They are caused by unclear priorities and inconsistent handovers.
+          </p>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Beyond software, I restructure workflows to reduce exceptions, shorten handovers, and make the next step obvious for the team.
+          </p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer class="py-20 border-t border-slate-800 bg-slate-950 relative z-10">
-        <div class="max-w-3xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold text-white mb-6">Let’s identify the gap first.</h2>
-            <p class="text-slate-400 mb-10 text-lg">
-                If you feel your business is running on workarounds, I will help you understand where control is leaking - and whether a custom system is the right fix.
+  <!-- SOCIAL PROOF / IMPACT -->
+  <section class="py-20 bg-slate-900/30 relative z-10 border-b border-slate-800/50">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold text-white mb-12 uppercase tracking-wide">Operational impact delivered for market leaders</h2>
+
+      <div class="flex flex-wrap justify-center items-center gap-10 md:gap-16">
+        <div class="logo-item" onmouseover="showImpact('morris')" onmouseout="hideImpact()">
+          <img src="morislogo.jpg" alt="Morrisons" class="h-10 w-auto object-contain" />
+        </div>
+        <div class="logo-item" onmouseover="showImpact('jlr')" onmouseout="hideImpact()">
+          <img src="jlrlogo.jpg" alt="JLR" class="h-10 w-auto object-contain" />
+        </div>
+        <div class="logo-item" onmouseover="showImpact('xandor')" onmouseout="hideImpact()">
+          <img src="xandlogo.jpg" alt="Xandor" class="h-10 w-auto object-contain" />
+        </div>
+        <div class="logo-item" onmouseover="showImpact('cb')" onmouseout="hideImpact()">
+          <img src="CBlogo.jpg" alt="Cartwright & Butler" class="h-10 w-auto object-contain" />
+        </div>
+        <div class="logo-item" onmouseover="showImpact('propak')" onmouseout="hideImpact()">
+          <img src="proplogo.jpg" alt="Pro-Pak" class="h-10 w-auto object-contain" />
+        </div>
+        <div class="logo-item" onmouseover="showImpact('netsuite')" onmouseout="hideImpact()">
+          <img src="NSlogo.jpg" alt="NetSuite" class="h-10 w-auto object-contain" />
+        </div>
+      </div>
+
+      <div class="mt-12 min-h-[80px] max-w-3xl mx-auto p-6 border-t border-slate-800 text-slate-400 text-sm italic">
+        <div id="default-impact">Hover over a partner logo to see the specific operational intervention.</div>
+
+        <div id="morris" class="impact-text text-blue-300">Designed and implemented a factory-floor quality control system to automate routine auditor checks and streamline management reporting.</div>
+        <div id="jlr" class="impact-text text-blue-300">Provided consultations on project management system integrity to ensure operational consistency and data clarity.</div>
+        <div id="xandor" class="impact-text text-blue-300">Architected manufacturing processes from the initial NPI phase through to full-scale mass production implementation.</div>
+        <div id="cb" class="impact-text text-blue-300">Developed a goods-in system managing pallet scanning, volume validation, and shelf-life (BBE) compliance.</div>
+        <div id="propak" class="impact-text text-blue-300">Engineered and optimized quality control processes to ensure strict operational standards and production consistency.</div>
+        <div id="netsuite" class="impact-text text-blue-300">Consulted on warehouse management logic and data consistency to align ERP behavior with real-world operational requirements.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section id="roadmap" class="py-24 relative z-10">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-white uppercase tracking-tight">The Roadmap: From Diagnosis to Delivery</h2>
+        <p class="text-slate-500 mt-2 text-sm">Every engagement begins with a deep dive into your operation.</p>
+      </div>
+
+      <div class="space-y-12">
+        <div class="glass-card p-8 md:p-10 rounded-2xl border-l-4 border-l-blue-500">
+          <div class="font-mono text-[10px] text-blue-500 font-bold uppercase tracking-widest mb-4">Phase 1: Defining the scope</div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-lg font-bold text-white mb-2">Option A: Built by diagnosis (recommended)</h3>
+              <p class="text-sm text-slate-400">I analyze the operation, identify the failure points, and design the enforcement logic that removes them. This is the most reliable way to break a ceiling rather than automate it.</p>
+            </div>
+            <div class="border-l border-slate-700 pl-6">
+              <h3 class="text-lg font-bold text-white mb-2">Option B: Built by instruction</h3>
+              <p class="text-sm text-slate-400">I build what you specify. This can work well when requirements are mature. The tradeoff is higher risk of missed edge cases that only surface after real usage.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-8 md:p-10 rounded-2xl border-l-4 border-l-emerald-500">
+          <div class="font-mono text-[10px] text-emerald-500 font-bold uppercase tracking-widest mb-4">Phase 2: Handover, risk, and responsibility</div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-lg font-bold text-white mb-2">Model A: Managed system (partnership)</h3>
+              <p class="text-sm text-slate-400">I retain control of the environment and codebase. Because integrity and security are managed, responsibility for uptime and continuity remains with me. If the business evolves, the system evolves under supervision.</p>
+            </div>
+            <div class="border-l border-slate-700 pl-6">
+              <h3 class="text-lg font-bold text-white mb-2">Model B: Asset transfer (ownership)</h3>
+              <p class="text-sm text-slate-400">You receive full source code and admin access. Once you can modify the system, change control and integrity become your responsibility. Security and drift become your risk.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-8 md:p-10 rounded-2xl border-l-4 border-l-amber-500">
+          <div class="font-mono text-[10px] text-amber-400 font-bold uppercase tracking-widest mb-4">Phase 3: Stabilization and results</div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-lg font-bold text-white mb-2">Fast delivery timelines, grounded in reality</h3>
+              <p class="text-sm text-slate-400">The goal is not transformation. It is a change in operational mechanics. Delivery is intentionally fast, but timeline depends on scope, constraints, integrations, and how much of the operation must be stabilized.</p>
+            </div>
+            <div class="border-l border-slate-700 pl-6">
+              <h3 class="text-lg font-bold text-white mb-2">Best practices without bureaucracy</h3>
+              <p class="text-sm text-slate-400">Best practices are used to create predictability, not process theatre. The system reduces cognitive load, shortens handovers, and makes the next step obvious for the team.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LEVELS -->
+  <section id="levels" class="py-24 bg-slate-900/20 relative z-10 border-t border-slate-800/60">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-white uppercase tracking-tight">Levels of operational support</h2>
+        <p class="text-slate-500 mt-2 font-mono text-sm">Select the logic tier that fits your scale.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass-card p-8 rounded-xl border-t-4 border-t-slate-500 h-full flex flex-col">
+          <div class="text-slate-500 font-mono text-[10px] mb-4 uppercase tracking-widest font-bold">Entry level</div>
+          <h3 class="text-2xl font-bold text-white mb-6">BASIC</h3>
+          <ul class="space-y-4 mb-8 text-sm text-slate-300 check-list flex-grow">
+            <li>Focus: Core process control and data integrity</li>
+            <li>Remove manual workarounds and ambiguity</li>
+            <li>Standard operational logs and traceability</li>
+            <li><strong>Support:</strong> Monthly maintenance + 5h advisory</li>
+          </ul>
+          <div class="mt-auto pt-6 border-t border-slate-800 text-center"><span class="text-xs text-slate-500">Best for stabilizing operations</span></div>
+        </div>
+
+        <div class="glass-card p-8 rounded-xl border-t-4 border-t-blue-500 shadow-glow bg-slate-900/40 h-full flex flex-col">
+          <div class="text-blue-500 font-mono text-[10px] mb-4 uppercase tracking-widest font-bold">Insight level</div>
+          <h3 class="text-2xl font-bold text-white mb-6">ADVANCED</h3>
+          <ul class="space-y-4 mb-8 text-sm text-slate-300 check-list flex-grow">
+            <li>Everything in Basic + full visibility through dashboards and reporting</li>
+            <li>Quantitative smart alerts and exception control</li>
+            <li>Operational performance and margin clarity</li>
+            <li><strong>Support:</strong> Prioritized response and health checks</li>
+          </ul>
+          <div class="mt-auto pt-6 border-t border-slate-800 text-center"><span class="text-xs text-blue-400 font-bold">Best for scaling businesses</span></div>
+        </div>
+
+        <div class="glass-card p-8 rounded-xl border-t-4 border-t-emerald-500 h-full flex flex-col">
+          <div class="text-emerald-500 font-mono text-[10px] mb-4 uppercase tracking-widest font-bold">Predictive level</div>
+          <h3 class="text-2xl font-bold text-white mb-6">PRO</h3>
+          <ul class="space-y-4 mb-8 text-sm text-slate-300 check-list flex-grow">
+            <li>Everything in Advanced + optimization layer</li>
+            <li>Demand forecasting and capacity guidance</li>
+            <li>Secure AI reporting (no sensitive data exposure)</li>
+            <li><strong>Support:</strong> Critical priority and continuous evolution</li>
+          </ul>
+          <div class="mt-auto pt-6 border-t border-slate-800 text-center"><span class="text-xs text-emerald-500">Best for market leaders</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-24 relative z-10">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="glass-card rounded-xl p-8 md:p-12 border border-slate-800/60">
+        <div class="flex flex-col md:flex-row gap-12 items-start">
+          <div class="w-full md:w-[240px] flex-shrink-0">
+            <div class="w-full aspect-[3/4] rounded-lg bg-slate-950 border border-slate-700 overflow-hidden relative">
+              <img src="img.jpg" alt="Kamil Dyczkowski" class="w-full h-full object-cover object-top hover:scale-105 transition duration-700" />
+            </div>
+            <div class="mt-4 text-center md:text-left">
+              <div class="text-white font-bold">Kamil Dyczkowski</div>
+              <div class="text-blue-500 text-[10px] font-mono uppercase tracking-widest">Operator-level Architect</div>
+            </div>
+          </div>
+
+          <div class="flex-grow space-y-6 text-slate-300 leading-relaxed text-sm md:text-base">
+            <h2 class="text-2xl font-bold text-white mb-2">Process-first.<br />System-second.</h2>
+
+            <p>
+              I am an operator-level architect, not a consultant and not a typical developer.
+              My scope covers manufacturing, warehouses, and appointment-driven service operations,
+              from treatment studios and gyms to high-volume trade services.
             </p>
-            <a href="mailto:dyczkowski.kamil@gmail.com" class="inline-block px-12 py-5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-lg transition shadow-glow text-lg">
-                Request Operational Review
-            </a>
-            <p class="mt-16 text-[10px] text-slate-600 font-mono uppercase tracking-widest">
-                © 2026 Kamil Dyczkowski | Yorkshire, UK
+
+            <p>
+              I enter where process integrity has reached its limit and the business is capped by its own chaos.
+              The goal is operational comfort: fewer exceptions, clearer priorities, and a stable source of truth.
+              Best practices are used to create order and predictability, not bureaucracy.
             </p>
+
+            <p>
+              My work is a straight line: diagnosis, system design, and implementation of a strict enforcement layer.
+              Enforcement is not about controlling people. It controls the process so teams cannot accidentally create errors,
+              and nobody has to rely on memory to keep the business running.
+            </p>
+
+            <p>
+              After more than 20 years in high-stakes environments, I have seen where even enterprise systems like SAP or Oracle fail,
+              not due to lack of capability, but due to flawed assumptions. My systems are built without those assumptions,
+              around the reality of the shop floor and the reception desk.
+            </p>
+
+            <p class="text-white font-bold border-l-2 border-blue-500 pl-4 py-1">
+              You do not need louder management. You need enforced operational logic that removes ambiguity and prevents leaks.
+            </p>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        (() => {
-            const arena = document.getElementById('arena');
-            const btnChaos = document.getElementById('btnChaos');
-            const btnControl = document.getElementById('btnControl');
-            
-            const cfg = { padding: 10, friction: 0.98, drift: 0.05, maxV: 15, impulse: 5, impulseRadius: 300 };
+  <!-- FAQ (single frame) -->
+  <section class="py-20 bg-slate-900/30 relative z-10 border-t border-slate-800/50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-white mb-10 text-center uppercase">Frequently Asked Questions</h2>
 
-            let isControl = false; 
-            let rafId = null;
-            let tiles = [];
+      <div class="glass-card p-6 md:p-8 rounded-2xl border border-slate-800/60">
+        <div class="space-y-4">
 
-            const tilesSpec = [
-                { id:'1', group:'Information', cls:'accent-red', k:'NOTES', t:'Paper Fragments' },
-                { id:'2', group:'Information', cls:'accent-amber',k:'HANDOVERS', t:'Memory Based' },
-                { id:'3', group:'Information', cls:'accent-blue',k:'SPREADSHEET', t:'Version Drift' },
-                { id:'4', group:'Information', cls:'accent-blue',k:'DEFINITIONS', t:'Ambiguity' },
-                { id:'5', group:'Information', cls:'accent-amber',k:'DUPLICATES', t:'False Data' },
-                { id:'6', group:'Execution', cls:'accent-emerald',k:'WORKFLOW', t:'Variance' },
-                { id:'7', group:'Execution', cls:'accent-red', k:'MISSED', t:'Late Discovery' },
-                { id:'8', group:'Execution', cls:'accent-violet',k:'SCHEDULING', t:'Bottlenecks' },
-                { id:'9', group:'Execution', cls:'accent-amber', k:'HANDOFFS', t:'Lost Tasks' },
-                { id:'10', group:'Execution', cls:'accent-emerald', k:'QUALITY', t:'Manual Checks' },
-                { id:'11', group:'Inventory', cls:'accent-amber', k:'INVENTORY', t:'Guesswork' },
-                { id:'12', group:'Inventory', cls:'accent-blue',k:'CONSUMABLES', t:'Silent Waste' },
-                { id:'13', group:'Inventory', cls:'accent-violet',k:'SUPPLIERS', t:'Reactive' },
-                { id:'14', group:'Inventory', cls:'accent-emerald',k:'MOVEMENT', t:'Invisible Flow' },
-                { id:'15', group:'Risk', cls:'accent-blue', k:'ALERTS', t:'Too Late' },
-                { id:'16', group:'Risk', cls:'accent-emerald',k:'AUDIT', t:'No Trace' },
-                { id:'17', group:'Risk', cls:'accent-amber',k:'BILLING', t:'Leaks' },
-                { id:'18', group:'Risk', cls:'accent-red',k:'COMPLIANCE', t:'Informal' }
-            ];
+          <details class="p-5">
+            <summary class="flex items-center justify-between gap-4">
+              <span class="text-white font-bold text-sm">How do you handle AI with sensitive patient data?</span>
+              <span class="text-slate-500 font-mono text-[10px] uppercase tracking-widest">Expand</span>
+            </summary>
+            <div class="mt-3 text-xs text-slate-400 leading-relaxed">
+              Data privacy is non-negotiable. In regulated sectors, AI is not integrated with personal records.
+              It can be used for meta-analysis such as booking trends and operational summaries, aligned with UK GDPR constraints.
+            </div>
+          </details>
 
-            const groups = [ 
-                { key:'Information', title:'INFORMATION' }, 
-                { key:'Execution', title:'EXECUTION' }, 
-                { key:'Inventory', title:'INVENTORY' }, 
-                { key:'Risk', title:'RISK & MONEY' } 
-            ];
+          <details class="p-5">
+            <summary class="flex items-center justify-between gap-4">
+              <span class="text-white font-bold text-sm">What does "5 hours of support" in Basic cover?</span>
+              <span class="text-slate-500 font-mono text-[10px] uppercase tracking-widest">Expand</span>
+            </summary>
+            <div class="mt-3 text-xs text-slate-400 leading-relaxed">
+              This is operational stability coverage, not a general helpdesk. It includes maintenance, security updates,
+              and advisory to protect your source of truth and prevent drift.
+            </div>
+          </details>
 
-            function rand(min,max){ return Math.random()*(max-min)+min; }
+          <details class="p-5">
+            <summary class="flex items-center justify-between gap-4">
+              <span class="text-white font-bold text-sm">Can a custom system outperform SAP or NetSuite?</span>
+              <span class="text-slate-500 font-mono text-[10px] uppercase tracking-widest">Expand</span>
+            </summary>
+            <div class="mt-3 text-xs text-slate-400 leading-relaxed">
+              It can outperform them in your specific workflows because it is built around your constraints.
+              Large systems optimize for generality. I optimize for process integrity in your operation.
+            </div>
+          </details>
 
-            function init(){
-                tilesSpec.forEach(spec => {
-                    const el = document.createElement('div');
-                    el.className = `tile ${spec.cls}`;
-                    el.innerHTML = `
-                        <div class="hdr">${spec.k}</div>
-                        <div class="body">
-                            <div class="t">${spec.t}</div>
-                            <div class="d">Normalized & Verified</div>
-                        </div>
-                    `;
-                    arena.appendChild(el);
-                    
-                    tiles.push({
-                        el, spec,
-                        x: rand(20, arena.clientWidth - 280),
-                        y: rand(20, arena.clientHeight - 100),
-                        vx: rand(-4,4), vy: rand(-4,4),
-                        rot: rand(-15, 15)
-                    });
-                });
+          <details class="p-5">
+            <summary class="flex items-center justify-between gap-4">
+              <span class="text-white font-bold text-sm">Is the Operational Review mandatory?</span>
+              <span class="text-slate-500 font-mono text-[10px] uppercase tracking-widest">Expand</span>
+            </summary>
+            <div class="mt-3 text-xs text-slate-400 leading-relaxed">
+              Yes. I do not build systems on assumptions. Diagnosis ensures the system removes the bottleneck
+              instead of automating the chaos around it.
+            </div>
+          </details>
 
-                const grid = document.createElement('div');
-                grid.className = 'control-wrap';
-                grid.id = 'controlGrid';
-                
-                groups.forEach(g => {
-                    const col = document.createElement('div');
-                    col.className = 'control-col';
-                    col.innerHTML = `<div class="control-head">${g.title}</div><div class="control-body" id="grp-${g.key}"></div>`;
-                    grid.appendChild(col);
-                });
-                arena.appendChild(grid);
+        </div>
+      </div>
+    </div>
+  </section>
 
-                btnChaos.addEventListener('click', setChaos);
-                btnControl.addEventListener('click', setControl);
-                
-                arena.addEventListener('mousemove', (e) => {
-                    if(isControl) return;
-                    const rect = arena.getBoundingClientRect();
-                    const mx = e.clientX - rect.left;
-                    const my = e.clientY - rect.top;
-                    
-                    tiles.forEach(t => {
-                        const dx = (t.x + 130) - mx;
-                        const dy = (t.y + 40) - my;
-                        const dist = Math.sqrt(dx*dx + dy*dy);
-                        if(dist < 150) {
-                            t.vx += (dx/dist) * 0.8;
-                            t.vy += (dy/dist) * 0.8;
-                        }
-                    });
-                });
+  <!-- FOOTER -->
+  <footer class="py-20 border-t border-slate-800 bg-slate-950 relative z-10">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-white mb-6">Direct access for serious operations.</h2>
+      <p class="text-slate-400 mb-10 text-sm max-w-xl mx-auto">
+        I do not provide generic quotes over the phone. Every successful implementation starts with a brief description of the problem.
+        Send an email describing your ceiling and where your business leaks time, money, or clarity.
+      </p>
+      <a href="mailto:dyczkowski.kamil@gmail.com?subject=Growth Ceiling Diagnosis" class="inline-block px-12 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-lg transition shadow-glow text-sm uppercase tracking-widest">Request Diagnostic Call</a>
+      <p class="mt-16 text-[10px] text-slate-600 font-mono uppercase tracking-widest">© 2026 Kamil Dyczkowski | Yorkshire, UK</p>
+    </div>
+  </footer>
 
-                startLoop();
-            }
+  <script>
+    function revealPhone() {
+      const el = document.getElementById('phone-container');
+      el.innerText = "Requesting Diagnostic...";
+      setTimeout(() => {
+        window.location.href = "mailto:dyczkowski.kamil@gmail.com?subject=Diagnostic Call Request";
+        el.innerText = "[ Redirecting to Email ]";
+      }, 500);
+    }
 
-            function startLoop(){
-                const loop = () => {
-                    if(!isControl) updateChaos();
-                    rafId = requestAnimationFrame(loop);
-                };
-                rafId = requestAnimationFrame(loop);
-            }
+    function showImpact(id) {
+      const defaultText = document.getElementById('default-impact');
+      if (defaultText) defaultText.style.display = 'none';
 
-            function updateChaos(){
-                tiles.forEach(t => {
-                    t.x += t.vx;
-                    t.y += t.vy;
-                    if(t.x < 0 || t.x > arena.clientWidth - 260) t.vx *= -1;
-                    if(t.y < 0 || t.y > arena.clientHeight - 80) t.vy *= -1;
-                    t.vx *= 0.99; t.vy *= 0.99;
-                    t.vx += rand(-0.02, 0.02); t.vy += rand(-0.02, 0.02);
-                    t.rot += rand(-0.1, 0.1);
-                    t.el.style.transform = `translate(${t.x}px, ${t.y}px) rotate(${t.rot}deg)`;
-                });
-            }
-            
-            function setControl(){
-                if(isControl) return;
-                isControl = true;
-                arena.classList.add('control');
-                const grid = document.getElementById('controlGrid');
-                grid.style.opacity = '1';
-                grid.style.pointerEvents = 'auto';
+      const elements = document.getElementsByClassName('impact-text');
+      for (let el of elements) { el.classList.remove('active'); }
 
-                const colMap = {};
-                groups.forEach(g => {
-                    const colBody = document.getElementById(`grp-${g.key}`);
-                    colMap[g.key] = colBody;
-                });
+      const target = document.getElementById(id);
+      if (target) target.classList.add('active');
+    }
 
-                tiles.forEach((t, i) => {
-                    setTimeout(() => {
-                        const targetCol = colMap[t.spec.group];
-                        t.el.style.transform = 'none';
-                        t.el.style.position = 'relative';
-                        t.el.style.width = '100%';
-                        t.el.style.top = 'auto';
-                        t.el.style.left = 'auto';
-                        t.el.style.marginBottom = '6px';
-                        t.el.style.zIndex = 'auto';
-                        targetCol.appendChild(t.el);
-                        t.el.animate([
-                            { transform: 'translateY(40px) scale(0.9)', opacity: 0 },
-                            { transform: 'translateY(0) scale(1)', opacity: 1 }
-                        ], { duration: 400, easing: 'cubic-bezier(0.2, 0.8, 0.2, 1)' });
-                    }, i * 100);
-                });
-            }
-
-            function setChaos(){
-                if(!isControl) return;
-                isControl = false;
-                arena.classList.remove('control');
-                const grid = document.getElementById('controlGrid');
-                grid.style.opacity = '0';
-                grid.style.pointerEvents = 'none';
-                tiles.forEach(t => {
-                    arena.appendChild(t.el);
-                    t.el.style.position = 'absolute';
-                    t.el.style.width = '260px';
-                    t.x = rand(50, arena.clientWidth - 300);
-                    t.y = rand(50, arena.clientHeight - 100);
-                    t.el.style.transform = `translate(${t.x}px, ${t.y}px)`;
-                    t.el.style.marginBottom = '0';
-                });
-            }
-            init();
-        })();
-    </script>
+    function hideImpact() {
+      // Keep last selection for better UX
+    }
+  </script>
 </body>
 </html>
