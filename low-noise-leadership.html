@@ -1,9 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZRZ1ZF5RW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9ZRZ1ZF5RW');
+    </script>
+
     <!-- SEO & META TAGS -->
     <title>Low-Noise Leadership | Kamil Dyczkowski</title>
     <meta name="description" content="A practical operating system for introverted leaders. Discover how to use silence, analysis, and strategic depth as your greatest advantage in a noisy world. Available in two editions.">
@@ -13,11 +22,22 @@
     <!-- OPEN GRAPH (Social Media) -->
     <meta property="og:title" content="Low-Noise Leadership | The Operating System for Introverted Leaders">
     <meta property="og:description" content="Stop fighting your nature. Learn to lead with precision, not noise. Two editions available: Operational Handbook and Strategic System.">
-    <meta property="og:image" content="https://kamil-dyczkowski.com/social-share-image.jpg">
-    <meta property="og:url" content="https://kamil-dyczkowski.com">
+    <meta property="og:image" content="https://kamildyczkowski.com/kamil-dyczkowski-warehouse-consultant.jpg">
+    <meta property="og:url" content="https://kamildyczkowski.com/low-noise-leadership">
     <meta property="og:type" content="book">
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: { sans: ['Inter','sans-serif'], mono: ['JetBrains Mono','monospace'] },
+              colors: { slate: { 950: '#020617' } },
+              boxShadow: { glow: '0 0 25px rgba(37,99,235,0.22)' }
+            }
+          }
+        }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
@@ -28,11 +48,12 @@
             width: 100%;
             margin: 0;
             padding: 0;
+            background-color: #020617;
+            color: #cbd5e1;
         }
         
         .font-mono { font-family: 'JetBrains Mono', monospace; }
 
-        /* --- BACKGROUND SYSTEM --- */
         .bg-deep-system {
             background-color: #020617;
             background-image:
@@ -66,7 +87,7 @@
         .glass-panel {
             background: rgba(2, 6, 23, 0.95);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(30, 41, 59, 0.5);
+            border-bottom: 1px solid rgba(51, 65, 85, 0.40);
         }
 
         .fade-in { animation: fadeIn 0.6s ease-in-out; }
@@ -74,9 +95,7 @@
             from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        html { scroll-behavior: smooth; }
 
-        /* --- BOOK ROW STYLING --- */
         .book-row-container {
             border-bottom: 1px solid rgba(30, 41, 59, 0.6);
             padding-bottom: 4rem;
@@ -90,9 +109,10 @@
             padding-bottom: 0;
         }
 
+        /* Reduced max-width for book cover from 320px to 220px */
         .book-cover {
             width: 100%;
-            max-width: 320px;
+            max-width: 220px; 
             aspect-ratio: 2/3;
             object-fit: cover;
             border: 1px solid rgba(59, 130, 246, 0.2);
@@ -113,21 +133,11 @@
             font-weight: bold;
         }
         
-        section, header, footer {
-            position: relative;
-            z-index: 10;
-        }
-
-        /* Mobile Menu Transitions */
-        #mobile-menu {
-            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-            max-height: 0;
-            opacity: 0;
-            overflow: hidden;
-        }
-        #mobile-menu.open {
-            max-height: 400px;
-            opacity: 1;
+        .pill {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
         }
     </style>
 </head>
@@ -135,77 +145,70 @@
 <body class="bg-deep-system text-slate-300 antialiased selection:bg-blue-500 selection:text-white">
     <div class="grid-pattern"></div>
 
-    <!-- Navigation -->
+    <!-- NAV (Standardized with index.html) -->
     <nav class="fixed w-full z-50 glass-panel">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <span class="font-bold text-sm sm:text-lg md:text-xl tracking-tight text-white uppercase truncate">
-                        <span class="lang-en">Low-Noise Leadership</span>
-                        <span class="lang-pl hidden">Low-Noise Leadership</span>
-                    </span>
-                </div>
-
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#about-system" class="text-slate-400 hover:text-blue-400 transition font-medium text-sm uppercase tracking-wide">
-                        <span class="lang-en">The System</span>
-                        <span class="lang-pl hidden">O Systemie</span>
-                    </a>
-                    <a href="#author" class="text-slate-400 hover:text-blue-400 transition font-medium text-sm uppercase tracking-wide">
-                        <span class="lang-en">Author</span>
-                        <span class="lang-pl hidden">Autor</span>
-                    </a>
-
-                    <div class="flex items-center border border-slate-700 rounded-md overflow-hidden text-xs md:text-sm font-semibold">
-                        <button onclick="switchLang('en')" id="btn-en" class="px-3 py-1 bg-blue-600 text-white hover:bg-blue-700 transition">EN</button>
-                        <button onclick="switchLang('pl')" id="btn-pl" class="px-3 py-1 bg-slate-800 text-slate-400 hover:bg-slate-700 transition">PL</button>
-                    </div>
-
-                    <a href="#books" class="bg-white text-slate-900 px-6 py-2.5 rounded-md hover:bg-blue-50 transition text-sm font-bold shadow-[0_0_15px_rgba(255,255,255,0.15)]">
-                        <span class="lang-en">Buy Now</span>
-                        <span class="lang-pl hidden">Kup Teraz</span>
-                    </a>
-                </div>
-
-                <!-- Mobile Hamburger Button -->
-                <div class="flex items-center md:hidden gap-3">
-                    <div class="flex items-center border border-slate-700 rounded-md overflow-hidden text-xs font-semibold">
-                        <button onclick="switchLang('en')" id="btn-en-mob" class="px-2 py-1 bg-blue-600 text-white">EN</button>
-                        <button onclick="switchLang('pl')" id="btn-pl-mob" class="px-2 py-1 bg-slate-800 text-slate-400">PL</button>
-                    </div>
-
-                    <button id="mobile-menu-btn" class="text-white hover:text-blue-400 focus:outline-none">
-                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                        </svg>
-                    </button>
-                </div>
+          <div class="flex justify-between h-20 items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+              <svg class="h-8 w-auto" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 10 L15 20 L5 30" stroke="#3b82f6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="20" y="25" width="12" height="4" fill="#3b82f6">
+                  <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" calcMode="discrete"/>
+                </rect>
+              </svg>
+    
+              <div class="flex flex-col justify-center">
+                <span class="font-bold text-[16px] tracking-tight text-white leading-none uppercase font-mono group-hover:text-blue-400 transition">Kamil Dyczkowski</span>
+                <span class="text-[9px] text-slate-500 uppercase tracking-[0.2em] font-bold mt-1">Business Solutions & Systems</span>
+              </div>
+            </a>
+    
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+              <a href="index.html#symptoms" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Symptoms</a>
+              <a href="index.html#solution" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Solution</a>
+              <a href="index.html#roadmap" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Roadmap</a>
+              <a href="index.html#faq" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">FAQ</a>
+              <a href="about.html" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">About</a>
+              <a href="low-noise-leadership.html" class="text-white border-b border-blue-500 pb-1 font-bold uppercase tracking-widest text-xs text-center">Book</a>
+              <a href="mailto:dyczkowski.kamil@gmail.com" class="px-5 py-2 rounded bg-blue-700 text-white font-bold hover:bg-blue-600 transition text-xs uppercase tracking-wide">Contact</a>
             </div>
+    
+            <!-- Mobile Header Icons -->
+            <div class="md:hidden flex items-center gap-4">
+               <!-- Call Icon -->
+               <a href="tel:+447403874868" class="text-slate-400 hover:text-white transition p-2 border border-slate-700 rounded-md bg-slate-900/50">
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                </svg>
+               </a>
+               
+               <!-- Hamburger Menu Button -->
+               <button id="mobile-menu-btn" class="text-slate-400 hover:text-white p-2">
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                 </svg>
+               </button>
+            </div>
+          </div>
         </div>
-
+        
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="md:hidden bg-slate-900 border-b border-slate-800">
-            <div class="px-4 pt-2 pb-4 space-y-2">
-                <a href="#about-system" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-slate-800 transition" onclick="toggleMobileMenu()">
-                    <span class="lang-en">The System</span>
-                    <span class="lang-pl hidden">O Systemie</span>
-                </a>
-                <a href="#author" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-slate-800 transition" onclick="toggleMobileMenu()">
-                    <span class="lang-en">Author</span>
-                    <span class="lang-pl hidden">Autor</span>
-                </a>
-                <a href="#books" class="block px-3 py-2 rounded-md text-base font-bold text-blue-400 hover:bg-slate-800 transition" onclick="toggleMobileMenu()">
-                    <span class="lang-en">Buy on Amazon</span>
-                    <span class="lang-pl hidden">Kup na Amazon</span>
-                </a>
-            </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-950/95 backdrop-blur-xl border-b border-slate-800 absolute w-full left-0 top-20 shadow-2xl z-50">
+          <div class="px-6 py-8 space-y-6 flex flex-col">
+            <a href="index.html#symptoms" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Symptoms</a>
+            <a href="index.html#solution" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Solution</a>
+            <a href="index.html#roadmap" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Roadmap</a>
+            <a href="index.html#faq" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">FAQ</a>
+            <a href="about.html" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">About</a>
+            <a href="low-noise-leadership.html" class="text-blue-400 hover:text-blue-300 font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Book</a>
+            <a href="mailto:dyczkowski.kamil@gmail.com" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm">Email Me</a>
+          </div>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <header class="pt-28 pb-16 md:pt-32 md:pb-24 relative" id="books">
+    <header class="pt-28 pb-16 md:pt-36 md:pb-24 relative" id="books">
         <div class="glow-effect"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
@@ -216,7 +219,8 @@
                     <span class="lang-pl hidden">Dwie Edycje Dostępne</span>
                 </div>
                 
-                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6 md:mb-8 tracking-tight">
+                <!-- Reduced H1 font size from 6xl to 5xl/4xl -->
+                <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight mb-6 md:mb-8 tracking-tight">
                     <span class="lang-en">Leadership without the <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Noise.</span></span>
                     <span class="lang-pl hidden">Przywództwo bez <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Hałasu.</span></span>
                 </h1>
@@ -254,7 +258,7 @@
                 <!-- PRODUCT 1: PRACTICAL SYSTEM -->
                 <div class="book-row-container flex flex-col md:flex-row gap-8 items-start fade-in">
                     <!-- Left: Cover -->
-                    <div class="w-full md:w-1/3 flex justify-start flex-shrink-0">
+                    <div class="w-full md:w-1/3 flex justify-start md:justify-end flex-shrink-0">
                         <img src="prac.jpg" alt="Low-Noise Leadership: A Practical System for Introverted Leaders" class="book-cover">
                     </div>
 
@@ -300,11 +304,12 @@
                             </li>
                         </ul>
 
-                        <div class="flex gap-4">
-                            <a href="https://www.amazon.co.uk/dp/B0GF46ZJ1L" target="_blank" class="bg-blue-600 text-white px-8 py-4 rounded-md font-bold hover:bg-blue-500 transition shadow-lg shadow-blue-900/20">
+                        <div class="flex flex-col sm:flex-row gap-4 items-center sm:items-start">
+                            <a href="https://www.amazon.co.uk/dp/B0GF46ZJ1L" target="_blank" class="bg-blue-600 text-white px-8 py-4 rounded-md font-bold hover:bg-blue-500 transition shadow-lg shadow-blue-900/20 w-full sm:w-auto text-center">
                                 <span class="lang-en">Buy Practical System</span>
                                 <span class="lang-pl hidden">Kup Practical System</span>
                             </a>
+                            <span class="text-white font-mono text-xl font-bold py-4">£4.99</span>
                         </div>
                     </div>
                 </div>
@@ -312,7 +317,7 @@
                 <!-- PRODUCT 2: EXPANDED SYSTEM -->
                 <div class="book-row-container flex flex-col md:flex-row gap-8 items-start fade-in">
                     <!-- Left: Cover -->
-                    <div class="w-full md:w-1/3 flex justify-start flex-shrink-0">
+                    <div class="w-full md:w-1/3 flex justify-start md:justify-end flex-shrink-0">
                         <img src="ext.jpg" alt="Low-Noise Leadership: The Expanded System for Introverted Leaders" class="book-cover" style="border-color: rgba(16, 185, 129, 0.2);">
                     </div>
 
@@ -362,11 +367,12 @@
                             </li>
                         </ul>
 
-                        <div class="flex gap-4">
-                            <a href="https://www.amazon.co.uk/dp/B0GF3PR2JK/" target="_blank" class="bg-blue-600 text-white px-8 py-4 rounded-md font-bold hover:bg-blue-500 transition shadow-lg shadow-blue-900/20">
+                        <div class="flex flex-col sm:flex-row gap-4 items-center sm:items-start">
+                            <a href="https://www.amazon.co.uk/dp/B0GF3PR2JK/" target="_blank" class="bg-blue-600 text-white px-8 py-4 rounded-md font-bold hover:bg-blue-500 transition shadow-lg shadow-blue-900/20 w-full sm:w-auto text-center">
                                 <span class="lang-en">Buy Expanded System</span>
                                 <span class="lang-pl hidden">Kup Expanded System</span>
                             </a>
+                            <span class="text-white font-mono text-xl font-bold py-4">£8.99</span>
                         </div>
                     </div>
                 </div>
@@ -499,8 +505,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="w-full md:w-1/3 flex justify-start">
-                    <div class="relative w-full max-w-[340px] rounded-xl overflow-hidden border border-slate-700 shadow-2xl grayscale hover:grayscale-0 transition duration-700 group">
-                        <img src="img.jpg" alt="Kamil Dyczkowski" class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105">
+                    <div class="relative w-full max-w-[280px] rounded-xl overflow-hidden border border-slate-700 shadow-2xl grayscale hover:grayscale-0 transition duration-700 group">
+                        <img src="kamil-dyczkowski-warehouse-consultant.jpg" alt="Kamil Dyczkowski" class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105">
                         <div class="absolute inset-0 bg-blue-900/20 mix-blend-overlay group-hover:bg-transparent transition"></div>
                     </div>
                 </div>
@@ -540,7 +546,7 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER & FORM -->
     <footer id="contact" class="bg-slate-950 border-t border-slate-800 py-20">
         <div class="max-w-3xl mx-auto text-center px-4">
             <h2 class="text-3xl font-bold text-white mb-6 lang-en">Let's Connect</h2>
@@ -561,6 +567,18 @@
                 </button>
             </form>
 
+            <!-- HIDDEN PHONE NUMBER (Reveal on Click) -->
+            <div class="mb-10 flex justify-center">
+                <a class="btn-ghost flex items-center gap-2 cursor-pointer border border-slate-700 rounded px-4 py-2 hover:bg-slate-800 transition" 
+                   href="#"
+                   onclick="event.preventDefault(); this.querySelector('span').innerText = '07403 874868'; this.href = 'tel:+447403874868'; window.location.href='tel:+447403874868';">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                  </svg>
+                  <span class="font-mono text-sm text-slate-400">Call direct</span>
+                </a>
+            </div>
+
             <div class="text-slate-600 text-sm">
                 &copy; 2026 Kamil Dyczkowski. All rights reserved.
             </div>
@@ -570,42 +588,21 @@
     <script>
         const FORM_EMAIL = "dyczkowski.kamil@gmail.com";
 
-        function switchLang(lang) {
-            document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('hidden', lang !== 'en'));
-            document.querySelectorAll('.lang-pl').forEach(el => el.classList.toggle('hidden', lang !== 'pl'));
-            
-            const btnEn = document.getElementById('btn-en');
-            const btnPl = document.getElementById('btn-pl');
-            const btnEnMob = document.getElementById('btn-en-mob');
-            const btnPlMob = document.getElementById('btn-pl-mob');
-
-            if(btnEn) btnEn.className = lang === 'en' ? "px-3 py-1 bg-blue-600 text-white hover:bg-blue-700 transition" : "px-3 py-1 bg-slate-800 text-slate-400 hover:bg-slate-700 transition";
-            if(btnPl) btnPl.className = lang === 'pl' ? "px-3 py-1 bg-blue-600 text-white hover:bg-blue-700 transition" : "px-3 py-1 bg-slate-800 text-slate-400 hover:bg-slate-700 transition";
-            if(btnEnMob) btnEnMob.className = lang === 'en' ? "px-2 py-1 bg-blue-600 text-white" : "px-2 py-1 bg-slate-800 text-slate-400";
-            if(btnPlMob) btnPlMob.className = lang === 'pl' ? "px-2 py-1 bg-blue-600 text-white" : "px-2 py-1 bg-slate-800 text-slate-400";
-            
-            document.documentElement.lang = lang;
-            const msgInput = document.getElementById('message-input');
-            if (msgInput) msgInput.placeholder = (lang === 'pl') ? "Twoja wiadomość (opcjonalnie)" : "Your message (optional)";
-        }
-
+        // Mobile Menu Toggle logic
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        function toggleMobileMenu() { mobileMenu.classList.toggle('open'); }
-        if(mobileMenuBtn) mobileMenuBtn.onclick = toggleMobileMenu;
-
-        async function checkCountryAndSetLanguage() {
-            try {
-                const response = await fetch('https://api.country.is');
-                if (response.ok) {
-                    const data = await response.json();
-                    if (data.country === 'PL') switchLang('pl');
-                }
-            } catch (e) {}
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
         }
 
-        document.addEventListener('DOMContentLoaded', checkCountryAndSetLanguage);
+        function toggleMobileMenu() {
+            if (mobileMenu) mobileMenu.classList.add('hidden');
+        }
 
+        // Form Submit Logic
         document.getElementById('signup-form').onsubmit = function(e) {
             e.preventDefault();
             const btnText = document.getElementById('btn-text');
@@ -616,7 +613,7 @@
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email: this.email.value, message: this.message.value, _subject: "Low-Noise Leadership - Message" })
             }).then(() => {
-                btnText.innerText = document.documentElement.lang === 'pl' ? "Wysłano" : "Sent";
+                btnText.innerText = "Sent"; // Simplified to English as standard
                 this.reset();
                 setTimeout(() => { btnText.innerHTML = originalContent; }, 2000);
             });
