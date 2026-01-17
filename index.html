@@ -1,8 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZRZ1ZF5RW"></script>
@@ -12,10 +14,25 @@
     gtag('js', new Date());
     gtag('config', 'G-9ZRZ1ZF5RW');
   </script>
+<!-- Primary SEO -->
+  <title>Warehouse Control Systems for Small Businesses | Kamil Dyczkowski</title>
+  <meta name="description" content="For small businesses running on paper and memory. I install warehouse control systems that stop inventory drift, picking mistakes, and rework - so growing revenue turns into profit." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://kamildyczkowski.com/" />
 
-  <title>Business Solutions & Systems | Kamil Dyczkowski</title>
-  <meta name="description" content="Break the efficiency ceiling capping your revenue. Operator-level system design and process enforcement for SMEs." />
-  <meta name="author" content="Kamil Dyczkowski" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Warehouse Control Systems for Small Businesses" />
+  <meta property="og:description" content="Stop inventory drift, picking mistakes, and rework. Enforcement layer that makes correct actions unavoidable." />
+  <meta property="og:url" content="https://kamildyczkowski.com/" />
+  <meta property="og:site_name" content="Kamil Dyczkowski" />
+  <meta property="og:image" content="https://kamildyczkowski.com/og.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Warehouse Control Systems for Small Businesses" />
+  <meta name="twitter:description" content="Stop inventory drift, picking mistakes, and rework with an enforcement layer." />
+  <meta name="twitter:image" content="https://kamildyczkowski.com/og.jpg" />
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
@@ -26,143 +43,167 @@
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          },
-          colors: {
-            slate: { 850: '#151e2e', 950: '#020617' }
-          },
-          boxShadow: {
-            glow: '0 0 25px rgba(37,99,235,0.2)',
-            machine: 'inset 0 0 20px rgba(0,0,0,0.6)'
-          }
+          fontFamily: { sans: ['Inter','sans-serif'], mono: ['JetBrains Mono','monospace'] },
+          colors: { slate: { 950: '#020617' } },
+          boxShadow: { glow: '0 0 25px rgba(37,99,235,0.22)' }
         }
       }
     }
   </script>
 
   <style>
-    body { font-family: 'Inter', sans-serif; color: #cbd5e1; background-color: #020617; }
-
-    .bg-deep-system {
+    body { font-family: Inter, sans-serif; color: #cbd5e1; background: #020617; }
+    .bg-system {
       background-color: #020617;
       background-image:
-        radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.08) 0px, transparent 50%),
-        radial-gradient(at 100% 100%, rgba(15, 23, 42, 1) 0px, transparent 50%);
+        radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.10) 0px, transparent 55%),
+        radial-gradient(at 100% 100%, rgba(15, 23, 42, 1) 0px, transparent 55%);
       position: relative;
       overflow-x: hidden;
     }
-
     .grid-pattern {
-      position: absolute;
-      inset: 0;
+      position: absolute; inset: 0;
       background-size: 40px 40px;
       background-image:
-        linear-gradient(to right, rgba(51, 65, 85, 0.1) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(51, 65, 85, 0.1) 1px, transparent 1px);
-      mask-image: linear-gradient(to bottom, black 10%, transparent 90%);
-      z-index: 0;
-      pointer-events: none;
+        linear-gradient(to right, rgba(51, 65, 85, 0.10) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(51, 65, 85, 0.10) 1px, transparent 1px);
+      mask-image: linear-gradient(to bottom, black 15%, transparent 90%);
+      pointer-events: none; z-index: 0;
+    }
+    .glass {
+      background: rgba(15, 23, 42, 0.38);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(51, 65, 85, 0.55);
+    }
+    .panel {
+      background: rgba(2, 6, 23, 0.82);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(51, 65, 85, 0.40);
     }
 
     .glass-panel {
-      background: rgba(2, 6, 23, 0.9);
+      background: rgba(2, 6, 23, 0.82);
       backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(51, 65, 85, 0.4);
+      border-bottom: 1px solid rgba(51, 65, 85, 0.40);
     }
-
-    .glass-card {
-      background: rgba(15, 23, 42, 0.4);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(51, 65, 85, 0.5);
-      transition: all 0.3s ease;
-      display: flex;
-      flex-direction: column;
-    }
-    .glass-card:hover {
-      border-color: rgba(59, 130, 246, 0.5);
-      background: rgba(30, 41, 59, 0.4);
-    }
-
+    .pill { font-family: JetBrains Mono, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; }
     .btn-primary {
-      background: #ffffff;
-      color: #0f172a;
-      font-weight: 700;
-      padding: 14px 28px;
-      border-radius: 6px;
+      background: #ffffff; color: #0f172a;
+      font-weight: 800;
+      padding: 14px 26px;
+      border-radius: 10px;
       transition: all 0.2s;
+      display: inline-flex; align-items: center; justify-content: center;
       letter-spacing: -0.01em;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
     }
     .btn-primary:hover { background: #cbd5e1; transform: translateY(-1px); }
-
-    ul.check-list li {
-      position: relative;
-      padding-left: 1.5rem;
-      margin-bottom: 0.75rem;
-      font-size: 0.9rem;
-      color: #94a3b8;
+    .btn-ghost {
+      border: 1px solid rgba(51,65,85,0.7);
+      color: #e2e8f0;
+      padding: 14px 22px;
+      border-radius: 10px;
+      font-weight: 800;
+      transition: all 0.2s;
+      background: rgba(2,6,23,0.25);
     }
-    ul.check-list li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: #3b82f6;
-      font-weight: bold;
-    }
-
-    .reveal-btn {
-      cursor: pointer;
-      color: #3b82f6;
-      font-weight: bold;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      text-transform: uppercase;
-    }
-    .reveal-btn:hover { text-decoration: underline; }
-
-    /* FAQ */
-    details { border: 1px solid rgba(51, 65, 85, 0.5); border-radius: 10px; background: rgba(15, 23, 42, 0.35); }
+    .btn-ghost:hover { background: rgba(15,23,42,0.45); transform: translateY(-1px); }
+    details { border: 1px solid rgba(51, 65, 85, 0.55); border-radius: 12px; background: rgba(15, 23, 42, 0.35); }
     details[open] { border-color: rgba(59, 130, 246, 0.45); background: rgba(30, 41, 59, 0.35); }
     summary { cursor: pointer; list-style: none; }
     summary::-webkit-details-marker { display: none; }
+    .kbd {
+      font-family: JetBrains Mono, monospace;
+      font-size: 12px;
+      padding: 2px 8px;
+      border-radius: 8px;
+      border: 1px solid rgba(51, 65, 85, 0.6);
+      background: rgba(2, 6, 23, 0.55);
+      color: #e2e8f0;
+    }
   </style>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ProfessionalService",
+    "name":"Kamil Dyczkowski - Warehouse Control Systems",
+    "url":"https://kamildyczkowski.com/",
+    "areaServed":"United Kingdom",
+    "description":"Warehouse control systems for small businesses operating on paper and memory. Enforcement layer to stop inventory drift, picking mistakes, and rework.",
+    "founder":{"@type":"Person","name":"Kamil Dyczkowski"},
+    "serviceType":[
+      "Warehouse process enforcement",
+      "Inventory integrity controls",
+      "Picking and movement validation",
+      "Goods-in, stock movement, and auditability"
+    ]
+  }
+  </script>
+
+  <!-- FAQ schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"We are still on paper. Is it too early to build a system?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"No. Paper and memory work until volume rises. The system is the control layer that prevents drift, makes movement traceable, and stops time loss caused by rework."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Do you sell training?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"No. I do not sell training or generic workshops. I build and enforce operational logic so the correct action becomes the only possible action."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"What is the typical first step?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"A short diagnosis call to confirm fit, map the failure points, and define the minimum viable control layer to implement first."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
-<body class="bg-deep-system text-slate-300 selection:bg-blue-500 selection:text-white">
+<body class="bg-system selection:bg-blue-500 selection:text-white">
   <div class="grid-pattern"></div>
 
+  <!-- NAV -->
   <nav class="fixed w-full z-50 glass-panel">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-20 items-center">
-        <!-- LOGO BRANDING -->
-        <a href="#" class="flex items-center gap-3 group">
-          <!-- SVG Logo Icon (Technical/Developer Style) -->
+        <a href="index.html" class="flex items-center gap-3 group">
           <svg class="h-8 w-auto" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5 10 L15 20 L5 30" stroke="#3b82f6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <rect x="20" y="25" width="12" height="4" fill="#3b82f6" class="animate-pulse">
-               <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" calcMode="discrete"/>
+            <rect x="20" y="25" width="12" height="4" fill="#3b82f6">
+              <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" calcMode="discrete"/>
             </rect>
           </svg>
-          
+
           <div class="flex flex-col justify-center">
-             <span class="font-bold text-[16px] tracking-tight text-white leading-none uppercase font-mono group-hover:text-blue-400 transition">Kamil Dyczkowski</span>
-             <span class="text-[9px] text-slate-500 uppercase tracking-[0.2em] font-bold mt-1">Business Solutions & Systems</span>
+            <span class="font-bold text-[16px] tracking-tight text-white leading-none uppercase font-mono group-hover:text-blue-400 transition">Kamil Dyczkowski</span>
+            <span class="text-[9px] text-slate-500 uppercase tracking-[0.2em] font-bold mt-1">Business Solutions & Systems</span>
           </div>
         </a>
 
         <div class="hidden md:flex items-center space-x-8">
-          <a href="#symptoms" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Symptoms</a>
-          <a href="#roadmap" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Roadmap</a>
-          <a href="#levels" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Offers</a>
-          <a href="#about" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">About</a>
-
-          <!-- Phone number logic updated to REVEAL -->
-          <span id="phone-container" class="reveal-btn" onclick="revealPhone()">[ Show Direct Line ]</span>
-
+          <a href="index.html#symptoms" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Symptoms</a>
+          <a href="index.html#solution" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Solution</a>
+          <a href="index.html#roadmap" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Roadmap</a>
+          <a href="index.html#faq" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">FAQ</a>
+          <a href="about.html" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">About</a>
+          <a href="low-noise-leadership.html" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Book</a>
           <a href="mailto:dyczkowski.kamil@gmail.com" class="px-5 py-2 rounded bg-blue-700 text-white font-bold hover:bg-blue-600 transition text-xs uppercase tracking-wide">Contact</a>
         </div>
 
@@ -173,407 +214,221 @@
     </div>
   </nav>
 
+
   <!-- HERO -->
-  <header class="pt-32 pb-16 md:pt-48 md:pb-18 relative z-10">
+  <header id="top" class="pt-28 pb-14 relative z-10">
     <div class="max-w-5xl mx-auto px-4 text-center">
-      <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight mb-8">
-        Break the <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">efficiency ceiling</span><br />
-        that is capping your revenue.
+      <div class="pill text-slate-500 mb-4">For warehouse-driven small businesses</div>
+
+      <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight tracking-tight">
+        Revenue is rising.<br />
+        Profit is not.<br />
+        The leak is operational.
       </h1>
 
-      <div class="max-w-3xl mx-auto space-y-6 text-slate-400 text-base md:text-lg font-light leading-relaxed mb-10">
-        <p>
-          You are stuck in a cycle where adding more clients just creates more chaos. Your overheads are growing, your team is at capacity, but your profit margin is stagnant. <strong class="text-white">This is not a people problem. It is a process failure.</strong>
-        </p>
-        <p>
-          It happens when your team is forced to fight their own tools. Instead of relying on rigid, off-the-shelf software that demands manual workarounds, I build architecture that fits your actual workflow. My systems ensure that the correct action is the only possible action - giving you the stability to scale without the stress.
-        </p>
+      <p class="mt-6 text-slate-400 text-base md:text-lg leading-relaxed max-w-4xl mx-auto">
+        If your warehouse still runs on paper, memory, and informal rules, growth creates chaos.
+        I install a control and enforcement layer that stops inventory drift, picking mistakes, and rework - so time is recovered and margin returns.
+      </p>
+
+      <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+        <a class="btn-primary" href="mailto:YOUR_EMAIL?subject=Warehouse%20Control%20-%20Discovery%20Call">Book a discovery call</a>
+        <a class="btn-ghost" href="#symptoms">See the failure patterns</a>
       </div>
 
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="mailto:dyczkowski.kamil@gmail.com?subject=Discovery Call Request" class="btn-primary">Book Free Discovery Call</a>
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+        <div class="glass rounded-xl p-5">
+          <div class="pill text-blue-400 mb-2">Target</div>
+          <div class="text-sm text-slate-300">Small business warehouse operations moving from paper to control.</div>
+        </div>
+        <div class="glass rounded-xl p-5">
+          <div class="pill text-blue-400 mb-2">Outcome</div>
+          <div class="text-sm text-slate-300">Less rework, fewer errors, faster flow - measurable time recovery.</div>
+        </div>
+        <div class="glass rounded-xl p-5">
+          <div class="pill text-blue-400 mb-2">Mode</div>
+          <div class="text-sm text-slate-300">Long-term partnership or end-to-end system delivery.</div>
+        </div>
+      </div>
+
+      <div class="mt-8 text-xs text-slate-500">
+        Not training. Not workshops. Not reports. <span class="text-slate-300 font-bold">Enforced operational logic.</span>
       </div>
     </div>
   </header>
 
-  <!-- ANCHOR -->
-  <section class="pb-14 md:pb-20 relative z-10">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="glass-card rounded-2xl p-8 md:p-10 border border-slate-800/60">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-          <div class="md:col-span-1">
-            <div class="text-slate-500 font-mono text-[10px] uppercase tracking-widest font-bold mb-3">Positioning</div>
-            <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight leading-tight">
-              Process-first.<br />
-              System-second.
-            </h2>
-            <p class="mt-4 text-sm text-slate-400 leading-relaxed">
-              Operator-level architecture delivered with best-practice discipline.
-              We fix the process before we write the code.
-            </p>
-          </div>
-
-          <div class="md:col-span-2 space-y-4 text-slate-300 leading-relaxed">
-            <p class="text-sm md:text-base">
-              I am not a consultant who delivers a generic report. I enter when process integrity has reached its limit and the business is capped by internal chaos.
-            </p>
-            <p class="text-sm md:text-base">
-              My work is a straight line: <strong class="text-white">diagnosis</strong>, <strong class="text-white">system design</strong>, and implementation of a
-              <strong class="text-white">strict enforcement layer</strong>.
-              Enforcement is not about micromanaging people. It protects the process so teams cannot accidentally create errors.
-            </p>
-
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-              <div class="glass-card p-4 rounded-xl border border-slate-800/60">
-                <div class="text-blue-400 font-mono text-[10px] uppercase tracking-widest font-bold mb-2">Diagnosis</div>
-                <div class="text-sm text-slate-300">Identify real profit leaks, not just symptoms.</div>
-              </div>
-              <div class="glass-card p-4 rounded-xl border border-slate-800/60">
-                <div class="text-blue-400 font-mono text-[10px] uppercase tracking-widest font-bold mb-2">Design</div>
-                <div class="text-sm text-slate-300">Rebuild workflow logic using proven patterns.</div>
-              </div>
-              <div class="glass-card p-4 rounded-xl border border-slate-800/60">
-                <div class="text-blue-400 font-mono text-[10px] uppercase tracking-widest font-bold mb-2">Enforcement</div>
-                <div class="text-sm text-slate-300">Make correct actions unavoidable.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- SYMPTOMS -->
-  <section id="symptoms" class="py-20 relative z-10 border-y border-slate-800/60 bg-slate-950/40 backdrop-blur-sm">
+  <section id="symptoms" class="py-16 relative z-10 border-y border-slate-800/60 bg-slate-950/40 backdrop-blur-sm">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl font-bold text-white mb-4">Why Your Current Setup is Failing You</h2>
-        <p class="text-slate-500 font-mono text-sm uppercase tracking-widest">Identify the leak in your operation</p>
+      <div class="text-center">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white">The warehouse failure patterns</h2>
+        <p class="text-slate-400 mt-3 max-w-3xl mx-auto">
+          These are not people problems. They are control gaps.
+        </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="glass-card p-8 rounded-xl border-t-4 border-t-blue-500 h-full">
-          <h3 class="text-xl font-bold text-white mb-4">1. Warehouse and inventory control</h3>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4">
-            If your warehouse relies on memory and paper, you are leaking money.
-            I implement lifecycle control from Goods-In and stock movement to counts, write-offs, and smart alerts.
-          </p>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Shelf-life (BBE) tracking, picking logic, and scan-based validation are enforced by the system,
-            not managed by memory.
-          </p>
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="glass rounded-2xl p-7">
+          <h3 class="text-white font-bold">Inventory drift</h3>
+          <p class="text-slate-400 text-sm mt-2">Stock levels in reality do not match the sheet. Time is spent searching, counting, arguing, and correcting.</p>
+          <p class="text-slate-300 text-sm mt-3"><span class="kbd">Leak</span> write-offs, emergency purchases, missed sales</p>
         </div>
 
-        <div class="glass-card p-8 rounded-xl border-t-4 border-t-emerald-500 h-full">
-          <h3 class="text-xl font-bold text-white mb-4">2. Data integrity and compliance</h3>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4">
-            Fragmented spreadsheets and notes do not create a source of truth.
-            They create contradictions, blind spots, and liability. My solutions replace informal workarounds with structured data.
-          </p>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Systems are designed to align with <strong class="text-white">UK GDPR</strong>. Privacy is a design constraint, not an afterthought.
-          </p>
+        <div class="glass rounded-2xl p-7">
+          <h3 class="text-white font-bold">Picking mistakes and rework</h3>
+          <p class="text-slate-400 text-sm mt-2">Wrong item, wrong quantity, wrong batch. The cost is not the mistake - it is the recovery loop.</p>
+          <p class="text-slate-300 text-sm mt-3"><span class="kbd">Leak</span> returns, customer friction, overtime</p>
         </div>
 
-        <div class="glass-card p-8 rounded-xl border-t-4 border-t-slate-600 h-full">
-          <h3 class="text-xl font-bold text-white mb-4">3. Off-the-shelf compromise</h3>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4">
-            Generic software rarely fits the reality of your operation.
-            It forces workarounds, and every workaround becomes a leak.
-          </p>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            I apply best-practice patterns, then tailor the logic to your workflow so the tool supports the work
-            rather than bending it.
-          </p>
+        <div class="glass rounded-2xl p-7">
+          <h3 class="text-white font-bold">No enforced movement logic</h3>
+          <p class="text-slate-400 text-sm mt-2">Goods-in, relocations, adjustments, and write-offs happen, but not as controlled transactions.</p>
+          <p class="text-slate-300 text-sm mt-3"><span class="kbd">Leak</span> invisible shrink, broken traceability</p>
         </div>
 
-        <div class="glass-card p-8 rounded-xl border-t-4 border-t-amber-500 h-full">
-          <h3 class="text-xl font-bold text-white mb-4">4. Workflow logic and priorities</h3>
-          <p class="text-slate-400 text-sm leading-relaxed mb-4">
-            Most bottlenecks are not caused by effort. They are caused by unclear priorities and inconsistent handovers.
-          </p>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            I restructure workflows to reduce exceptions, shorten handovers, and make the next step obvious for the team.
-          </p>
+        <div class="glass rounded-2xl p-7">
+          <h3 class="text-white font-bold">Work runs on memory</h3>
+          <p class="text-slate-400 text-sm mt-2">One key person holds the rules in their head. When they are absent, quality collapses.</p>
+          <p class="text-slate-300 text-sm mt-3"><span class="kbd">Leak</span> fragility, missed handovers</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- IMPACT (ANONYMIZED & STATIC GRID - RESTORED) -->
-  <section class="py-20 bg-slate-900/30 relative z-10 border-b border-slate-800/50">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-2xl font-bold text-white uppercase tracking-wide">Operational impact delivered</h2>
-        <p class="text-slate-500 font-mono text-sm uppercase tracking-widest mt-2">Proven results in high-stakes environments</p>
+  <!-- SOLUTION -->
+  <section id="solution" class="py-16 relative z-10">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white">What I install: a control and enforcement layer</h2>
+        <p class="text-slate-400 mt-3 max-w-3xl mx-auto">
+          The goal is simple: correct actions become unavoidable. Exceptions become visible immediately.
+        </p>
       </div>
 
-      <!-- Static Grid Layout - No Hover Required -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <!-- Item 1 -->
-        <div class="glass-card p-6 rounded-xl border border-slate-800/40 hover:border-blue-500/30 transition-colors">
-          <div class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-3">National Food Retailer</div>
-          <p class="text-sm text-slate-300 leading-relaxed">
-            Designed and implemented a factory-floor quality control system to automate routine auditor checks and streamline management reporting.
-          </p>
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="glass rounded-2xl p-7">
+          <div class="pill text-blue-400 mb-2">Goods-in control</div>
+          <p class="text-slate-400 text-sm">Validated receiving, clear status, and enforced transaction rules.</p>
         </div>
-
-        <!-- Item 2 -->
-        <div class="glass-card p-6 rounded-xl border border-slate-800/40 hover:border-blue-500/30 transition-colors">
-          <div class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-3">Global Automotive Manufacturer</div>
-          <p class="text-sm text-slate-300 leading-relaxed">
-            Provided consultations on project management system integrity to ensure operational consistency and data clarity across complex supply chains.
-          </p>
+        <div class="glass rounded-2xl p-7">
+          <div class="pill text-blue-400 mb-2">Movement validation</div>
+          <p class="text-slate-400 text-sm">Relocations, picks, adjustments, write-offs as controlled events, not informal edits.</p>
         </div>
-
-        <!-- Item 3 -->
-        <div class="glass-card p-6 rounded-xl border border-slate-800/40 hover:border-blue-500/30 transition-colors">
-          <div class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-3">Tier 1 Automotive Supplier</div>
-          <p class="text-sm text-slate-300 leading-relaxed">
-            Architected manufacturing processes from the initial NPI phase through to full-scale mass production implementation, ensuring zero-defect compliance.
-          </p>
+        <div class="glass rounded-2xl p-7">
+          <div class="pill text-blue-400 mb-2">Exception visibility</div>
+          <p class="text-slate-400 text-sm">Alerts and dashboards that expose drift early, before it becomes cost.</p>
         </div>
+      </div>
 
-        <!-- Item 4 -->
-        <div class="glass-card p-6 rounded-xl border border-slate-800/40 hover:border-blue-500/30 transition-colors">
-          <div class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-3">Luxury Food Brand</div>
-          <p class="text-sm text-slate-300 leading-relaxed">
-            Developed a goods-in system managing pallet scanning, volume validation, and shelf-life (BBE) compliance to eliminate stock wastage.
-          </p>
-        </div>
-
-        <!-- Item 5 -->
-        <div class="glass-card p-6 rounded-xl border border-slate-800/40 hover:border-blue-500/30 transition-colors">
-          <div class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-3">Contract Packing Specialist</div>
-          <p class="text-sm text-slate-300 leading-relaxed">
-            Engineered and optimized quality control processes to ensure strict operational standards and production consistency under high volume.
-          </p>
-        </div>
-
-        <!-- Item 6 -->
-        <div class="glass-card p-6 rounded-xl border border-slate-800/40 hover:border-blue-500/30 transition-colors">
-          <div class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-3">ERP Implementation (Warehousing)</div>
-          <p class="text-sm text-slate-300 leading-relaxed">
-            Consulted on warehouse management logic and data consistency to align ERP behavior with real-world operational requirements.
-          </p>
-        </div>
-
+      <div class="mt-10 glass rounded-2xl p-8">
+        <h3 class="text-white font-bold text-lg">No training dependency</h3>
+        <p class="text-slate-400 text-sm mt-2">
+          I do not sell workshops. If your process needs training to remain stable, it is not enforced.
+          Systems should constrain incorrect actions, not hope people remember rules under pressure.
+        </p>
       </div>
     </div>
   </section>
 
   <!-- ROADMAP -->
-  <section id="roadmap" class="py-24 relative z-10">
+  <section id="roadmap" class="py-16 relative z-10 border-y border-slate-800/60 bg-slate-950/35">
     <div class="max-w-5xl mx-auto px-4">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl font-bold text-white uppercase tracking-tight">The Roadmap: From Diagnosis to Delivery</h2>
-        <p class="text-slate-500 mt-2 text-sm">Every engagement begins with a deep dive into your operation.</p>
+      <div class="text-center">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white">Roadmap: from paper to control</h2>
+        <p class="text-slate-400 mt-3 max-w-3xl mx-auto">
+          Two engagement modes. Same goal: measurable time recovery and fewer mistakes.
+        </p>
       </div>
 
-      <div class="space-y-12">
-        <div class="glass-card p-8 md:p-10 rounded-2xl border-l-4 border-l-blue-500">
-          <div class="font-mono text-[10px] text-blue-500 font-bold uppercase tracking-widest mb-4">Phase 1: Defining the scope</div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 class="text-lg font-bold text-white mb-2">Option A: Built by diagnosis (Recommended)</h3>
-              <p class="text-sm text-slate-400">I analyze the operation, identify the failure points, and design the enforcement logic that removes them. This is the most reliable way to break a ceiling rather than automate it.</p>
-            </div>
-            <div class="border-l border-slate-700 pl-6">
-              <h3 class="text-lg font-bold text-white mb-2">Option B: Built by instruction</h3>
-              <p class="text-sm text-slate-400">I build what you specify. This works well when requirements are mature. The tradeoff is higher risk of missed edge cases that only surface after real usage.</p>
-            </div>
-          </div>
+      <div class="mt-10 space-y-6">
+        <div class="glass rounded-2xl p-8">
+          <div class="pill text-blue-400 mb-3">Phase 1</div>
+          <h3 class="text-white font-bold text-lg">Diagnosis - isolate the leak</h3>
+          <p class="text-slate-400 text-sm mt-2">We map where drift forms: receiving, storage, picking, adjustments, write-offs, and handovers. Output is a scoped plan for the minimum viable control layer.</p>
         </div>
 
-        <div class="glass-card p-8 md:p-10 rounded-2xl border-l-4 border-l-emerald-500">
-          <div class="font-mono text-[10px] text-emerald-500 font-bold uppercase tracking-widest mb-4">Phase 2: Handover, risk, and responsibility</div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 class="text-lg font-bold text-white mb-2">Model A: Managed system (Partnership)</h3>
-              <p class="text-sm text-slate-400">I retain control of the environment and codebase. Responsibility for uptime and continuity remains with me. If the business evolves, the system evolves under supervision.</p>
-            </div>
-            <div class="border-l border-slate-700 pl-6">
-              <h3 class="text-lg font-bold text-white mb-2">Model B: Asset transfer (Ownership)</h3>
-              <p class="text-sm text-slate-400">You receive full source code and admin access. Once you can modify the system, change control and integrity become your responsibility.</p>
-            </div>
-          </div>
+        <div class="glass rounded-2xl p-8">
+          <div class="pill text-blue-400 mb-3">Phase 2</div>
+          <h3 class="text-white font-bold text-lg">Install control - enforce transactions</h3>
+          <p class="text-slate-400 text-sm mt-2">We implement the rules as enforced steps: validations, required fields, constraints, and auditability. The system prevents silent drift.</p>
+        </div>
+
+        <div class="glass rounded-2xl p-8">
+          <div class="pill text-blue-400 mb-3">Phase 3</div>
+          <h3 class="text-white font-bold text-lg">Partnership - evolve under change</h3>
+          <p class="text-slate-400 text-sm mt-2">As volume and product mix change, controls must evolve. Partnership keeps integrity stable without rebuilding from scratch.</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- LEVELS -->
-  <section id="levels" class="py-24 bg-slate-900/20 relative z-10 border-t border-slate-800/60">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl font-bold text-white uppercase tracking-tight">Levels of operational support</h2>
-        <p class="text-slate-500 mt-2 font-mono text-sm">Select the logic tier that fits your scale.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="glass-card p-8 rounded-xl border-t-4 border-t-slate-500 h-full flex flex-col">
-          <div class="text-slate-500 font-mono text-[10px] mb-4 uppercase tracking-widest font-bold">Entry level</div>
-          <h3 class="text-2xl font-bold text-white mb-6">BASIC</h3>
-          <ul class="space-y-4 mb-8 text-sm text-slate-300 check-list flex-grow">
-            <li>Focus: Core process control and data integrity</li>
-            <li>Remove manual workarounds and ambiguity</li>
-            <li>Standard operational logs and traceability</li>
-            <li><strong>Support:</strong> Monthly maintenance + 5h advisory</li>
-          </ul>
-          <div class="mt-auto pt-6 border-t border-slate-800 text-center"><span class="text-xs text-slate-500">Best for stabilizing operations</span></div>
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="glass rounded-2xl p-7">
+          <div class="pill text-slate-400 mb-2">Best fit</div>
+          <p class="text-slate-300 text-sm"><strong>Small warehouses</strong> where paper and memory are now the bottleneck.</p>
         </div>
-
-        <div class="glass-card p-8 rounded-xl border-t-4 border-t-blue-500 shadow-glow bg-slate-900/40 h-full flex flex-col">
-          <div class="text-blue-500 font-mono text-[10px] mb-4 uppercase tracking-widest font-bold">Insight level</div>
-          <h3 class="text-2xl font-bold text-white mb-6">ADVANCED</h3>
-          <ul class="space-y-4 mb-8 text-sm text-slate-300 check-list flex-grow">
-            <li>Everything in Basic + full visibility through dashboards</li>
-            <li>Quantitative smart alerts and exception control</li>
-            <li>Operational performance and margin clarity</li>
-            <li><strong>Support:</strong> Prioritized response and health checks</li>
-          </ul>
-          <div class="mt-auto pt-6 border-t border-slate-800 text-center"><span class="text-xs text-blue-400 font-bold">Best for scaling businesses</span></div>
-        </div>
-
-        <div class="glass-card p-8 rounded-xl border-t-4 border-t-emerald-500 h-full flex flex-col">
-          <div class="text-emerald-500 font-mono text-[10px] mb-4 uppercase tracking-widest font-bold">Predictive level</div>
-          <h3 class="text-2xl font-bold text-white mb-6">PRO</h3>
-          <ul class="space-y-4 mb-8 text-sm text-slate-300 check-list flex-grow">
-            <li>Everything in Advanced + optimization layer</li>
-            <li>Demand forecasting and capacity guidance</li>
-            <li>Secure AI reporting (no sensitive data exposure)</li>
-            <li><strong>Support:</strong> Critical priority and continuous evolution</li>
-          </ul>
-          <div class="mt-auto pt-6 border-t border-slate-800 text-center"><span class="text-xs text-emerald-500">Best for market leaders</span></div>
+        <div class="glass rounded-2xl p-7">
+          <div class="pill text-slate-400 mb-2">30-90 day outcome</div>
+          <p class="text-slate-300 text-sm"><strong>Recovered time</strong> and fewer mistakes that trigger recovery loops.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT (FULL CONTENT) -->
-  <section id="about" class="py-24 relative z-10">
+  <!-- FAQ -->
+  <section id="faq" class="py-16 relative z-10">
     <div class="max-w-4xl mx-auto px-4">
-      <div class="glass-card rounded-xl p-8 md:p-12 border border-slate-800/60">
-        <div class="flex flex-col md:flex-row gap-12 items-start">
-          <div class="w-full md:w-[240px] flex-shrink-0">
-            <div class="w-full aspect-[3/4] rounded-lg bg-slate-950 border border-slate-700 overflow-hidden relative">
-              <img src="img.jpg" alt="Kamil Dyczkowski" class="w-full h-full object-cover object-top hover:scale-105 transition duration-700" />
-            </div>
-            <div class="mt-4 text-center md:text-left">
-              <div class="text-white font-bold">Kamil Dyczkowski</div>
-              <div class="text-blue-500 text-[10px] font-mono uppercase tracking-widest">Operator-level Architect</div>
-            </div>
+      <h2 class="text-2xl md:text-3xl font-extrabold text-white text-center">FAQ</h2>
+
+      <div class="mt-10 space-y-4">
+        <details class="p-5">
+          <summary class="flex items-center justify-between gap-4">
+            <span class="text-white font-bold text-sm">What do you need from me to start?</span>
+            <span class="pill text-slate-500">Expand</span>
+          </summary>
+          <div class="mt-3 text-sm text-slate-400 leading-relaxed">
+            Three lines: what you store, where mistakes happen most, and what still runs on paper or memory. That is enough to scope the first step.
           </div>
+        </details>
 
-          <div class="flex-grow space-y-6 text-slate-300 leading-relaxed text-sm md:text-base">
-            <h2 class="text-2xl font-bold text-white mb-2">Process-first.<br />System-second.</h2>
-
-            <p>
-              I am an operator-level architect, not a consultant and not a typical developer.
-              My scope covers manufacturing, warehouses, and appointment-driven service operations,
-              from treatment studios and gyms to high-volume trade services.
-            </p>
-
-            <p>
-              I enter when process integrity has reached its limit and the business is capped by its own chaos.
-              The goal is operational comfort: fewer exceptions, clearer priorities, and a stable source of truth.
-              Best practices are used to create order and predictability, not bureaucracy.
-            </p>
-
-            <p>
-              My work is a straight line: diagnosis, system design, and implementation of a strict enforcement layer.
-              Enforcement is not about controlling people. It controls the process so teams cannot accidentally create errors,
-              and nobody has to rely on memory to keep the business running.
-            </p>
-
-            <p>
-              After more than 20 years in high-stakes environments, I have seen where even enterprise systems like SAP or Oracle fail,
-              not due to lack of capability, but due to flawed assumptions. My systems are built without those assumptions,
-              around the reality of the shop floor and the reception desk.
-            </p>
-
-            <p class="text-white font-bold border-l-2 border-blue-500 pl-4 py-1">
-              You do not need louder management. You need enforced operational logic that removes ambiguity and prevents leaks.
-            </p>
+        <details class="p-5">
+          <summary class="flex items-center justify-between gap-4">
+            <span class="text-white font-bold text-sm">Do you implement end-to-end systems?</span>
+            <span class="pill text-slate-500">Expand</span>
+          </summary>
+          <div class="mt-3 text-sm text-slate-400 leading-relaxed">
+            Yes. Partnership is the operating model, end-to-end delivery is the objective. We install control first, then expand as constraints and volume evolve.
           </div>
-        </div>
+        </details>
+
+        <details class="p-5">
+          <summary class="flex items-center justify-between gap-4">
+            <span class="text-white font-bold text-sm">Do you do training or workshops?</span>
+            <span class="pill text-slate-500">Expand</span>
+          </summary>
+          <div class="mt-3 text-sm text-slate-400 leading-relaxed">
+            No. The system enforces the rules. People should not have to remember critical controls under pressure.
+          </div>
+        </details>
       </div>
     </div>
   </section>
 
-  <!-- FAQ (single frame) -->
-  <section class="py-20 bg-slate-900/30 relative z-10 border-t border-slate-800/50">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-2xl font-bold text-white mb-10 text-center uppercase">Frequently Asked Questions</h2>
-
-      <div class="glass-card p-6 md:p-8 rounded-2xl border border-slate-800/60">
-        <div class="space-y-4">
-
-          <details class="p-5">
-            <summary class="flex items-center justify-between gap-4">
-              <span class="text-white font-bold text-sm">Is the "Discovery Call" really free?</span>
-              <span class="text-slate-500 font-mono text-[10px] uppercase tracking-widest">Expand</span>
-            </summary>
-            <div class="mt-3 text-xs text-slate-400 leading-relaxed">
-              Yes. The initial conversation is free to establish if I can actually solve your problem.
-              Paid services (Audit, Design, Implementation) only start once we agree on the scope.
-            </div>
-          </details>
-
-          <details class="p-5">
-            <summary class="flex items-center justify-between gap-4">
-              <span class="text-white font-bold text-sm">How do you handle AI with sensitive data?</span>
-              <span class="text-slate-500 font-mono text-[10px] uppercase tracking-widest">Expand</span>
-            </summary>
-            <div class="mt-3 text-xs text-slate-400 leading-relaxed">
-              Data privacy is non-negotiable. AI is not integrated with personal records.
-              It is used for meta-analysis such as booking trends and operational summaries, aligned with UK GDPR.
-            </div>
-          </details>
-
-          <details class="p-5">
-            <summary class="flex items-center justify-between gap-4">
-              <span class="text-white font-bold text-sm">Can a custom system outperform SAP or NetSuite?</span>
-              <span class="text-slate-500 font-mono text-[10px] uppercase tracking-widest">Expand</span>
-            </summary>
-            <div class="mt-3 text-xs text-slate-400 leading-relaxed">
-              It can outperform them in your specific workflows because it is built around your constraints.
-              Large systems optimize for generality. I optimize for process integrity in your operation.
-            </div>
-          </details>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="py-20 border-t border-slate-800 bg-slate-950 relative z-10">
+  <!-- CONTACT -->
+  <footer id="contact" class="py-16 border-t border-slate-800 bg-slate-950 relative z-10">
     <div class="max-w-3xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold text-white mb-6">Direct access for serious operations.</h2>
-      <p class="text-slate-400 mb-10 text-sm max-w-xl mx-auto">
-        I do not provide generic quotes without understanding the context. Every successful implementation starts with a brief description of the problem.
+      <h2 class="text-2xl md:text-3xl font-extrabold text-white">Contact</h2>
+      <p class="text-slate-400 mt-3 text-sm max-w-xl mx-auto">
+        Send a short description of the leak: inventory drift, picking mistakes, write-offs, or missing traceability. I will tell you if this is solvable and what the first control layer should be.
       </p>
-      <a href="mailto:dyczkowski.kamil@gmail.com?subject=Discovery Call Request" class="inline-block px-12 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-lg transition shadow-glow text-sm uppercase tracking-widest">Book Free Discovery Call</a>
-      <p class="mt-16 text-[10px] text-slate-600 font-mono uppercase tracking-widest">© 2026 Kamil Dyczkowski | Business Solutions & Systems</p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+        <a class="btn-primary" href="mailto:YOUR_EMAIL?subject=Warehouse%20Control%20-%20Discovery%20Call">Email me</a>
+        <a class="btn-ghost" href="tel:YOUR_PHONE_E164">Call direct</a>
+      </div>
+
+      <p class="mt-10 text-[11px] text-slate-600 font-mono uppercase tracking-widest">
+        © 2026 Kamil Dyczkowski | Warehouse Control Systems
+      </p>
     </div>
   </footer>
-
-  <script>
-    // Logic: Reveal real phone number + clickable link
-    function revealPhone() {
-      const el = document.getElementById('phone-container');
-      const phoneDisplay = "+44 7403 874 868";
-      const phoneHref = "+447403874868";
-      
-      // Update the HTML to be a clickable phone link
-      el.innerHTML = `<a href="tel:${phoneHref}" class="text-white hover:text-blue-400 transition tracking-wider border-b border-blue-500 pb-1">${phoneDisplay}</a>`;
-      
-      // Remove the onclick event so subsequent clicks just call the number
-      el.onclick = null;
-      el.classList.remove('reveal-btn');
-    }
-  </script>
 </body>
 </html>
