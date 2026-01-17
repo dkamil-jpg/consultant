@@ -138,9 +138,20 @@
   <nav class="fixed w-full z-50 glass-panel">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-20 items-center">
-        <a href="#" class="flex flex-col justify-center group">
-          <span class="font-bold text-[15px] tracking-tight text-white leading-none uppercase">Kamil Dyczkowski</span>
-          <span class="text-[10px] text-slate-500 uppercase tracking-widest font-bold mt-1 group-hover:text-blue-400 transition">Business Solutions</span>
+        <!-- LOGO BRANDING -->
+        <a href="#" class="flex items-center gap-3 group">
+          <!-- SVG Logo Icon (Technical/Developer Style) -->
+          <svg class="h-8 w-auto" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 10 L15 20 L5 30" stroke="#3b82f6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="20" y="25" width="12" height="4" fill="#3b82f6" class="animate-pulse">
+               <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" calcMode="discrete"/>
+            </rect>
+          </svg>
+          
+          <div class="flex flex-col justify-center">
+             <span class="font-bold text-[16px] tracking-tight text-white leading-none uppercase font-mono group-hover:text-blue-400 transition">Kamil Dyczkowski</span>
+             <span class="text-[9px] text-slate-500 uppercase tracking-[0.2em] font-bold mt-1">Business Solutions & Systems</span>
+          </div>
         </a>
 
         <div class="hidden md:flex items-center space-x-8">
@@ -149,6 +160,7 @@
           <a href="#levels" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Offers</a>
           <a href="#about" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">About</a>
 
+          <!-- Phone number logic updated to REVEAL -->
           <span id="phone-container" class="reveal-btn" onclick="revealPhone()">[ Show Direct Line ]</span>
 
           <a href="mailto:dyczkowski.kamil@gmail.com" class="px-5 py-2 rounded bg-blue-700 text-white font-bold hover:bg-blue-600 transition text-xs uppercase tracking-wide">Contact</a>
@@ -288,7 +300,7 @@
     </div>
   </section>
 
-  <!-- IMPACT (ANONYMIZED & STATIC) -->
+  <!-- IMPACT (ANONYMIZED & STATIC GRID - RESTORED) -->
   <section class="py-20 bg-slate-900/30 relative z-10 border-b border-slate-800/50">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center mb-12">
@@ -299,7 +311,7 @@
       <!-- Static Grid Layout - No Hover Required -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         
-        <!-- Item 1 (Was Morrisons) -->
+        <!-- Item 1 -->
         <div class="glass-card p-6 rounded-xl border border-slate-800/40 hover:border-blue-500/30 transition-colors">
           <div class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-3">National Food Retailer</div>
           <p class="text-sm text-slate-300 leading-relaxed">
@@ -307,7 +319,7 @@
           </p>
         </div>
 
-        <!-- Item 2 (Was JLR) -->
+        <!-- Item 2 -->
         <div class="glass-card p-6 rounded-xl border border-slate-800/40 hover:border-blue-500/30 transition-colors">
           <div class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-3">Global Automotive Manufacturer</div>
           <p class="text-sm text-slate-300 leading-relaxed">
@@ -315,7 +327,7 @@
           </p>
         </div>
 
-        <!-- Item 3 (Was Xandor) -->
+        <!-- Item 3 -->
         <div class="glass-card p-6 rounded-xl border border-slate-800/40 hover:border-blue-500/30 transition-colors">
           <div class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-3">Tier 1 Automotive Supplier</div>
           <p class="text-sm text-slate-300 leading-relaxed">
@@ -323,7 +335,7 @@
           </p>
         </div>
 
-        <!-- Item 4 (Was Cartwright & Butler) -->
+        <!-- Item 4 -->
         <div class="glass-card p-6 rounded-xl border border-slate-800/40 hover:border-blue-500/30 transition-colors">
           <div class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-3">Luxury Food Brand</div>
           <p class="text-sm text-slate-300 leading-relaxed">
@@ -331,7 +343,7 @@
           </p>
         </div>
 
-        <!-- Item 5 (Was Pro-Pak) -->
+        <!-- Item 5 -->
         <div class="glass-card p-6 rounded-xl border border-slate-800/40 hover:border-blue-500/30 transition-colors">
           <div class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-3">Contract Packing Specialist</div>
           <p class="text-sm text-slate-300 leading-relaxed">
@@ -339,7 +351,7 @@
           </p>
         </div>
 
-        <!-- Item 6 (Was NetSuite) -->
+        <!-- Item 6 -->
         <div class="glass-card p-6 rounded-xl border border-slate-800/40 hover:border-blue-500/30 transition-colors">
           <div class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-3">ERP Implementation (Warehousing)</div>
           <p class="text-sm text-slate-300 leading-relaxed">
@@ -544,7 +556,7 @@
         I do not provide generic quotes without understanding the context. Every successful implementation starts with a brief description of the problem.
       </p>
       <a href="mailto:dyczkowski.kamil@gmail.com?subject=Discovery Call Request" class="inline-block px-12 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-lg transition shadow-glow text-sm uppercase tracking-widest">Book Free Discovery Call</a>
-      <p class="mt-16 text-[10px] text-slate-600 font-mono uppercase tracking-widest">© 2026 Kamil Dyczkowski | Yorkshire, UK</p>
+      <p class="mt-16 text-[10px] text-slate-600 font-mono uppercase tracking-widest">© 2026 Kamil Dyczkowski | Business Solutions & Systems</p>
     </div>
   </footer>
 
