@@ -114,23 +114,6 @@
       font-weight: bold;
     }
 
-    /* Updated interaction for mobile */
-    .logo-item { 
-      cursor: pointer; 
-      transition: all 0.3s; 
-      opacity: 0.5; 
-      filter: grayscale(100%); 
-    }
-    .logo-item:hover, .logo-item.active-logo { 
-      opacity: 1; 
-      filter: grayscale(0%); 
-      transform: scale(1.05); 
-    }
-    
-    .impact-text { display: none; }
-    .impact-text.active { display: block; animation: fadeIn 0.4s ease; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
-
     .reveal-btn {
       cursor: pointer;
       color: #3b82f6;
@@ -166,7 +149,6 @@
           <a href="#levels" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Offers</a>
           <a href="#about" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">About</a>
 
-          <!-- Phone number logic updated -->
           <span id="phone-container" class="reveal-btn" onclick="revealPhone()">[ Show Direct Line ]</span>
 
           <a href="mailto:dyczkowski.kamil@gmail.com" class="px-5 py-2 rounded bg-blue-700 text-white font-bold hover:bg-blue-600 transition text-xs uppercase tracking-wide">Contact</a>
@@ -182,7 +164,6 @@
   <!-- HERO -->
   <header class="pt-32 pb-16 md:pt-48 md:pb-18 relative z-10">
     <div class="max-w-5xl mx-auto px-4 text-center">
-      <!-- UPDATED H1 & DESCRIPTION FOR DIRECTION 1 (REVENUE CEILING) -->
       <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight mb-8">
         Break the <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">efficiency ceiling</span><br />
         that is capping your revenue.
@@ -193,12 +174,11 @@
           You are stuck in a cycle where adding more clients just creates more chaos. Your overheads are growing, your team is at capacity, but your profit margin is stagnant. <strong class="text-white">This is not a people problem. It is a process failure.</strong>
         </p>
         <p>
-          It happens when a business runs on human memory instead of enforced logic. I build the architecture that removes this reliance. My systems ensure that the correct action is the only possible action - giving you the stability to scale without the stress.
+          It happens when a business runs on human memory instead of enforced logic. I build the architecture that removes this reliance. My systems ensure that the correct action is the only possible action—giving you the stability to scale without the stress.
         </p>
       </div>
 
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <!-- UPDATED CTA -->
         <a href="mailto:dyczkowski.kamil@gmail.com?subject=Discovery Call Request" class="btn-primary">Book Free Discovery Call</a>
       </div>
     </div>
@@ -308,42 +288,65 @@
     </div>
   </section>
 
-  <!-- SOCIAL PROOF / IMPACT -->
+  <!-- IMPACT (ANONYMIZED & STATIC) -->
   <section class="py-20 bg-slate-900/30 relative z-10 border-b border-slate-800/50">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <h2 class="text-2xl font-bold text-white mb-12 uppercase tracking-wide">Operational impact delivered for market leaders</h2>
-
-      <!-- Added onclick for mobile support and clearer instructions -->
-      <div class="flex flex-wrap justify-center items-center gap-10 md:gap-16">
-        <div class="logo-item" onclick="showImpact('morris', this)" onmouseover="showImpact('morris', this)">
-          <img src="morislogo.jpg" alt="Morrisons" class="h-10 w-auto object-contain" />
-        </div>
-        <div class="logo-item" onclick="showImpact('jlr', this)" onmouseover="showImpact('jlr', this)">
-          <img src="jlrlogo.jpg" alt="JLR" class="h-10 w-auto object-contain" />
-        </div>
-        <div class="logo-item" onclick="showImpact('xandor', this)" onmouseover="showImpact('xandor', this)">
-          <img src="xandlogo.jpg" alt="Xandor" class="h-10 w-auto object-contain" />
-        </div>
-        <div class="logo-item" onclick="showImpact('cb', this)" onmouseover="showImpact('cb', this)">
-          <img src="CBlogo.jpg" alt="Cartwright & Butler" class="h-10 w-auto object-contain" />
-        </div>
-        <div class="logo-item" onclick="showImpact('propak', this)" onmouseover="showImpact('propak', this)">
-          <img src="proplogo.jpg" alt="Pro-Pak" class="h-10 w-auto object-contain" />
-        </div>
-        <div class="logo-item" onclick="showImpact('netsuite', this)" onmouseover="showImpact('netsuite', this)">
-          <img src="NSlogo.jpg" alt="NetSuite" class="h-10 w-auto object-contain" />
-        </div>
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl font-bold text-white uppercase tracking-wide">Operational impact delivered</h2>
+        <p class="text-slate-500 font-mono text-sm uppercase tracking-widest mt-2">Proven results in high-stakes environments</p>
       </div>
 
-      <div class="mt-12 min-h-[80px] max-w-3xl mx-auto p-6 border-t border-slate-800 text-slate-400 text-sm italic">
-        <div id="default-impact" class="text-slate-500 animate-pulse">Tap or hover over a partner logo to see the specific operational intervention.</div>
+      <!-- Static Grid Layout - No Hover Required -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Item 1 (Was Morrisons) -->
+        <div class="glass-card p-6 rounded-xl border border-slate-800/40 hover:border-blue-500/30 transition-colors">
+          <div class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-3">National Food Retailer</div>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Designed and implemented a factory-floor quality control system to automate routine auditor checks and streamline management reporting.
+          </p>
+        </div>
 
-        <div id="morris" class="impact-text text-blue-300">Designed and implemented a factory-floor quality control system to automate routine auditor checks and streamline management reporting.</div>
-        <div id="jlr" class="impact-text text-blue-300">Provided consultations on project management system integrity to ensure operational consistency and data clarity.</div>
-        <div id="xandor" class="impact-text text-blue-300">Architected manufacturing processes from the initial NPI phase through to full-scale mass production implementation.</div>
-        <div id="cb" class="impact-text text-blue-300">Developed a goods-in system managing pallet scanning, volume validation, and shelf-life (BBE) compliance.</div>
-        <div id="propak" class="impact-text text-blue-300">Engineered and optimized quality control processes to ensure strict operational standards and production consistency.</div>
-        <div id="netsuite" class="impact-text text-blue-300">Consulted on warehouse management logic and data consistency to align ERP behavior with real-world operational requirements.</div>
+        <!-- Item 2 (Was JLR) -->
+        <div class="glass-card p-6 rounded-xl border border-slate-800/40 hover:border-blue-500/30 transition-colors">
+          <div class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-3">Global Automotive Manufacturer</div>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Provided consultations on project management system integrity to ensure operational consistency and data clarity across complex supply chains.
+          </p>
+        </div>
+
+        <!-- Item 3 (Was Xandor) -->
+        <div class="glass-card p-6 rounded-xl border border-slate-800/40 hover:border-blue-500/30 transition-colors">
+          <div class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-3">Tier 1 Automotive Supplier</div>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Architected manufacturing processes from the initial NPI phase through to full-scale mass production implementation, ensuring zero-defect compliance.
+          </p>
+        </div>
+
+        <!-- Item 4 (Was Cartwright & Butler) -->
+        <div class="glass-card p-6 rounded-xl border border-slate-800/40 hover:border-blue-500/30 transition-colors">
+          <div class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-3">Luxury Food Brand</div>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Developed a goods-in system managing pallet scanning, volume validation, and shelf-life (BBE) compliance to eliminate stock wastage.
+          </p>
+        </div>
+
+        <!-- Item 5 (Was Pro-Pak) -->
+        <div class="glass-card p-6 rounded-xl border border-slate-800/40 hover:border-blue-500/30 transition-colors">
+          <div class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-3">Contract Packing Specialist</div>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Engineered and optimized quality control processes to ensure strict operational standards and production consistency under high volume.
+          </p>
+        </div>
+
+        <!-- Item 6 (Was NetSuite) -->
+        <div class="glass-card p-6 rounded-xl border border-slate-800/40 hover:border-blue-500/30 transition-colors">
+          <div class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-3">ERP Implementation (Warehousing)</div>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Consulted on warehouse management logic and data consistency to align ERP behavior with real-world operational requirements.
+          </p>
+        </div>
+
       </div>
     </div>
   </section>
@@ -540,7 +543,6 @@
       <p class="text-slate-400 mb-10 text-sm max-w-xl mx-auto">
         I do not provide generic quotes without understanding the context. Every successful implementation starts with a brief description of the problem.
       </p>
-      <!-- UPDATED CTA -->
       <a href="mailto:dyczkowski.kamil@gmail.com?subject=Discovery Call Request" class="inline-block px-12 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-lg transition shadow-glow text-sm uppercase tracking-widest">Book Free Discovery Call</a>
       <p class="mt-16 text-[10px] text-slate-600 font-mono uppercase tracking-widest">© 2026 Kamil Dyczkowski | Yorkshire, UK</p>
     </div>
@@ -559,27 +561,6 @@
       // Remove the onclick event so subsequent clicks just call the number
       el.onclick = null;
       el.classList.remove('reveal-btn');
-    }
-
-    // Logic: Show impact description (Works for Hover AND Click)
-    function showImpact(id, element) {
-      const defaultText = document.getElementById('default-impact');
-      if (defaultText) defaultText.style.display = 'none';
-
-      // Reset all descriptions
-      const descElements = document.getElementsByClassName('impact-text');
-      for (let el of descElements) { el.classList.remove('active'); }
-
-      // Reset all logo styles
-      const logoElements = document.getElementsByClassName('logo-item');
-      for (let logo of logoElements) { logo.classList.remove('active-logo'); }
-
-      // Activate selected description
-      const target = document.getElementById(id);
-      if (target) target.classList.add('active');
-
-      // Highlight selected logo
-      if (element) element.classList.add('active-logo');
     }
   </script>
 </body>
