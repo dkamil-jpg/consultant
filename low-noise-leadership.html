@@ -14,17 +14,53 @@
     </script>
 
     <!-- SEO & META TAGS -->
-    <title>Low-Noise Leadership | Kamil Dyczkowski</title>
-    <meta name="description" content="A practical operating system for introverted leaders. Discover how to use silence, analysis, and strategic depth as your greatest advantage in a noisy world. Available in two editions.">
-    <meta name="keywords" content="introverted leadership, quiet power, kamil dyczkowski, low-noise leadership, leadership strategy, business book">
+    <title>Low-Noise Leadership | Operating System for Introverted Minds</title>
+    <meta name="description" content="A practical operating system for introverts to manage energy and focus. Not just for leaders, but for anyone operating under high cognitive load. Stop fighting your nature.">
+    <meta name="keywords" content="introvert operating system, energy management for introverts, deep work protocols, neurobiology of introversion, Kamil Dyczkowski, cognitive load management">
     <meta name="author" content="Kamil Dyczkowski">
+    <link rel="canonical" href="https://kamildyczkowski.com/low-noise-leadership" />
     
-    <!-- OPEN GRAPH (Social Media) -->
-    <meta property="og:title" content="Low-Noise Leadership | The Operating System for Introverted Leaders">
-    <meta property="og:description" content="Stop fighting your nature. Learn to lead with precision, not noise. Two editions available: Operational Handbook and Strategic System.">
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Low-Noise Leadership | The Operating System for Introverts">
+    <meta property="og:description" content="Stop fighting your nature. Learn to manage your energy and focus with precision. A manual for the introverted mind.">
     <meta property="og:image" content="https://kamildyczkowski.com/kamil-dyczkowski-warehouse-consultant.jpg">
     <meta property="og:url" content="https://kamildyczkowski.com/low-noise-leadership">
     <meta property="og:type" content="book">
+
+    <!-- SCHEMA.ORG - PRODUCT DATA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Book",
+          "name": "Low-Noise Leadership: A Practical System",
+          "author": { "@type": "Person", "name": "Kamil Dyczkowski" },
+          "description": "Operational handbook for introverts. Protocols for energy management and decision making.",
+          "offers": {
+            "@type": "Offer",
+            "price": "4.99",
+            "priceCurrency": "GBP",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.amazon.co.uk/dp/B0GF46ZJ1L"
+          }
+        },
+        {
+          "@type": "Book",
+          "name": "Low-Noise Leadership: The Expanded System",
+          "author": { "@type": "Person", "name": "Kamil Dyczkowski" },
+          "description": "Deep dive into neurobiology, psychology, and strategy of the introverted mind.",
+          "offers": {
+            "@type": "Offer",
+            "price": "8.99",
+            "priceCurrency": "GBP",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.amazon.co.uk/dp/B0GF3PR2JK/"
+          }
+        }
+      ]
+    }
+    </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -41,13 +77,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
-        /* GLOBAL PROTECTION AGAINST HORIZONTAL SCROLL */
         html, body {
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
             width: 100%;
-            margin: 0;
-            padding: 0;
             background-color: #020617;
             color: #cbd5e1;
         }
@@ -90,26 +123,23 @@
             border-bottom: 1px solid rgba(51, 65, 85, 0.40);
         }
 
+        .glass-card {
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(51, 65, 85, 0.5);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(59, 130, 246, 0.5);
+            background: rgba(30, 41, 59, 0.4);
+        }
+
         .fade-in { animation: fadeIn 0.6s ease-in-out; }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .book-row-container {
-            border-bottom: 1px solid rgba(30, 41, 59, 0.6);
-            padding-bottom: 4rem;
-            margin-bottom: 4rem;
-            position: relative;
-            z-index: 10;
-        }
-        .book-row-container:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        /* Reduced max-width for book cover from 320px to 220px */
         .book-cover {
             width: 100%;
             max-width: 220px; 
@@ -124,20 +154,62 @@
             transform: translateY(-5px) scale(1.02);
         }
         
-        .feature-bullet::before {
-            content: "▹";
-            color: #3b82f6;
-            position: absolute;
-            left: 0;
-            top: 0;
-            font-weight: bold;
-        }
-        
         .pill {
             font-family: 'JetBrains Mono', monospace;
             font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 0.18em;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+            font-weight: 700;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .btn-primary:hover { background: #1d4ed8; transform: translateY(-1px); box-shadow: 0 0 15px rgba(37,99,235,0.4); }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid rgba(59, 130, 246, 0.5);
+            color: #e2e8f0;
+            font-weight: 700;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .btn-outline:hover { background: rgba(30, 58, 138, 0.3); border-color: #3b82f6; }
+
+        /* Language Toggle Styles */
+        .lang-toggle {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+        .lang-toggle.active {
+            background: rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
+            font-weight: bold;
+        }
+        .lang-toggle:hover {
+            color: white;
         }
     </style>
 </head>
@@ -145,10 +217,11 @@
 <body class="bg-deep-system text-slate-300 antialiased selection:bg-blue-500 selection:text-white">
     <div class="grid-pattern"></div>
 
-    <!-- NAV (Standardized with index.html) -->
+    <!-- NAV -->
     <nav class="fixed w-full z-50 glass-panel">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between h-20 items-center">
+            <!-- Logo - Returns to Main Site -->
             <a href="index.html" class="flex items-center gap-3 group">
               <svg class="h-8 w-auto" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5 10 L15 20 L5 30" stroke="#3b82f6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -159,31 +232,36 @@
     
               <div class="flex flex-col justify-center">
                 <span class="font-bold text-[16px] tracking-tight text-white leading-none uppercase font-mono group-hover:text-blue-400 transition">Kamil Dyczkowski</span>
-                <span class="text-[9px] text-slate-500 uppercase tracking-[0.2em] font-bold mt-1">Business Solutions & Systems</span>
+                <span class="text-[9px] text-slate-500 uppercase tracking-[0.2em] font-bold mt-1">
+                    <span class="lang-en">System Architect</span>
+                    <span class="lang-pl hidden">Architekt Systemów</span>
+                </span>
               </div>
             </a>
     
-            <!-- Desktop Menu -->
+            <!-- Desktop Menu - CLEANED (Focus Mode) -->
             <div class="hidden md:flex items-center space-x-8">
-              <a href="index.html#symptoms" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Symptoms</a>
-              <a href="index.html#solution" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Solution</a>
-              <a href="index.html#roadmap" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Roadmap</a>
-              <a href="index.html#faq" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">FAQ</a>
               <a href="about.html" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">About</a>
               <a href="low-noise-leadership.html" class="text-white border-b border-blue-500 pb-1 font-bold uppercase tracking-widest text-xs text-center">Book</a>
-              <a href="mailto:dyczkowski.kamil@gmail.com" class="px-5 py-2 rounded bg-blue-700 text-white font-bold hover:bg-blue-600 transition text-xs uppercase tracking-wide">Contact</a>
+              <a href="#contact" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Contact</a>
+              
+              <!-- Language Switcher -->
+              <div class="flex items-center gap-1 border-l border-slate-700 pl-6 ml-2">
+                  <button onclick="setLang('en')" class="lang-toggle lang-btn-en active">EN</button>
+                  <span class="text-slate-600">|</span>
+                  <button onclick="setLang('pl')" class="lang-toggle lang-btn-pl">PL</button>
+              </div>
             </div>
     
             <!-- Mobile Header Icons -->
             <div class="md:hidden flex items-center gap-4">
-               <!-- Call Icon -->
-               <a href="tel:+447403874868" class="text-slate-400 hover:text-white transition p-2 border border-slate-700 rounded-md bg-slate-900/50">
-                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-                </svg>
-               </a>
-               
-               <!-- Hamburger Menu Button -->
+                <!-- Mobile Lang Switcher -->
+               <div class="flex items-center gap-1 mr-2">
+                  <button onclick="setLang('en')" class="text-[10px] font-mono font-bold text-blue-400 lang-btn-en">EN</button>
+                  <span class="text-slate-600">|</span>
+                  <button onclick="setLang('pl')" class="text-[10px] font-mono text-slate-500 lang-btn-pl">PL</button>
+               </div>
+
                <button id="mobile-menu-btn" class="text-slate-400 hover:text-white p-2">
                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -196,18 +274,14 @@
         <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-slate-950/95 backdrop-blur-xl border-b border-slate-800 absolute w-full left-0 top-20 shadow-2xl z-50">
           <div class="px-6 py-8 space-y-6 flex flex-col">
-            <a href="index.html#symptoms" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Symptoms</a>
-            <a href="index.html#solution" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Solution</a>
-            <a href="index.html#roadmap" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Roadmap</a>
-            <a href="index.html#faq" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">FAQ</a>
-            <a href="about.html" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">About</a>
-            <a href="low-noise-leadership.html" class="text-blue-400 hover:text-blue-300 font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Book</a>
-            <a href="mailto:dyczkowski.kamil@gmail.com" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm">Email Me</a>
+            <a href="about.html" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2">About</a>
+            <a href="low-noise-leadership.html" class="text-blue-400 hover:text-blue-300 font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2">Book</a>
+            <a href="#contact" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm">Contact</a>
           </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION (Original Content Preserved) -->
     <header class="pt-28 pb-16 md:pt-36 md:pb-24 relative" id="books">
         <div class="glow-effect"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -219,7 +293,6 @@
                     <span class="lang-pl hidden">Dwie Edycje Dostępne</span>
                 </div>
                 
-                <!-- Reduced H1 font size from 6xl to 5xl/4xl -->
                 <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight mb-6 md:mb-8 tracking-tight">
                     <span class="lang-en">Leadership without the <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Noise.</span></span>
                     <span class="lang-pl hidden">Przywództwo bez <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Hałasu.</span></span>
@@ -250,138 +323,22 @@
                         </span>
                     </p>
                 </div>
-            </div>
 
-            <!-- BOOKS LIST -->
-            <div class="max-w-6xl mx-auto">
-                
-                <!-- PRODUCT 1: PRACTICAL SYSTEM -->
-                <div class="book-row-container flex flex-col md:flex-row gap-8 items-start fade-in">
-                    <!-- Left: Cover -->
-                    <div class="w-full md:w-1/3 flex justify-start md:justify-end flex-shrink-0">
-                        <img src="prac.jpg" alt="Low-Noise Leadership: A Practical System for Introverted Leaders" class="book-cover">
-                    </div>
-
-                    <!-- Right: Content -->
-                    <div class="w-full md:w-2/3 pt-4">
-                        <span class="text-blue-500 font-mono text-xs uppercase tracking-widest font-bold mb-3 block">
-                            <span class="lang-en">The Operational Handbook</span>
-                            <span class="lang-pl hidden">Podręcznik Operacyjny</span>
-                        </span>
-                        
-                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 leading-tight">
-                            Low-Noise Leadership: <br>
-                            <span class="text-slate-400">A Practical System for Introverted Leaders</span>
-                        </h2>
-
-                        <div class="text-base md:text-lg text-slate-300 mb-8 leading-relaxed">
-                            <p class="lang-en mb-4">
-                                This is not a theoretical treatise. It is an <strong>operational handbook</strong> designed for leaders who are tired of noise and need a clear map of action. Instead of abstract concepts, you get protocols. 
-                            </p>
-                            <p class="lang-en">
-                                Introversion is not a flaw to be fixed, but an operating system to be mastered. It helps you manage "cognitive debt" in a loud office and regulate your energy in real-time.
-                            </p>
-                            <p class="lang-pl hidden mb-4">
-                                To nie jest traktat teoretyczny. To <strong>podręcznik operacyjny</strong> zaprojektowany dla liderów zmęczonych hałasem, którzy potrzebują jasnej mapy działania. Zamiast abstrakcyjnych koncepcji - otrzymujesz gotowe protokoły.
-                            </p>
-                            <p class="lang-pl hidden">
-                                Introwersja to nie wada do naprawienia, ale system operacyjny do opanowania. Pozwoli Ci zarządzać "długiem poznawczym" w głośnym biurze i regulować energię w czasie rzeczywistym.
-                            </p>
-                        </div>
-
-                        <ul class="space-y-4 mb-8 text-slate-300 text-base">
-                            <li class="relative pl-7 feature-bullet">
-                                <span class="lang-en"><strong>The Lean Approach:</strong> Protocols for moments when you need a decision, not a lecture.</span>
-                                <span class="lang-pl hidden"><strong>Podejście Lean:</strong> Protokoły na momenty, gdy potrzebujesz decyzji, a nie wykładu.</span>
-                            </li>
-                            <li class="relative pl-7 feature-bullet">
-                                <span class="lang-en"><strong>Energy Regulation:</strong> Stop fighting your nervous system. Learn to use it.</span>
-                                <span class="lang-pl hidden"><strong>Regulacja Energii:</strong> Przestań walczyć ze swoim układem nerwowym. Naucz się go używać.</span>
-                            </li>
-                            <li class="relative pl-7 feature-bullet">
-                                <span class="lang-en"><strong>Sensory Audit:</strong> Tools to reduce cognitive load immediately.</span>
-                                <span class="lang-pl hidden"><strong>Audyt Sensoryczny:</strong> Narzędzia do natychmiastowej redukcji obciążenia poznawczego.</span>
-                            </li>
-                        </ul>
-
-                        <div class="flex flex-col sm:flex-row gap-4 items-center sm:items-start">
-                            <a href="https://www.amazon.co.uk/dp/B0GF46ZJ1L" target="_blank" class="bg-blue-600 text-white px-8 py-4 rounded-md font-bold hover:bg-blue-500 transition shadow-lg shadow-blue-900/20 w-full sm:w-auto text-center">
-                                <span class="lang-en">Buy Practical System</span>
-                                <span class="lang-pl hidden">Kup Practical System</span>
-                            </a>
-                            <span class="text-white font-mono text-xl font-bold py-4">£4.99</span>
-                        </div>
-                    </div>
+                <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                    <a href="#purchase" class="btn-primary">
+                        <span class="lang-en">Jump to Handbook (£4.99)</span>
+                        <span class="lang-pl hidden">Kup Handbook (£4.99)</span>
+                    </a>
+                    <a href="#purchase" class="btn-outline">
+                        <span class="lang-en">Jump to Full System (£8.99)</span>
+                        <span class="lang-pl hidden">Kup Pełny System (£8.99)</span>
+                    </a>
                 </div>
-
-                <!-- PRODUCT 2: EXPANDED SYSTEM -->
-                <div class="book-row-container flex flex-col md:flex-row gap-8 items-start fade-in">
-                    <!-- Left: Cover -->
-                    <div class="w-full md:w-1/3 flex justify-start md:justify-end flex-shrink-0">
-                        <img src="ext.jpg" alt="Low-Noise Leadership: The Expanded System for Introverted Leaders" class="book-cover" style="border-color: rgba(16, 185, 129, 0.2);">
-                    </div>
-
-                    <!-- Right: Content -->
-                    <div class="w-full md:w-2/3 pt-4">
-                        <span class="text-emerald-500 font-mono text-xs uppercase tracking-widest font-bold mb-3 block">
-                            <span class="lang-en">The Strategic System</span>
-                            <span class="lang-pl hidden">Strategiczny System</span>
-                        </span>
-                        
-                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 leading-tight">
-                            Low-Noise Leadership: <br>
-                            <span class="text-slate-400">The Expanded System for Introverted Leaders</span>
-                        </h2>
-
-                        <div class="text-base md:text-lg text-slate-300 mb-8 leading-relaxed">
-                            <p class="lang-en mb-4">
-                                The complete, expanded <strong>blueprint</strong> defining leadership in the AI and VUCA era. This book integrates <strong>deep neurobiology</strong> with advanced business strategy.
-                            </p>
-                            <p class="lang-en">
-                                From understanding the chemistry of your brain (dopamine vs. acetylcholine) to the role of the "Quiet Architect" who uses AI as an extroversion exoskeleton.
-                            </p>
-                            <p class="lang-pl hidden mb-4">
-                                Kompletny, rozszerzony <strong>blueprint</strong> definiujący przywództwo w erze AI i świecie VUCA. Ta pozycja łączy <strong>głęboką neurobiologię</strong> z zaawansowaną strategią biznesową.
-                            </p>
-                            <p class="lang-pl hidden">
-                                Od zrozumienia chemii mózgu (ścieżki dopaminy i acetylocholiny) po rolę "Cichego Architekta" wykorzystującego AI jako egzoszkielet ekstrawersji.
-                            </p>
-                        </div>
-
-                        <ul class="space-y-4 mb-8 text-slate-300 text-base">
-                            <li class="relative pl-7 feature-bullet">
-                                <style>.feature-bullet.emerald::before { color: #10b981; }</style>
-                                <span class="feature-bullet emerald"></span>
-                                <span class="lang-en"><strong>Neurobiological Foundation:</strong> Deep dive into the mechanics of your focus and influence.</span>
-                                <span class="lang-pl hidden"><strong>Fundament Neurobiologiczny:</strong> Głębokie zrozumienie mechaniki Twojego skupienia i wpływu.</span>
-                            </li>
-                            <li class="relative pl-7 feature-bullet">
-                                <span class="feature-bullet emerald"></span>
-                                <span class="lang-en"><strong>The AI Advantage:</strong> Using technology to automate noise and scale your depth.</span>
-                                <span class="lang-pl hidden"><strong>Przewaga AI:</strong> Wykorzystanie technologii do automatyzacji szumu i skalowania głębi.</span>
-                            </li>
-                            <li class="relative pl-7 feature-bullet">
-                                <span class="feature-bullet emerald"></span>
-                                <span class="lang-en"><strong>Strategic Legacy:</strong> Building systems that last without your constant presence.</span>
-                                <span class="lang-pl hidden"><strong>Strategiczne Dziedzictwo:</strong> Budowanie systemów, które przetrwają bez Twojej ciągłej obecności.</span>
-                            </li>
-                        </ul>
-
-                        <div class="flex flex-col sm:flex-row gap-4 items-center sm:items-start">
-                            <a href="https://www.amazon.co.uk/dp/B0GF3PR2JK/" target="_blank" class="bg-blue-600 text-white px-8 py-4 rounded-md font-bold hover:bg-blue-500 transition shadow-lg shadow-blue-900/20 w-full sm:w-auto text-center">
-                                <span class="lang-en">Buy Expanded System</span>
-                                <span class="lang-pl hidden">Kup Expanded System</span>
-                            </a>
-                            <span class="text-white font-mono text-xl font-bold py-4">£8.99</span>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </header>
 
-    <!-- TARGET AUDIENCE SECTION -->
+    <!-- TARGET AUDIENCE (THE INTROVERT) - MOVED UP FOR DIAGNOSIS -->
     <section id="target-audience" class="py-24 bg-slate-950 border-y border-slate-800 relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="p-8 md:p-12 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-blue-500/30 transition duration-500 text-center group">
@@ -392,8 +349,8 @@
                 </div>
                 
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
-                    <span class="lang-en">The Introvert</span>
-                    <span class="lang-pl hidden">Introwertyk</span>
+                    <span class="lang-en">The Diagnosis</span>
+                    <span class="lang-pl hidden">Diagnoza</span>
                 </h2>
 
                 <div class="text-base md:text-lg text-slate-300 leading-relaxed space-y-6">
@@ -414,7 +371,7 @@
         </div>
     </section>
 
-    <!-- SYSTEM / MODULES SECTION -->
+    <!-- SYSTEM / MODULES SECTION - MOVED UP FOR SOLUTION AWARENESS -->
     <section id="about-system" class="py-24 bg-slate-950/50 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-20 max-w-3xl mx-auto">
@@ -500,7 +457,133 @@
         </div>
     </section>
 
-    <!-- AUTHOR SECTION -->
+    <!-- PURCHASE SECTION (BOOKS LIST) -->
+    <div class="max-w-6xl mx-auto py-24 border-t border-slate-800" id="purchase">
+        
+        <!-- PRODUCT 1: PRACTICAL SYSTEM -->
+        <div class="book-row-container flex flex-col md:flex-row gap-8 items-start fade-in">
+            <!-- Left: Cover -->
+            <div class="w-full md:w-1/3 flex justify-start md:justify-end flex-shrink-0">
+                <img src="prac.jpg" alt="Low-Noise Leadership: A Practical System for Introverted Leaders" class="book-cover">
+            </div>
+
+            <!-- Right: Content -->
+            <div class="w-full md:w-2/3 pt-4">
+                <span class="text-blue-500 font-mono text-xs uppercase tracking-widest font-bold mb-3 block">
+                    <span class="lang-en">The Operational Handbook</span>
+                    <span class="lang-pl hidden">Podręcznik Operacyjny</span>
+                </span>
+                
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 leading-tight">
+                    Low-Noise Leadership: <br>
+                    <span class="text-slate-400">A Practical System for Introverted Leaders</span>
+                </h2>
+
+                <div class="text-base md:text-lg text-slate-300 mb-8 leading-relaxed">
+                    <p class="lang-en mb-4">
+                        This is not a theoretical treatise. It is an <strong>operational handbook</strong> designed for leaders who are tired of noise and need a clear map of action. Instead of abstract concepts, you get protocols. 
+                    </p>
+                    <p class="lang-en">
+                        Introversion is not a flaw to be fixed, but an operating system to be mastered. It helps you manage "cognitive debt" in a loud office and regulate your energy in real-time.
+                    </p>
+                    <p class="lang-pl hidden mb-4">
+                        To nie jest traktat teoretyczny. To <strong>podręcznik operacyjny</strong> zaprojektowany dla liderów zmęczonych hałasem, którzy potrzebują jasnej mapy działania. Zamiast abstrakcyjnych koncepcji - otrzymujesz gotowe protokoły.
+                    </p>
+                    <p class="lang-pl hidden">
+                        Introwersja to nie wada do naprawienia, ale system operacyjny do opanowania. Pozwoli Ci zarządzać "długiem poznawczym" w głośnym biurze i regulować energię w czasie rzeczywistym.
+                    </p>
+                </div>
+
+                <ul class="space-y-4 mb-8 text-slate-300 text-base">
+                    <li class="relative pl-7 feature-bullet">
+                        <span class="lang-en"><strong>The Lean Approach:</strong> Protocols for moments when you need a decision, not a lecture.</span>
+                        <span class="lang-pl hidden"><strong>Podejście Lean:</strong> Protokoły na momenty, gdy potrzebujesz decyzji, a nie wykładu.</span>
+                    </li>
+                    <li class="relative pl-7 feature-bullet">
+                        <span class="lang-en"><strong>Energy Regulation:</strong> Stop fighting your nervous system. Learn to use it.</span>
+                        <span class="lang-pl hidden"><strong>Regulacja Energii:</strong> Przestań walczyć ze swoim układem nerwowym. Naucz się go używać.</span>
+                    </li>
+                    <li class="relative pl-7 feature-bullet">
+                        <span class="lang-en"><strong>Sensory Audit:</strong> Tools to reduce cognitive load immediately.</span>
+                        <span class="lang-pl hidden"><strong>Audyt Sensoryczny:</strong> Narzędzia do natychmiastowej redukcji obciążenia poznawczego.</span>
+                    </li>
+                </ul>
+
+                <div class="flex flex-col sm:flex-row gap-4 items-center sm:items-start">
+                    <a href="https://www.amazon.co.uk/dp/B0GF46ZJ1L" target="_blank" class="bg-blue-600 text-white px-8 py-4 rounded-md font-bold hover:bg-blue-500 transition shadow-lg shadow-blue-900/20 w-full sm:w-auto text-center">
+                        <span class="lang-en">Buy Practical System</span>
+                        <span class="lang-pl hidden">Kup Practical System</span>
+                    </a>
+                    <span class="text-white font-mono text-xl font-bold py-4">£4.99</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRODUCT 2: EXPANDED SYSTEM -->
+        <div class="book-row-container flex flex-col md:flex-row gap-8 items-start fade-in">
+            <!-- Left: Cover -->
+            <div class="w-full md:w-1/3 flex justify-start md:justify-end flex-shrink-0">
+                <img src="ext.jpg" alt="Low-Noise Leadership: The Expanded System for Introverted Leaders" class="book-cover" style="border-color: rgba(16, 185, 129, 0.2);">
+            </div>
+
+            <!-- Right: Content -->
+            <div class="w-full md:w-2/3 pt-4">
+                <span class="text-emerald-500 font-mono text-xs uppercase tracking-widest font-bold mb-3 block">
+                    <span class="lang-en">The Strategic System</span>
+                    <span class="lang-pl hidden">Strategiczny System</span>
+                </span>
+                
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 leading-tight">
+                    Low-Noise Leadership: <br>
+                    <span class="text-slate-400">The Expanded System for Introverted Leaders</span>
+                </h2>
+
+                <div class="text-base md:text-lg text-slate-300 mb-8 leading-relaxed">
+                    <p class="lang-en mb-4">
+                        The complete, expanded <strong>blueprint</strong> defining leadership in the AI and VUCA era. This book integrates <strong>deep neurobiology</strong> with advanced business strategy.
+                    </p>
+                    <p class="lang-en">
+                        From understanding the chemistry of your brain (dopamine vs. acetylcholine) to the role of the "Quiet Architect" who uses AI as an extroversion exoskeleton.
+                    </p>
+                    <p class="lang-pl hidden mb-4">
+                        Kompletny, rozszerzony <strong>blueprint</strong> definiujący przywództwo w erze AI i świecie VUCA. Ta pozycja łączy <strong>głęboką neurobiologię</strong> z zaawansowaną strategią biznesową.
+                    </p>
+                    <p class="lang-pl hidden">
+                        Od zrozumienia chemii mózgu (ścieżki dopaminy i acetylocholiny) po rolę "Cichego Architekta" wykorzystującego AI jako egzoszkielet ekstrawersji.
+                    </p>
+                </div>
+
+                <ul class="space-y-4 mb-8 text-slate-300 text-base">
+                    <li class="relative pl-7 feature-bullet">
+                        <style>.feature-bullet.emerald::before { color: #10b981; }</style>
+                        <span class="feature-bullet emerald"></span>
+                        <span class="lang-en"><strong>Neurobiological Foundation:</strong> Deep dive into the mechanics of your focus and influence.</span>
+                        <span class="lang-pl hidden"><strong>Fundament Neurobiologiczny:</strong> Głębokie zrozumienie mechaniki Twojego skupienia i wpływu.</span>
+                    </li>
+                    <li class="relative pl-7 feature-bullet">
+                        <span class="feature-bullet emerald"></span>
+                        <span class="lang-en"><strong>The AI Advantage:</strong> Using technology to automate noise and scale your depth.</span>
+                        <span class="lang-pl hidden"><strong>Przewaga AI:</strong> Wykorzystanie technologii do automatyzacji szumu i skalowania głębi.</span>
+                    </li>
+                    <li class="relative pl-7 feature-bullet">
+                        <span class="feature-bullet emerald"></span>
+                        <span class="lang-en"><strong>Strategic Legacy:</strong> Building systems that last without your constant presence.</span>
+                        <span class="lang-pl hidden"><strong>Strategiczne Dziedzictwo:</strong> Budowanie systemów, które przetrwają bez Twojej ciągłej obecności.</span>
+                    </li>
+                </ul>
+
+                <div class="flex flex-col sm:flex-row gap-4 items-center sm:items-start">
+                    <a href="https://www.amazon.co.uk/dp/B0GF3PR2JK/" target="_blank" class="bg-blue-600 text-white px-8 py-4 rounded-md font-bold hover:bg-blue-500 transition shadow-lg shadow-blue-900/20 w-full sm:w-auto text-center">
+                        <span class="lang-en">Buy Expanded System</span>
+                        <span class="lang-pl hidden">Kup Expanded System</span>
+                    </a>
+                    <span class="text-white font-mono text-xl font-bold py-4">£8.99</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AUTHOR SECTION - NEW INTROVERT-FOCUSED CONTENT -->
     <section id="author" class="py-24 bg-slate-900/30 relative overflow-hidden border-t border-slate-800/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center gap-12">
@@ -514,20 +597,20 @@
                 <div class="w-full md:w-2/3">
                     <h2 class="text-4xl font-bold mb-4 text-white">Kamil Dyczkowski</h2>
                     <h4 class="text-blue-400 text-lg font-bold mb-8 uppercase tracking-wider">
-                        <span class="lang-en">Author | Process Architect | Strategist</span>
-                        <span class="lang-pl hidden">Autor | Architekt Procesów | Strateg</span>
+                        <span class="lang-en">Author | Systems Architect</span>
+                        <span class="lang-pl hidden">Autor | Architekt Systemów</span>
                     </h4>
 
                     <div class="space-y-6 text-slate-300 leading-relaxed text-lg">
                         <div class="lang-en space-y-6">
-                            <p>I focus on <strong>Continuous Improvement</strong> understood practically - as building predictable, resilient, and effective work systems based on data, not intuition or loud narratives.</p>
-                            <p>I think systematically. I use advanced analytics and engineering tools to separate signal from noise and understand what actually drives effectiveness.</p>
-                            <p class="italic text-slate-400 border-l-4 border-blue-500 pl-4">"Low-Noise Leadership" is the result of years of analyzing my own cognitive "hardware" and observing leaders operating under pressure.</p>
+                            <p>I am not a guru. I am an operator who hacked his own hardware.</p>
+                            <p>For over two decades, I navigated high-pressure environments that reward noise and speed. To survive without burning out, I had to engineer a different way of working. I combined principles of Lean with applied neurobiology.</p>
+                            <p>The result is not just a leadership style, but a <strong>life operating system</strong>. I wrote this book for one reason: to give you the manual I wish I had 20 years ago. It turns unconscious introversion (a problem to solve) into full consciousness (a strategic attribute to deploy).</p>
                         </div>
                         <div class="lang-pl hidden space-y-6">
-                            <p>Moim obszarem jest <strong>Continuous Improvement</strong> rozumiane praktycznie - jako budowanie przewidywalnych, odpornych i skutecznych systemów pracy opartych na danych.</p>
-                            <p>Myślę systemowo. Korzystam z analityki i narzędzi inżynierskich, aby oddzielić sygnał od szumu i zrozumieć, co faktycznie napędza skuteczność.</p>
-                            <p class="italic text-slate-400 border-l-4 border-blue-500 pl-4">"Low-Noise Leadership" jest rezultatem wieloletniej analizy własnego "hardware'u" poznawczego oraz obserwacji liderów funkcjonujących pod presją.</p>
+                            <p>Nie jestem guru. Jestem operatorem, który zhakował własny sprzęt.</p>
+                            <p>Przez ponad dwie dekady poruszałem się w środowiskach o wysokiej presji, które nagradzają hałas i szybkość. Aby przetrwać bez wypalenia, musiałem zaprojektować inny sposób pracy. Połączyłem zasady Lean ze stosowaną neurobiologią.</p>
+                            <p>Wynikiem nie jest tylko styl przywództwa, ale <strong>życiowy system operacyjny</strong>. Napisałem tę książkę z jednego powodu: aby dać Ci instrukcję, którą sam chciałem mieć 20 lat temu. Zamienia ona nieświadomy introwertyzm (problem do naprawienia) w pełną świadomość (strategiczny atrybut do wykorzystania).</p>
                         </div>
                     </div>
 
@@ -553,10 +636,10 @@
             <h2 class="text-3xl font-bold text-white mb-6 lang-pl hidden">Zostańmy w kontakcie</h2>
 
             <p class="text-slate-300 mb-10 lang-en text-lg">
-                I am open to strategic consultations, process audits, and speaking engagements. Use the form below to reach out.
+                I am open to strategic consultations and speaking engagements. Use the form below to reach out.
             </p>
             <p class="text-slate-300 mb-10 lang-pl hidden text-lg">
-                Jestem otwarty na konsultacje strategiczne, audyty procesów oraz wystąpienia. Skorzystaj z formularza poniżej, aby nawiązać współpracę.
+                Jestem otwarty na konsultacje strategiczne i wystąpienia. Skorzystaj z formularza poniżej, aby nawiązać współpracę.
             </p>
 
             <form class="flex flex-col gap-4 max-w-lg mx-auto mb-12" id="signup-form">
@@ -567,18 +650,6 @@
                 </button>
             </form>
 
-            <!-- HIDDEN PHONE NUMBER (Reveal on Click) -->
-            <div class="mb-10 flex justify-center">
-                <a class="btn-ghost flex items-center gap-2 cursor-pointer border border-slate-700 rounded px-4 py-2 hover:bg-slate-800 transition" 
-                   href="#"
-                   onclick="event.preventDefault(); this.querySelector('span').innerText = '07403 874868'; this.href = 'tel:+447403874868'; window.location.href='tel:+447403874868';">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-                  </svg>
-                  <span class="font-mono text-sm text-slate-400">Call direct</span>
-                </a>
-            </div>
-
             <div class="text-slate-600 text-sm">
                 &copy; 2026 Kamil Dyczkowski. All rights reserved.
             </div>
@@ -587,6 +658,56 @@
 
     <script>
         const FORM_EMAIL = "dyczkowski.kamil@gmail.com";
+
+        // Language Logic
+        function setLang(lang) {
+            const enElements = document.querySelectorAll('.lang-en');
+            const plElements = document.querySelectorAll('.lang-pl');
+            const enBtns = document.querySelectorAll('.lang-btn-en');
+            const plBtns = document.querySelectorAll('.lang-btn-pl');
+
+            if (lang === 'pl') {
+                enElements.forEach(el => el.classList.add('hidden'));
+                plElements.forEach(el => el.classList.remove('hidden'));
+                enBtns.forEach(btn => {
+                    btn.classList.remove('active', 'text-blue-400');
+                    btn.classList.add('text-slate-500');
+                });
+                plBtns.forEach(btn => {
+                    btn.classList.add('active', 'text-blue-400');
+                    btn.classList.remove('text-slate-500');
+                });
+                document.documentElement.lang = 'pl';
+            } else {
+                plElements.forEach(el => el.classList.add('hidden'));
+                enElements.forEach(el => el.classList.remove('hidden'));
+                plBtns.forEach(btn => {
+                    btn.classList.remove('active', 'text-blue-400');
+                    btn.classList.add('text-slate-500');
+                });
+                enBtns.forEach(btn => {
+                    btn.classList.add('active', 'text-blue-400');
+                    btn.classList.remove('text-slate-500');
+                });
+                document.documentElement.lang = 'en';
+            }
+            localStorage.setItem('preferred-lang', lang);
+        }
+
+        // Initialize Language
+        (function initLanguage() {
+            const savedLang = localStorage.getItem('preferred-lang');
+            if (savedLang) {
+                setLang(savedLang);
+            } else {
+                const userLang = navigator.language || navigator.userLanguage;
+                if (userLang.startsWith('pl')) {
+                    setLang('pl');
+                } else {
+                    setLang('en');
+                }
+            }
+        })();
 
         // Mobile Menu Toggle logic
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -603,21 +724,24 @@
         }
 
         // Form Submit Logic
-        document.getElementById('signup-form').onsubmit = function(e) {
-            e.preventDefault();
-            const btnText = document.getElementById('btn-text');
-            const originalContent = btnText.innerHTML;
-            btnText.innerText = "...";
-            fetch(`https://formsubmit.co/ajax/${FORM_EMAIL}`, {
-                method: "POST",
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email: this.email.value, message: this.message.value, _subject: "Low-Noise Leadership - Message" })
-            }).then(() => {
-                btnText.innerText = "Sent"; // Simplified to English as standard
-                this.reset();
-                setTimeout(() => { btnText.innerHTML = originalContent; }, 2000);
-            });
-        };
+        const form = document.getElementById('signup-form');
+        if (form) {
+            form.onsubmit = function(e) {
+                e.preventDefault();
+                const btnText = document.getElementById('btn-text');
+                const originalContent = btnText.innerHTML;
+                btnText.innerText = "...";
+                fetch(`https://formsubmit.co/ajax/${FORM_EMAIL}`, {
+                    method: "POST",
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: this.email.value, message: this.message.value, _subject: "Low-Noise Leadership - Message" })
+                }).then(() => {
+                    btnText.innerText = "Sent";
+                    this.reset();
+                    setTimeout(() => { btnText.innerHTML = originalContent; }, 2000);
+                });
+            };
+        }
     </script>
 </body>
 </html>
