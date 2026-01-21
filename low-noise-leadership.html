@@ -719,14 +719,15 @@
         // Initialize Language (UPDATED: Defaults to EN, ignores Browser Lang)
         (function initLanguage() {
             const savedLang = localStorage.getItem('preferred-lang');
-            
-            // CASE 1: User has visited before and chosen a language
             if (savedLang) {
                 setLang(savedLang);
-            } 
-            // CASE 2: New user -> FORCE ENGLISH DEFAULT
-            else {
-                setLang('en');
+            } else {
+                const userLang = navigator.language || navigator.userLanguage;
+                if (userLang.startsWith('pl')) {
+                    setLang('pl');
+                } else {
+                    setLang('en');
+                }
             }
         })();
 
