@@ -4,11 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) - CONSENT MODE V2 IMPLEMENTATION -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZRZ1ZF5RW"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    
+    // Default to denied to comply with GDPR/PECR
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied'
+    });
+
     gtag('js', new Date());
     gtag('config', 'G-9ZRZ1ZF5RW');
   </script>
@@ -122,6 +129,12 @@
     details[open] { border-color: rgba(59, 130, 246, 0.45); background: rgba(30, 41, 59, 0.35); }
     summary { cursor: pointer; list-style: none; }
     summary::-webkit-details-marker { display: none; }
+    
+    .fade-in { animation: fadeIn 0.6s ease-in-out; }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(15px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 
   <!-- Structured data (Expanded for Topical Authority) -->
@@ -456,6 +469,21 @@
     </div>
   </footer>
 
+  <!-- COOKIE CONSENT BANNER -->
+  <div id="cookie-banner" class="fixed bottom-0 left-0 w-full z-[60] hidden fade-in">
+    <div class="glass-panel border-t border-slate-700/50 p-4">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-slate-400 text-xs text-center md:text-left">
+                We use cookies to analyze traffic and improve the system.
+            </p>
+            <div class="flex gap-4">
+                <button id="btn-decline" class="text-xs font-bold text-slate-500 hover:text-white uppercase tracking-widest transition">Decline</button>
+                <button id="btn-accept" class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-6 py-2 rounded uppercase tracking-widest transition shadow-glow">Accept</button>
+            </div>
+        </div>
+    </div>
+  </div>
+
   <script>
     // Simple mobile menu toggle
     const btn = document.getElementById('mobile-menu-btn');
@@ -471,6 +499,38 @@
       const m = document.getElementById('mobile-menu');
       if(m) m.classList.add('hidden');
     }
+
+    // CONSENT LOGIC
+    (function initConsent() {
+        const banner = document.getElementById('cookie-banner');
+        const choice = localStorage.getItem('cookie-consent');
+
+        // Check if user already made a choice
+        if (!choice) {
+            banner.classList.remove('hidden');
+        } else if (choice === 'accepted') {
+            // Enable Analytics
+            gtag('consent', 'update', {
+                'ad_storage': 'granted',
+                'analytics_storage': 'granted'
+            });
+        }
+
+        // Event Listeners
+        document.getElementById('btn-accept').addEventListener('click', () => {
+            localStorage.setItem('cookie-consent', 'accepted');
+            gtag('consent', 'update', {
+                'ad_storage': 'granted',
+                'analytics_storage': 'granted'
+            });
+            banner.classList.add('hidden');
+        });
+
+        document.getElementById('btn-decline').addEventListener('click', () => {
+            localStorage.setItem('cookie-consent', 'declined');
+            banner.classList.add('hidden');
+        });
+    })();
   </script>
 </body>
 </html>
