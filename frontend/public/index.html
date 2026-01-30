@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google tag (gtag.js) - CONSENT MODE V2 IMPLEMENTATION -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZRZ1ZF5RW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    
+    // Default to denied to comply with GDPR/PECR
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied'
+    });
+
+    gtag('js', new Date());
+    gtag('config', 'G-9ZRZ1ZF5RW');
+  </script>
+
+  <!-- Primary SEO - Optimized for Symptoms & UK Location -->
+  <title>Fix Inventory Drift & Picking Errors | Warehouse Process Expert UK</title>
+  <meta name="description" content="Stop profit leaks in your warehouse. I install enforcement layers for UK SMBs that replace paper and memory with strict control. Fix drift, errors, and rework." />
+  <meta name="keywords" content="Warehouse Consultant UK, Inventory Control System, Picking Errors Fix, Warehouse Process Improvement, Lean Warehousing UK, SMB Operations" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://kamildyczkowski.com/" />
+
+  <!-- Open Graph (Social Sharing) -->
+  <meta property="og:type" content="business.business" />
+  <meta property="og:title" content="Fix Inventory Drift & Picking Errors | Kamil Dyczkowski" />
+  <meta property="og:description" content="Stop inventory drift, picking mistakes, and rework. I install the enforcement layer that makes correct actions unavoidable." />
+  <meta property="og:url" content="https://kamildyczkowski.com/" />
+  <meta property="og:site_name" content="Kamil Dyczkowski | Warehouse Process Architect" />
+  <meta property="og:image" content="https://kamildyczkowski.com/kamil-dyczkowski-warehouse-consultant.jpg" />
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fix Warehouse Errors & Inventory Drift" />
+  <meta name="twitter:description" content="Operational enforcement for UK warehouses. Stop losing time and profit to chaos." />
+  <meta name="twitter:image" content="https://kamildyczkowski.com/kamil-dyczkowski-warehouse-consultant.jpg" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter','sans-serif'], mono: ['JetBrains Mono','monospace'] },
+          colors: { slate: { 950: '#020617' } },
+          boxShadow: { glow: '0 0 25px rgba(37,99,235,0.22)' }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: Inter, sans-serif; color: #cbd5e1; background: #020617; }
+    .bg-system {
+      background-color: #020617;
+      background-image:
+        radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.10) 0px, transparent 55%),
+        radial-gradient(at 100% 100%, rgba(15, 23, 42, 1) 0px, transparent 55%);
+      position: relative;
+      overflow-x: hidden;
+    }
+    .grid-pattern {
+      position: absolute; inset: 0;
+      background-size: 40px 40px;
+      background-image:
+        linear-gradient(to right, rgba(51, 65, 85, 0.10) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(51, 65, 85, 0.10) 1px, transparent 1px);
+      mask-image: linear-gradient(to bottom, black 15%, transparent 90%);
+      pointer-events: none; z-index: 0;
+    }
+    .glass {
+      background: rgba(15, 23, 42, 0.38);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(51, 65, 85, 0.55);
+    }
+    .panel {
+      background: rgba(2, 6, 23, 0.82);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(51, 65, 85, 0.40);
+    }
+
+    .glass-panel {
+      background: rgba(2, 6, 23, 0.82);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(51, 65, 85, 0.40);
+    }
+    .pill { font-family: JetBrains Mono, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; }
+    .btn-primary {
+      background: #ffffff; color: #0f172a;
+      font-weight: 800;
+      padding: 14px 26px;
+      border-radius: 10px;
+      transition: all 0.2s;
+      display: inline-flex; align-items: center; justify-content: center;
+      letter-spacing: -0.01em;
+    }
+    .btn-primary:hover { background: #cbd5e1; transform: translateY(-1px); }
+    .btn-ghost {
+      border: 1px solid rgba(51,65,85,0.7);
+      color: #e2e8f0;
+      padding: 14px 22px;
+      border-radius: 10px;
+      font-weight: 800;
+      transition: all 0.2s;
+      background: rgba(2,6,23,0.25);
+    }
+    .btn-ghost:hover { background: rgba(15,23,42,0.45); transform: translateY(-1px); }
+    details { border: 1px solid rgba(51, 65, 85, 0.55); border-radius: 12px; background: rgba(15, 23, 42, 0.35); }
+    details[open] { border-color: rgba(59, 130, 246, 0.45); background: rgba(30, 41, 59, 0.35); }
+    summary { cursor: pointer; list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+    .kbd {
+      font-family: JetBrains Mono, monospace;
+      font-size: 12px;
+      padding: 2px 8px;
+      border-radius: 8px;
+      border: 1px solid rgba(51, 65, 85, 0.6);
+      background: rgba(2, 6, 23, 0.55);
+      color: #e2e8f0;
+    }
+
+    /* Subtle scroll animations */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Hero headline animation */
+    .hero-line {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    .hero-line:nth-child(1) { animation-delay: 0.1s; }
+    .hero-line:nth-child(2) { animation-delay: 0.3s; }
+    .hero-line:nth-child(3) { animation-delay: 0.5s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Staggered card animations */
+    .stagger-item {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .stagger-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Subtle hover effects for cards */
+    .glass {
+      transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .glass:hover {
+      border-color: rgba(59, 130, 246, 0.35);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(59, 130, 246, 0.08);
+    }
+
+    /* Button subtle pulse on CTA */
+    .btn-primary {
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+    .btn-primary:hover::after {
+      transform: translateX(100%);
+    }
+  </style>
+
+  <!-- Structured data (Expanded for Local Service) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ProfessionalService",
+    "name":"Kamil Dyczkowski - Warehouse Process Architect",
+    "url":"https://kamildyczkowski.com/",
+    "logo": "https://kamildyczkowski.com/kamil-dyczkowski-warehouse-consultant.jpg",
+    "image": "https://kamildyczkowski.com/kamil-dyczkowski-warehouse-consultant.jpg",
+    "areaServed": {
+      "@type": "Country",
+      "name": "United Kingdom"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "UK"
+    },
+    "priceRange": "$$$",
+    "telephone": "+447403874868",
+    "description":"Enforcement layer to stop inventory drift, picking mistakes, and rework in small business warehouses.",
+    "founder":{"@type":"Person","name":"Kamil Dyczkowski"},
+    "serviceType":[
+      "Warehouse process enforcement",
+      "Inventory integrity controls",
+      "Picking and movement validation",
+      "Goods-in, stock movement, and auditability",
+      "SOP Implementation"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Operational Systems",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Operational Audit (Deep Dive)"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Control Layer Implementation"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- FAQ schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"We are still on paper. Is it too early to build a system?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"No. Paper and memory work until volume rises. The system is the control layer that prevents drift, makes movement traceable, and stops time loss caused by rework."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Do you sell training?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"No. I do not sell training or generic workshops. I build and enforce operational logic so the correct action becomes the only possible action."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"What is the typical first step?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"A short diagnosis call to confirm fit, map the failure points, and define the minimum viable control layer to implement first."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-system selection:bg-blue-500 selection:text-white">
+  <div class="grid-pattern"></div>
+
+  <!-- NAV -->
+  <nav class="fixed w-full z-50 glass-panel">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20 items-center">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <svg class="h-8 w-auto" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 10 L15 20 L5 30" stroke="#3b82f6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="20" y="25" width="12" height="4" fill="#3b82f6">
+              <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" calcMode="discrete"/>
+            </rect>
+          </svg>
+
+          <div class="flex flex-col justify-center">
+            <span class="font-bold text-[16px] tracking-tight text-white leading-none uppercase font-mono group-hover:text-blue-400 transition">Kamil Dyczkowski</span>
+            <span class="text-[9px] text-slate-500 uppercase tracking-[0.2em] font-bold mt-1">Business Solutions & Systems</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#symptoms" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Symptoms</a>
+          <a href="#solution" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Solution</a>
+          <a href="#roadmap" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Roadmap</a>
+          <a href="#faq" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">FAQ</a>
+          <a href="about.html" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">About</a>
+          <a href="low-noise-leadership.html" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Book</a>
+          <a href="mailto:dyczkowski.kamil@gmail.com" class="px-5 py-2 rounded bg-blue-700 text-white font-bold hover:bg-blue-600 transition text-xs uppercase tracking-wide">Contact</a>
+        </div>
+
+        <!-- Mobile Header Icons -->
+        <div class="md:hidden flex items-center gap-4">
+           <!-- Call Icon (Always visible) -->
+           <a href="tel:+447403874868" class="text-slate-400 hover:text-white transition p-2 border border-slate-700 rounded-md bg-slate-900/50">
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+            </svg>
+           </a>
+           
+           <!-- Hamburger Menu Button -->
+           <button id="mobile-menu-btn" class="text-slate-400 hover:text-white p-2">
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+             </svg>
+           </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-950/95 backdrop-blur-xl border-b border-slate-800 absolute w-full left-0 top-20 shadow-2xl">
+      <div class="px-6 py-8 space-y-6 flex flex-col">
+        <a href="#symptoms" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Symptoms</a>
+        <a href="#solution" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Solution</a>
+        <a href="#roadmap" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Roadmap</a>
+        <a href="#faq" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">FAQ</a>
+        <a href="about.html" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">About</a>
+        <a href="low-noise-leadership.html" class="text-blue-400 hover:text-blue-300 font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Book</a>
+        <a href="mailto:dyczkowski.kamil@gmail.com" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm">Email Me</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <header id="top" class="pt-28 pb-14 relative z-10">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <div class="pill text-slate-500 mb-4">For operations-heavy SMBs & Warehouses</div>
+
+      <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight tracking-tight">
+        <span class="hero-line block"><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Revenue</span> is rising.</span>
+        <span class="hero-line block"><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Profit</span> is not.</span>
+        <span class="hero-line block">The <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">leak</span> is operational.</span>
+      </h1>
+
+      <p class="mt-6 text-slate-400 text-base md:text-lg leading-relaxed max-w-4xl mx-auto">
+        If your warehouse still runs on paper, memory, and informal rules, growth creates chaos.
+        I install a control and enforcement layer that stops <strong class="text-white">inventory drift</strong>, <strong class="text-white">picking mistakes</strong>, and <strong class="text-white">rework</strong> - so time is recovered and margin returns.
+      </p>
+
+      <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+        <a class="btn-primary" href="mailto:dyczkowski.kamil@gmail.com?subject=Warehouse%20Control%20-%20Discovery%20Call">Book a discovery call</a>
+        <a class="btn-ghost" href="#symptoms">See the failure patterns</a>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+        <div class="glass rounded-xl p-5">
+          <div class="pill text-blue-400 mb-2">Target</div>
+          <div class="text-sm text-slate-300">Operations-heavy SMBs (Warehouse, Production, Service) moving from paper to control.</div>
+        </div>
+        <div class="glass rounded-xl p-5">
+          <div class="pill text-blue-400 mb-2">Outcome</div>
+          <div class="text-sm text-slate-300"><strong class="text-white">Operational immunity</strong>. Your business gains the <strong class="text-white">reputation</strong> of being reliable, and you gain the safety to scale without chaos. Time recovery is just the first step.</div>
+        </div>
+        <div class="glass rounded-xl p-5">
+          <div class="pill text-blue-400 mb-2">Mode</div>
+          <div class="text-sm text-slate-300">Long-term partnership or end-to-end system delivery.</div>
+        </div>
+      </div>
+
+      <div class="mt-8 text-xs text-slate-500">
+        Not training. Not workshops. Not reports. <span class="text-slate-300 font-bold">Enforced operational logic.</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- SYMPTOMS -->
+  <section id="symptoms" class="py-16 relative z-10 border-y border-slate-800/60 bg-slate-950/40 backdrop-blur-sm">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center fade-up">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white">The operational failure patterns</h2>
+        <p class="text-slate-400 mt-3 max-w-3xl mx-auto">
+          These are not people problems. They are control gaps.
+        </p>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="glass rounded-2xl p-7 stagger-item" data-delay="0">
+          <h3 class="text-white font-bold">Inventory drift</h3>
+          <p class="text-slate-400 text-sm mt-2">Stock levels in reality do not match the sheet. Time is spent searching, counting, arguing, and correcting.</p>
+          <p class="text-slate-300 text-sm mt-3"><span class="kbd">Leak</span> write-offs, emergency purchases, missed sales</p>
+        </div>
+
+        <div class="glass rounded-2xl p-7 stagger-item" data-delay="100">
+          <h3 class="text-white font-bold">Picking mistakes and rework</h3>
+          <p class="text-slate-400 text-sm mt-2">Wrong item, wrong quantity, wrong batch. The cost is not the mistake - it is the recovery loop.</p>
+          <p class="text-slate-300 text-sm mt-3"><span class="kbd">Leak</span> returns, customer friction, overtime</p>
+        </div>
+
+        <div class="glass rounded-2xl p-7 stagger-item" data-delay="200">
+          <h3 class="text-white font-bold">No enforced movement logic</h3>
+          <p class="text-slate-400 text-sm mt-2">Goods-in, relocations, adjustments, and write-offs happen, but not as controlled transactions.</p>
+          <p class="text-slate-300 text-sm mt-3"><span class="kbd">Leak</span> invisible shrink, broken traceability</p>
+        </div>
+
+        <div class="glass rounded-2xl p-7 stagger-item" data-delay="300">
+          <h3 class="text-white font-bold">Work runs on memory</h3>
+          <p class="text-slate-400 text-sm mt-2">One key person holds the rules in their head. When they are absent, quality collapses.</p>
+          <p class="text-slate-300 text-sm mt-3"><span class="kbd">Leak</span> fragility, missed handovers</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section id="solution" class="py-16 relative z-10">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center fade-up">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white">What I install: a control and enforcement layer</h2>
+        <p class="text-slate-400 mt-3 max-w-3xl mx-auto">
+          The goal is simple: correct actions become unavoidable. Exceptions become visible immediately.
+        </p>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="glass rounded-2xl p-7 stagger-item" data-delay="0">
+          <div class="pill text-blue-400 mb-2">Goods-in control</div>
+          <p class="text-slate-400 text-sm">Validated receiving, clear status, and enforced transaction rules.</p>
+        </div>
+        <div class="glass rounded-2xl p-7 stagger-item" data-delay="100">
+          <div class="pill text-blue-400 mb-2">Movement validation</div>
+          <p class="text-slate-400 text-sm">Relocations, picks, adjustments, write-offs as controlled events, not informal edits.</p>
+        </div>
+        <div class="glass rounded-2xl p-7 stagger-item" data-delay="200">
+          <div class="pill text-blue-400 mb-2">Exception visibility</div>
+          <p class="text-slate-400 text-sm">Alerts and dashboards that expose drift early, before it becomes cost.</p>
+        </div>
+      </div>
+
+      <div class="mt-10 glass rounded-2xl p-8 fade-up">
+        <h3 class="text-white font-bold text-lg">No training dependency</h3>
+        <p class="text-slate-400 text-sm mt-2">
+          I do not sell workshops. If your process needs training to remain stable, it is not enforced.
+          Systems should constrain incorrect actions, not hope people remember rules under pressure.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section id="roadmap" class="py-16 relative z-10 border-y border-slate-800/60 bg-slate-950/35">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center fade-up">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white">Roadmap: from paper to control</h2>
+        <p class="text-slate-400 mt-3 max-w-3xl mx-auto">
+          Two engagement modes. Same goal: measurable time recovery and fewer mistakes.
+        </p>
+      </div>
+
+      <div class="mt-10 space-y-6">
+        <div class="glass rounded-2xl p-8 stagger-item" data-delay="0">
+          <div class="pill text-blue-400 mb-3">Phase 1</div>
+          <h3 class="text-white font-bold text-lg">On-site Deep Dive (The Audit)</h3>
+          <p class="text-slate-400 text-sm mt-2">I don't work from a desk. I spend 1-5 days on your floor, observing the actual process and interviewing your staff. I look for what really happens, not what <i>should</i> happen. The output is a ruthless, <strong class="text-white">detailed report</strong> identifying every leak and a <strong class="text-white">cost-benefit analysis</strong> of the solution.</p>
+        </div>
+
+        <div class="glass rounded-2xl p-8 stagger-item" data-delay="150">
+          <div class="pill text-blue-400 mb-3">Phase 2</div>
+          <h3 class="text-white font-bold text-lg">The Decision & Blueprint</h3>
+          <p class="text-slate-400 text-sm mt-2">We review the audit together. You see exactly where the money is leaking and how much the fix will cost. We decide on the scope. Only then do we move to <strong class="text-white">implementation</strong>. No hidden costs, no vague promises.</p>
+        </div>
+
+        <div class="glass rounded-2xl p-8 stagger-item" data-delay="300">
+          <div class="pill text-blue-400 mb-3">Phase 3</div>
+          <h3 class="text-white font-bold text-lg">Implementation & Enforcement</h3>
+          <p class="text-slate-400 text-sm mt-2">I install the <strong class="text-white">control layer</strong>. We move from paper/memory to <strong class="text-white">enforced logic</strong>. I stay until the system is stable and your team can operate it without errors.</p>
+        </div>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="glass rounded-2xl p-7 stagger-item" data-delay="400">
+          <div class="pill text-slate-400 mb-2">Best fit</div>
+          <p class="text-slate-300 text-sm"><strong>Operations-heavy SMBs</strong> where paper and memory are now the bottleneck.</p>
+        </div>
+        <div class="glass rounded-2xl p-7 stagger-item" data-delay="500">
+          <div class="pill text-slate-400 mb-2">Outcome</div>
+          <p class="text-slate-300 text-sm"><strong>Operational immunity.</strong> The safety to scale without chaos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILOT PROGRAM OFFER -->
+  <section class="relative z-20 py-16 px-4 fade-up">
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-blue-950/30 backdrop-blur-md border border-blue-500/40 rounded-2xl p-6 md:p-8 shadow-[0_0_40px_rgba(59,130,246,0.15)] relative overflow-hidden group">
+        
+        <!-- Active Status Indicator -->
+        <div class="absolute top-0 right-0 p-4">
+          <div class="flex items-center gap-2 px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            </span>
+            <span class="text-[10px] font-mono font-bold text-blue-400 uppercase tracking-widest">Status: Open</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-6 items-start">
+          <div class="flex-grow">
+            <h3 class="text-xl md:text-2xl font-bold text-white mb-2">
+              Q1 2026 Pilot Cohort
+            </h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              I am opening <strong>3 spots</strong> for a high-intensity implementation at a preferential rate (-40%). 
+              <br class="hidden md:block"/>
+              In exchange, I require full access to document the process as a public Case Study (anonymized data allowed).
+            </p>
+            
+            <ul class="space-y-2 text-sm text-slate-400 font-mono">
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Full operational diagnosis
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Implementation of the Control Layer
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                30-day post-implementation monitoring
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex-shrink-0 w-full md:w-auto mt-4 md:mt-0 flex flex-col gap-3">
+             <!-- Counter -->
+            <div class="text-center md:text-right mb-1">
+              <span class="text-4xl font-bold text-white font-mono">1<span class="text-slate-600">/3</span></span>
+              <div class="text-[10px] text-slate-500 uppercase tracking-widest">Spots taken</div>
+            </div>
+            
+            <a href="mailto:dyczkowski.kamil@gmail.com?subject=Pilot%20Program%20Application" class="w-full btn-primary text-center justify-center bg-blue-600 border-none hover:bg-blue-500 text-white shadow-glow">
+              Apply for Pilot
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16 relative z-10">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-white text-center fade-up">FAQ</h2>
+
+      <div class="mt-10 space-y-4">
+        <details class="p-5 stagger-item" data-delay="0">
+          <summary class="flex items-center justify-between gap-4">
+            <span class="text-white font-bold text-sm">What do you need from me to start?</span>
+            <span class="pill text-slate-500">Expand</span>
+          </summary>
+          <div class="mt-3 text-sm text-slate-400 leading-relaxed">
+            Three lines: what you store, where mistakes happen most, and what still runs on paper or memory. That is enough to scope the first step.
+          </div>
+        </details>
+
+        <details class="p-5 stagger-item" data-delay="100">
+          <summary class="flex items-center justify-between gap-4">
+            <span class="text-white font-bold text-sm">Do you implement end-to-end systems?</span>
+            <span class="pill text-slate-500">Expand</span>
+          </summary>
+          <div class="mt-3 text-sm text-slate-400 leading-relaxed">
+            Yes. Partnership is the operating model, end-to-end delivery is the objective. We install control first, then expand as constraints and volume evolve.
+          </div>
+        </details>
+
+        <details class="p-5 stagger-item" data-delay="200">
+          <summary class="flex items-center justify-between gap-4">
+            <span class="text-white font-bold text-sm">Do you do training or workshops?</span>
+            <span class="pill text-slate-500">Expand</span>
+          </summary>
+          <div class="mt-3 text-sm text-slate-400 leading-relaxed">
+            No. The system enforces the rules. People should not have to remember critical controls under pressure.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <footer id="contact" class="py-16 border-t border-slate-800 bg-slate-950 relative z-10">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-white">Contact</h2>
+      <p class="text-slate-400 mt-3 text-sm max-w-xl mx-auto">
+        Send a short description of the leak: inventory drift, picking mistakes, write-offs, or missing traceability. I will tell you if this is solvable and what the first control layer should be.
+      </p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center items-center">
+        <a class="btn-primary" href="mailto:dyczkowski.kamil@gmail.com?subject=Warehouse%20Control%20-%20Discovery%20Call">Email me</a>
+        
+        <!-- CLICK-TO-REVEAL PHONE BUTTON -->
+        <a class="btn-ghost flex items-center gap-2 cursor-pointer w-[160px] justify-center" 
+           href="#"
+           onclick="event.preventDefault(); this.querySelector('span').innerText = '07403 874868'; this.href = 'tel:+447403874868'; window.location.href='tel:+447403874868';">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+          </svg>
+          <span class="font-mono">Call direct</span>
+        </a>
+
+      </div>
+
+      <p class="mt-10 text-[11px] text-slate-600 font-mono uppercase tracking-widest">
+        © 2026 Kamil Dyczkowski | Business Solutions & Systems
+      </p>
+    </div>
+  </footer>
+
+  <!-- COOKIE CONSENT BANNER -->
+  <div id="cookie-banner" class="fixed bottom-0 left-0 w-full z-[60] hidden fade-in">
+    <div class="glass-panel border-t border-slate-700/50 p-4">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-slate-400 text-xs text-center md:text-left">
+                We use cookies to analyze traffic and improve the system.
+            </p>
+            <div class="flex gap-4">
+                <button id="btn-decline" class="text-xs font-bold text-slate-500 hover:text-white uppercase tracking-widest transition">Decline</button>
+                <button id="btn-accept" class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-6 py-2 rounded uppercase tracking-widest transition shadow-glow">Accept</button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <script>
+    // Simple mobile menu toggle
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    if(btn && menu) {
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    }
+
+    function toggleMobileMenu() {
+      const m = document.getElementById('mobile-menu');
+      if(m) m.classList.add('hidden');
+    }
+
+    // CONSENT LOGIC
+    (function initConsent() {
+        const banner = document.getElementById('cookie-banner');
+        const choice = localStorage.getItem('cookie-consent');
+
+        // Check if user already made a choice
+        if (!choice) {
+            banner.classList.remove('hidden');
+        } else if (choice === 'accepted') {
+            // Enable Analytics
+            gtag('consent', 'update', {
+                'ad_storage': 'granted',
+                'analytics_storage': 'granted'
+            });
+        }
+
+        // Event Listeners
+        document.getElementById('btn-accept').addEventListener('click', () => {
+            localStorage.setItem('cookie-consent', 'accepted');
+            gtag('consent', 'update', {
+                'ad_storage': 'granted',
+                'analytics_storage': 'granted'
+            });
+            banner.classList.add('hidden');
+        });
+
+        document.getElementById('btn-decline').addEventListener('click', () => {
+            localStorage.setItem('cookie-consent', 'declined');
+            banner.classList.add('hidden');
+        });
+    })();
+
+    // SCROLL ANIMATIONS - Elegant fade-in on scroll
+    (function initScrollAnimations() {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -50px 0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const delay = el.dataset.delay || 0;
+            
+            setTimeout(() => {
+              el.classList.add('visible');
+            }, parseInt(delay));
+            
+            observer.unobserve(el);
+          }
+        });
+      }, observerOptions);
+
+      // Observe all animated elements
+      document.querySelectorAll('.fade-up, .stagger-item').forEach(el => {
+        observer.observe(el);
+      });
+    })();
+  </script>
+</body>
+</html>
