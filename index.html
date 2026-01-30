@@ -453,7 +453,7 @@
   <!-- SYMPTOMS -->
   <section id="symptoms" class="py-16 relative z-10 border-y border-slate-800/60 bg-slate-950/40 backdrop-blur-sm">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center">
+      <div class="text-center fade-up">
         <h2 class="text-2xl md:text-3xl font-extrabold text-white">The operational failure patterns</h2>
         <p class="text-slate-400 mt-3 max-w-3xl mx-auto">
           These are not people problems. They are control gaps.
@@ -461,25 +461,25 @@
       </div>
 
       <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="glass rounded-2xl p-7">
+        <div class="glass rounded-2xl p-7 stagger-item" data-delay="0">
           <h3 class="text-white font-bold">Inventory drift</h3>
           <p class="text-slate-400 text-sm mt-2">Stock levels in reality do not match the sheet. Time is spent searching, counting, arguing, and correcting.</p>
           <p class="text-slate-300 text-sm mt-3"><span class="kbd">Leak</span> write-offs, emergency purchases, missed sales</p>
         </div>
 
-        <div class="glass rounded-2xl p-7">
+        <div class="glass rounded-2xl p-7 stagger-item" data-delay="100">
           <h3 class="text-white font-bold">Picking mistakes and rework</h3>
           <p class="text-slate-400 text-sm mt-2">Wrong item, wrong quantity, wrong batch. The cost is not the mistake - it is the recovery loop.</p>
           <p class="text-slate-300 text-sm mt-3"><span class="kbd">Leak</span> returns, customer friction, overtime</p>
         </div>
 
-        <div class="glass rounded-2xl p-7">
+        <div class="glass rounded-2xl p-7 stagger-item" data-delay="200">
           <h3 class="text-white font-bold">No enforced movement logic</h3>
           <p class="text-slate-400 text-sm mt-2">Goods-in, relocations, adjustments, and write-offs happen, but not as controlled transactions.</p>
           <p class="text-slate-300 text-sm mt-3"><span class="kbd">Leak</span> invisible shrink, broken traceability</p>
         </div>
 
-        <div class="glass rounded-2xl p-7">
+        <div class="glass rounded-2xl p-7 stagger-item" data-delay="300">
           <h3 class="text-white font-bold">Work runs on memory</h3>
           <p class="text-slate-400 text-sm mt-2">One key person holds the rules in their head. When they are absent, quality collapses.</p>
           <p class="text-slate-300 text-sm mt-3"><span class="kbd">Leak</span> fragility, missed handovers</p>
