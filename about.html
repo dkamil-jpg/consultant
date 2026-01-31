@@ -21,18 +21,18 @@
   </script>
 
   <!-- Primary SEO - Optimized for Authority -->
-  <title>Kamil Dyczkowski | Operational Systems Architect for UK SMBs</title>
-  <meta name="description" content="Kamil Dyczkowski - Operator-level architect preventing inventory drift and picking errors. Expert in strict enforcement layers and Lean process control for UK warehouses." />
+  <title>About Kamil Dyczkowski | Process & Systems Expert UK</title>
+  <meta name="description" content="Over 20 years on the operational frontline in manufacturing, warehouses and service businesses. Process-first approach to fixing messy operations and building pragmatic systems." />
   <meta name="author" content="Kamil Dyczkowski" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://kamildyczkowski.com/about" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="profile" />
-  <meta property="og:title" content="Kamil Dyczkowski | Operational Systems Architect" />
-  <meta property="og:description" content="I don't sell training. I install strict enforcement layers that remove ambiguity from warehouse operations." />
+  <meta property="og:title" content="About Kamil Dyczkowski | Process & Systems Expert" />
+  <meta property="og:description" content="Over 20 years on the operational frontline. I design processes that survive growth and build systems that enforce them." />
   <meta property="og:url" content="https://kamildyczkowski.com/about" />
-  <meta property="og:site_name" content="Kamil Dyczkowski | Warehouse Process Architect" />
+  <meta property="og:site_name" content="Kamil Dyczkowski | Business Solutions & Systems" />
   <meta property="og:image" content="https://kamildyczkowski.com/kamil-dyczkowski-warehouse-consultant.jpg" />
   <meta property="og:locale" content="en_GB" />
 
@@ -124,16 +124,22 @@
       text-transform: uppercase;
       letter-spacing: 0.18em;
     }
-
-    details { border: 1px solid rgba(51, 65, 85, 0.5); border-radius: 10px; background: rgba(15, 23, 42, 0.35); }
-    details[open] { border-color: rgba(59, 130, 246, 0.45); background: rgba(30, 41, 59, 0.35); }
-    summary { cursor: pointer; list-style: none; }
-    summary::-webkit-details-marker { display: none; }
     
     .fade-in { animation: fadeIn 0.6s ease-in-out; }
     @keyframes fadeIn {
         from { opacity: 0; transform: translateY(15px); }
         to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Scroll animations */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 
@@ -144,19 +150,19 @@
     "@type":"Person",
     "name":"Kamil Dyczkowski",
     "url":"https://kamildyczkowski.com/about",
-    "jobTitle":"Warehouse Process Architect",
+    "jobTitle":"Process & Systems Expert",
     "telephone": "+447403874868",
-    "description":"Operator-level architect designing and enforcing operational systems for warehouses and SMEs. Focus: process integrity, data consistency, and enforcement layer implementation.",
+    "description":"Over 20 years on the operational frontline in manufacturing, warehouses and service businesses. Process-first approach to fixing messy operations and building pragmatic systems.",
     "sameAs":[
       "https://kamildyczkowski.com/",
       "https://www.linkedin.com/in/kamildyczkowski/"
     ],
     "knowsAbout": [
-      "Warehouse Management Systems",
+      "Process Design",
+      "Operations Management",
       "Lean Operations",
-      "Inventory Control",
-      "Process Enforcement",
-      "SOP Design",
+      "Business Systems",
+      "Warehouse Operations",
       "SMB Operations"
     ]
   }
@@ -186,11 +192,11 @@
 
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center space-x-8">
-          <a href="index.html#symptoms" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Symptoms</a>
-          <a href="index.html#solution" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Solution</a>
-          <a href="index.html#roadmap" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Roadmap</a>
-          <a href="index.html#faq" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">FAQ</a>
-          <a href="about.html" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">About</a>
+          <a href="index.html#situation" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Situation</a>
+          <a href="index.html#how-i-work" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">How I Work</a>
+          <a href="index.html#results" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Results</a>
+          <a href="index.html#pricing" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Pricing</a>
+          <a href="about.html" class="text-white transition text-xs font-bold uppercase tracking-widest text-center">About</a>
           <a href="low-noise-leadership.html" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Book</a>
           <a href="mailto:dyczkowski.kamil@gmail.com" class="px-5 py-2 rounded bg-blue-700 text-white font-bold hover:bg-blue-600 transition text-xs uppercase tracking-wide">Contact</a>
         </div>
@@ -217,11 +223,11 @@
     <!-- Mobile Menu Dropdown -->
     <div id="mobile-menu" class="hidden md:hidden bg-slate-950/95 backdrop-blur-xl border-b border-slate-800 absolute w-full left-0 top-20 shadow-2xl">
       <div class="px-6 py-8 space-y-6 flex flex-col">
-        <a href="index.html#symptoms" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Symptoms</a>
-        <a href="index.html#solution" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Solution</a>
-        <a href="index.html#roadmap" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Roadmap</a>
-        <a href="index.html#faq" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">FAQ</a>
-        <a href="about.html" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">About</a>
+        <a href="index.html#situation" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Situation</a>
+        <a href="index.html#how-i-work" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">How I Work</a>
+        <a href="index.html#results" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Results</a>
+        <a href="index.html#pricing" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Pricing</a>
+        <a href="about.html" class="text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">About</a>
         <a href="low-noise-leadership.html" class="text-blue-400 hover:text-blue-300 font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Book</a>
         <a href="mailto:dyczkowski.kamil@gmail.com" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm">Email Me</a>
       </div>
@@ -232,7 +238,7 @@
   <!-- HERO -->
   <header class="pt-32 pb-14 md:pt-44 md:pb-16 relative z-10">
     <div class="max-w-5xl mx-auto px-4 text-center">
-      <div class="pill text-slate-500 mb-5">About the operator</div>
+      <div class="pill text-slate-500 mb-5">About</div>
 
       <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-[1.1] tracking-tight mb-6">
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Process</span>-first.<br />
@@ -240,105 +246,62 @@
       </h1>
 
       <p class="max-w-3xl mx-auto text-slate-400 text-base md:text-lg font-light leading-relaxed">
-        I design and implement <strong class="text-white">operational systems</strong> - combining software and strict SOPs - that make skipping steps impossible. By enforcing logic at every stage, I eliminate shortcuts and give you absolute visibility into the real status of every task.
+        This section exists to prevent wasted conversations. If you are looking for generic training, motivation, or standard consultancy, we will not be a fit.
       </p>
 
       <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
         <a href="index.html" class="btn-primary">Back to the main page</a>
-        <a href="mailto:dyczkowski.kamil@gmail.com?subject=Discovery Call Request" class="px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-lg transition shadow-glow text-sm uppercase tracking-widest">Book Free Discovery Call</a>
+        <a href="mailto:dyczkowski.kamil@gmail.com?subject=20-minute%20Diagnostic%20Call" class="px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-lg transition shadow-glow text-sm uppercase tracking-widest">Book a diagnostic call</a>
       </div>
     </div>
   </header>
 
-  <!-- WHO I AM NOT -->
-  <section class="py-14 relative z-10">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="glass-card rounded-2xl p-8 md:p-10 border border-slate-800/60">
-        <div class="text-slate-500 font-mono text-[10px] uppercase tracking-widest font-bold mb-3">Filter</div>
-        <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight leading-tight">
-          Who I am not
-        </h2>
-        <p class="mt-4 text-sm md:text-base text-slate-400 leading-relaxed max-w-4xl">
-          This section exists to prevent wasted conversations. If you are looking for generic training, motivation, or standard consultancy, we will not be a fit.
-        </p>
-
-        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="glass-card p-6 rounded-xl border border-slate-800/60">
-            <div class="text-blue-400 font-mono text-[10px] uppercase tracking-widest font-bold mb-2">Not training</div>
-            <div class="text-sm text-slate-300">I do not sell generic workshops. However, when I implement a new process or software, <strong>I provide full training</strong> on that specific solution.</div>
-          </div>
-          <div class="glass-card p-6 rounded-xl border border-slate-800/60">
-            <div class="text-blue-400 font-mono text-[10px] uppercase tracking-widest font-bold mb-2">Not reports</div>
-            <div class="text-sm text-slate-300">I deliver detailed audits, but most consultants stop there. <strong>I start there.</strong> My product is the implementation, not the PDF.</div>
-          </div>
-          <div class="glass-card p-6 rounded-xl border border-slate-800/60">
-            <div class="text-blue-400 font-mono text-[10px] uppercase tracking-widest font-bold mb-2">Not vendor bias</div>
-            <div class="text-sm text-slate-300">I leverage 25 years of experience. A mix of <strong>strict SOPs</strong> and a system that enforces step-by-step flow eliminates <strong>95% of operational problems</strong>.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT (RESTORED CORE CONTENT) -->
+  <!-- MAIN ABOUT CONTENT -->
   <section class="py-14 relative z-10">
     <div class="max-w-4xl mx-auto px-4">
       <div class="glass-card rounded-xl p-8 md:p-12 border border-slate-800/60">
         <div class="flex flex-col md:flex-row gap-12 items-start">
           <div class="w-full md:w-[240px] flex-shrink-0">
             <div class="w-full rounded-lg bg-slate-950 border border-slate-700 overflow-hidden relative">
-              <!-- UPDATED IMAGE NAME FOR SEO -->
-              <img src="kamil-dyczkowski-warehouse-consultant.jpg" alt="Kamil Dyczkowski - Operational Systems Architect & Lean Consultant" class="w-full h-auto object-cover object-top hover:scale-105 transition duration-700" />
+              <img src="kamil-dyczkowski-warehouse-consultant.jpg" alt="Kamil Dyczkowski - Process & Systems Expert" class="w-full h-auto object-cover object-top hover:scale-105 transition duration-700" />
             </div>
             <div class="mt-4 text-center md:text-left">
               <div class="text-white font-bold">Kamil Dyczkowski</div>
-              <div class="text-blue-500 text-[10px] font-mono uppercase tracking-widest">Operator-level Architect</div>
+              <div class="text-blue-500 text-[10px] font-mono uppercase tracking-widest">Process & Systems Expert</div>
             </div>
           </div>
 
-          <div class="flex-grow space-y-6 text-slate-300 leading-relaxed text-sm md:text-base">
-            <h2 class="text-2xl font-bold text-white mb-2">Process-first.<br />System-second.</h2>
+          <div class="flex-grow space-y-5 text-slate-300 leading-relaxed text-sm md:text-base">
+            <p>I am not a motivational speaker and not a typical consultant. I am someone who has spent <strong class="text-white">over 20 years on the operational frontline</strong> – in manufacturing, warehouses and service environments – learning, often through mistakes, how to close the gap between how work is described and how it actually happens.</p>
 
-            <p>
-              I am an <strong class="text-white">operator-level architect</strong>, not a consultant and not a typical developer.
-              My scope covers <strong class="text-white">manufacturing, warehouses</strong>, and appointment-driven service operations,
-              from treatment studios and gyms to high-volume trade services.
-            </p>
+            <p>My scope covers <strong class="text-white">manufacturing, warehouses and appointment-driven service operations</strong>, from treatment studios and clinics to high-volume trade and workshop services. I enter when process integrity has reached its limit and the business is capped by its own chaos.</p>
 
-            <p>
-              I enter when process integrity has reached its limit and the business is capped by its own chaos.
-              The goal is <strong class="text-white">operational comfort</strong>: fewer exceptions, clearer priorities, and a stable source of truth.
-              Best practices are used to create order and predictability, not bureaucracy.
-            </p>
+            <p>The goal is simple: <strong class="text-white">stable, calm operations</strong>. Fewer exceptions, clearer priorities, and one reliable source of truth that your team can depend on under pressure. Best practices are used to create order and predictability, not bureaucracy.</p>
 
-            <p>
-              My work is a straight line: diagnosis, system design, and implementation of a <strong class="text-white">strict enforcement layer</strong>.
-              Enforcement is not about controlling people. It controls the process so teams cannot accidentally create errors,
-              and nobody has to rely on memory to keep the business running.
-            </p>
+            <p>My work follows a straight line:</p>
+            <ul class="list-disc list-inside text-slate-400 space-y-1 ml-2">
+              <li>understand how work really happens today,</li>
+              <li>design a process that can survive growth,</li>
+              <li>and, if needed, implement a strict enforcement layer in software so incorrect actions are either prevented or exposed immediately.</li>
+            </ul>
 
-            <p>
-              After more than 20 years in high-stakes environments, I have seen where even enterprise systems like SAP or Oracle fail,
-              not due to lack of capability, but due to flawed assumptions. My systems are built without those assumptions,
-              around the reality of the shop floor and the reception desk.
-            </p>
+            <p><strong class="text-white">Enforcement is not about controlling people.</strong> It is about controlling the process, so teams cannot accidentally create errors and nobody has to rely on memory to keep the business running.</p>
 
-            <p>
-              My background is <strong class="text-white">Lean</strong>, but my approach is aggressive efficiency.
-              I am a perfectionist who does not tolerate "good enough." I treat every project individually because every chaos is different.
-              I have a specific talent for spotting inefficiencies in places <strong class="text-white">most business owners and popular market consultants overlook</strong>.
-              Where others see "just how we do things," I see a leak that <strong class="text-white">damages your reputation, burns time, eats into profit, and generates frustration</strong>.
-              I don't compromise on <strong class="text-white">process integrity</strong> - if we build it, it must work perfectly.
-            </p>
+            <p>Over more than 20 years in high-stakes environments, I have seen where even large systems fail – not because they are weak, but because they are built on assumptions that do not match the reality of the shop floor or the reception desk. I design and build systems without those assumptions, around what actually happens in your operation.</p>
+
+            <p>My background is in <strong class="text-white">Lean and continuous improvement</strong>, but my approach is aggressive practicality. I am not interested in certificates or theatre. I am interested in whether your operation can handle tomorrow without falling apart.</p>
+
+            <p>I have a specific talent for spotting inefficiencies in places <strong class="text-white">most business owners and popular market consultants overlook</strong>. Where others see "just how we do things", I see a leak that damages your reputation, burns time, eats into profit, and generates frustration.</p>
+
+            <p>I do not compromise on process integrity. If we build it, <strong class="text-white">it must work under real conditions</strong> – with tired people, interruptions and imperfect information.</p>
+
+            <p>My way of working is not theoretical. It is the result of over 20 years on the operational frontline, supported by deep study of neurobiology and behavioural science.</p>
 
             <div class="glass-card p-6 rounded-xl border border-slate-800/60 mt-8">
-              <div class="text-blue-400 font-mono text-[10px] uppercase tracking-widest font-bold mb-2">The Blueprint: Low-Noise Leadership</div>
-              <div class="text-white font-bold">The Source Code of My Operating System</div>
+              <div class="text-blue-400 font-mono text-[10px] uppercase tracking-widest font-bold mb-2">The Blueprint</div>
+              <div class="text-white font-bold">Low-Noise Leadership</div>
               <p class="text-slate-400 text-sm mt-2 leading-relaxed">
-                My approach is not theoretical. It is the result of <strong>20 years on the operational frontline</strong>, supported by deep study of neurobiology and behavioral science.
-              </p>
-              <p class="text-slate-400 text-sm mt-2 leading-relaxed">
-                As the author of <em>Low-Noise Leadership</em>, I documented my internal operating system. It explains the mechanics of focus and energy regulation that allow me to see leaks where others only hear noise.
+                As the author of <em>Low-Noise Leadership</em>, I documented my own internal operating system – the mechanics of focus and energy regulation that allow me to see leaks where others only hear noise.
               </p>
               <div class="mt-4">
                 <a href="low-noise-leadership.html" class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-bold text-sm">
@@ -348,7 +311,7 @@
             </div>
 
             <p class="text-white font-bold border-l-2 border-blue-500 pl-4 py-1 mt-6">
-              You do not need <strong class="text-white">louder management</strong> or <strong class="text-white">micromanagement</strong>. You need <strong class="text-white">enforced operational logic</strong> that removes ambiguity and prevents leaks.
+              You do not need louder management or tighter micromanagement. You need <strong class="text-white">enforced operational logic</strong> that removes ambiguity and prevents leaks.
             </p>
           </div>
         </div>
@@ -359,7 +322,7 @@
   <!-- WHY SYSTEMS FAIL -->
   <section class="py-14 relative z-10">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="glass-card rounded-2xl p-8 md:p-10 border border-slate-800/60">
+      <div class="glass-card rounded-2xl p-8 md:p-10 border border-slate-800/60 fade-up">
         <div class="text-slate-500 font-mono text-[10px] uppercase tracking-widest font-bold mb-3">Context</div>
         <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight leading-tight">
           Why operations fail even with software in place
@@ -383,7 +346,7 @@
           <div class="glass-card p-6 rounded-xl border border-slate-800/60">
             <div class="text-white font-bold">Data becomes contradictory</div>
             <p class="text-slate-400 text-sm mt-2">
-              Spreadsheets, notes, and informal logs create competing sources of truth and invisible drift.
+              Spreadsheets, notes and informal logs create competing sources of truth and invisible drift.
             </p>
           </div>
 
@@ -398,63 +361,19 @@
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="py-14 bg-slate-900/30 relative z-10 border-t border-slate-800/50">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-2xl font-bold text-white mb-10 text-center uppercase">Frequently Asked Questions</h2>
-
-      <div class="glass-card p-6 md:p-8 rounded-2xl border border-slate-800/60">
-        <div class="space-y-4">
-          <details class="p-5">
-            <summary class="flex items-center justify-between gap-4">
-              <span class="text-white font-bold text-sm">Do you sell training?</span>
-              <span class="text-slate-500 font-mono text-[10px] uppercase tracking-widest">Expand</span>
-            </summary>
-            <div class="mt-3 text-xs text-slate-400 leading-relaxed">
-              No. Training is not a control mechanism. If the process depends on memory, it will fail under pressure.
-              I build and enforce operational logic so the correct action is the only possible action.
-            </div>
-          </details>
-
-          <details class="p-5">
-            <summary class="flex items-center justify-between gap-4">
-              <span class="text-white font-bold text-sm">Is this only for warehouses?</span>
-              <span class="text-slate-500 font-mono text-[10px] uppercase tracking-widest">Expand</span>
-            </summary>
-            <div class="mt-3 text-xs text-slate-400 leading-relaxed">
-              Warehouse control is a primary focus, but the same enforcement approach applies to manufacturing and appointment-driven service operations.
-              If errors repeat and rework consumes time, the root cause is almost always missing control.
-            </div>
-          </details>
-
-          <details class="p-5">
-            <summary class="flex items-center justify-between gap-4">
-              <span class="text-white font-bold text-sm">What is the first step?</span>
-              <span class="text-slate-500 font-mono text-[10px] uppercase tracking-widest">Expand</span>
-            </summary>
-            <div class="mt-3 text-xs text-slate-400 leading-relaxed">
-              A short call to confirm fit and identify where integrity breaks. If it is solvable, we define the minimum viable control layer to implement first.
-            </div>
-          </details>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- FOOTER -->
   <footer class="py-16 border-t border-slate-800 bg-slate-950 relative z-10">
     <div class="max-w-3xl mx-auto px-4 text-center">
-      <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">Direct access for serious operations.</h2>
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">Ready to talk?</h2>
       <p class="text-slate-400 mb-10 text-sm max-w-xl mx-auto">
-        If your operation still runs on paper and memory, describe the failure point.
-        I will tell you if it can be fixed and what the first control layer should be.
+        If you recognise your situation and want to see whether I can actually help, book a 20-minute diagnostic call or send me a short email.
       </p>
       
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="mailto:dyczkowski.kamil@gmail.com?subject=Discovery Call Request" class="inline-block px-12 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-lg transition shadow-glow text-sm uppercase tracking-widest">Book Free Discovery Call</a>
+        <a href="mailto:dyczkowski.kamil@gmail.com?subject=20-minute%20Diagnostic%20Call" class="inline-block px-12 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-lg transition shadow-glow text-sm uppercase tracking-widest">Book a diagnostic call</a>
         
         <!-- CLICK-TO-REVEAL PHONE BUTTON -->
-        <a class="btn-ghost flex items-center gap-2 cursor-pointer w-[160px] justify-center" 
+        <a class="btn-ghost flex items-center gap-2 cursor-pointer w-[160px] justify-center border border-slate-700 px-6 py-4 rounded-lg" 
            href="#"
            onclick="event.preventDefault(); this.querySelector('span').innerText = '07403 874868'; this.href = 'tel:+447403874868'; window.location.href='tel:+447403874868';">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
@@ -462,7 +381,6 @@
           </svg>
           <span class="font-mono">Call direct</span>
         </a>
-
       </div>
 
       <p class="mt-12 text-[10px] text-slate-600 font-mono uppercase tracking-widest">© 2026 Kamil Dyczkowski | Business Solutions & Systems</p>
@@ -530,6 +448,28 @@
             localStorage.setItem('cookie-consent', 'declined');
             banner.classList.add('hidden');
         });
+    })();
+
+    // SCROLL ANIMATIONS
+    (function initScrollAnimations() {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -50px 0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.fade-up').forEach(el => {
+        observer.observe(el);
+      });
     })();
   </script>
 </body>
