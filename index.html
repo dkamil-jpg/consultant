@@ -21,25 +21,25 @@
   </script>
 
   <!-- Primary SEO - Optimized for Symptoms & UK Location -->
-  <title>Fix Inventory Drift & Picking Errors | Warehouse Process Expert UK</title>
-  <meta name="description" content="Stop profit leaks in your warehouse. I install enforcement layers for UK SMBs that replace paper and memory with strict control. Fix drift, errors, and rework." />
-  <meta name="keywords" content="Warehouse Consultant UK, Inventory Control System, Picking Errors Fix, Warehouse Process Improvement, Lean Warehousing UK, SMB Operations" />
+  <title>Get Operations Under Control | Process & Systems Expert UK</title>
+  <meta name="description" content="I help UK SMBs fix messy processes and build pragmatic systems. Stop chaos, overtime and fire-fighting. Process-first approach for warehouses, manufacturing and service operations." />
+  <meta name="keywords" content="Operations Consultant UK, Process Improvement, Business Systems, Warehouse Operations, SMB Operations, Lean Process UK" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://kamildyczkowski.com/" />
 
   <!-- Open Graph (Social Sharing) -->
   <meta property="og:type" content="business.business" />
-  <meta property="og:title" content="Fix Inventory Drift & Picking Errors | Kamil Dyczkowski" />
-  <meta property="og:description" content="Stop inventory drift, picking mistakes, and rework. I install the enforcement layer that makes correct actions unavoidable." />
+  <meta property="og:title" content="Get Operations Under Control | Kamil Dyczkowski" />
+  <meta property="og:description" content="I help UK SMBs fix messy processes and build pragmatic systems. Stop chaos, overtime and constant fire-fighting." />
   <meta property="og:url" content="https://kamildyczkowski.com/" />
-  <meta property="og:site_name" content="Kamil Dyczkowski | Warehouse Process Architect" />
+  <meta property="og:site_name" content="Kamil Dyczkowski | Business Solutions & Systems" />
   <meta property="og:image" content="https://kamildyczkowski.com/kamil-dyczkowski-warehouse-consultant.jpg" />
   <meta property="og:locale" content="en_GB" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Fix Warehouse Errors & Inventory Drift" />
-  <meta name="twitter:description" content="Operational enforcement for UK warehouses. Stop losing time and profit to chaos." />
+  <meta name="twitter:title" content="Get Operations Under Control | Process Expert UK" />
+  <meta name="twitter:description" content="Fix messy processes. Build pragmatic systems. Serve more customers without chaos." />
   <meta name="twitter:image" content="https://kamildyczkowski.com/kamil-dyczkowski-warehouse-consultant.jpg" />
 
   <!-- Fonts -->
@@ -82,6 +82,12 @@
       background: rgba(15, 23, 42, 0.38);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(51, 65, 85, 0.55);
+      transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .glass:hover {
+      border-color: rgba(59, 130, 246, 0.35);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(59, 130, 246, 0.08);
     }
     .panel {
       background: rgba(2, 6, 23, 0.82);
@@ -103,8 +109,21 @@
       transition: all 0.2s;
       display: inline-flex; align-items: center; justify-content: center;
       letter-spacing: -0.01em;
+      position: relative;
+      overflow: hidden;
     }
     .btn-primary:hover { background: #cbd5e1; transform: translateY(-1px); }
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+    .btn-primary:hover::after {
+      transform: translateX(100%);
+    }
     .btn-ghost {
       border: 1px solid rgba(51,65,85,0.7);
       color: #e2e8f0;
@@ -148,7 +167,6 @@
     }
     .hero-line:nth-child(1) { animation-delay: 0.1s; }
     .hero-line:nth-child(2) { animation-delay: 0.3s; }
-    .hero-line:nth-child(3) { animation-delay: 0.5s; }
 
     @keyframes fadeInUp {
       to {
@@ -168,31 +186,20 @@
       transform: translateY(0);
     }
 
-    /* Subtle hover effects for cards */
-    .glass {
-      transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .glass:hover {
-      border-color: rgba(59, 130, 246, 0.35);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(59, 130, 246, 0.08);
-    }
-
-    /* Button subtle pulse on CTA */
-    .btn-primary {
-      position: relative;
-      overflow: hidden;
-    }
-    .btn-primary::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-      transform: translateX(-100%);
-      transition: transform 0.6s ease;
-    }
-    .btn-primary:hover::after {
-      transform: translateX(100%);
+    /* Step number styling */
+    .step-number {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: JetBrains Mono, monospace;
+      font-weight: 700;
+      color: #3b82f6;
+      flex-shrink: 0;
     }
   </style>
 
@@ -201,7 +208,7 @@
   {
     "@context":"https://schema.org",
     "@type":"ProfessionalService",
-    "name":"Kamil Dyczkowski - Warehouse Process Architect",
+    "name":"Kamil Dyczkowski - Business Solutions & Systems",
     "url":"https://kamildyczkowski.com/",
     "logo": "https://kamildyczkowski.com/kamil-dyczkowski-warehouse-consultant.jpg",
     "image": "https://kamildyczkowski.com/kamil-dyczkowski-warehouse-consultant.jpg",
@@ -215,31 +222,38 @@
     },
     "priceRange": "$$$",
     "telephone": "+447403874868",
-    "description":"Enforcement layer to stop inventory drift, picking mistakes, and rework in small business warehouses.",
+    "description":"I help UK SMBs fix messy processes and build pragmatic systems. Process-first approach for warehouses, manufacturing and service operations.",
     "founder":{"@type":"Person","name":"Kamil Dyczkowski"},
     "serviceType":[
-      "Warehouse process enforcement",
-      "Inventory integrity controls",
-      "Picking and movement validation",
-      "Goods-in, stock movement, and auditability",
-      "SOP Implementation"
+      "Process design and improvement",
+      "Operational diagnostics",
+      "Custom business systems",
+      "Warehouse operations",
+      "Service operations"
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Operational Systems",
+      "name": "Operational Services",
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Operational Audit (Deep Dive)"
+            "name": "On-site Diagnostic"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Control Layer Implementation"
+            "name": "Process Redesign"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Custom System Implementation"
           }
         }
       ]
@@ -255,18 +269,18 @@
     "mainEntity":[
       {
         "@type":"Question",
-        "name":"We are still on paper. Is it too early to build a system?",
+        "name":"What do you need from me to start?",
         "acceptedAnswer":{
           "@type":"Answer",
-          "text":"No. Paper and memory work until volume rises. The system is the control layer that prevents drift, makes movement traceable, and stops time loss caused by rework."
+          "text":"A short description of where mistakes happen most and what still runs on paper or memory. That is enough to scope the first step."
         }
       },
       {
         "@type":"Question",
-        "name":"Do you sell training?",
+        "name":"Do you sell training or workshops?",
         "acceptedAnswer":{
           "@type":"Answer",
-          "text":"No. I do not sell training or generic workshops. I build and enforce operational logic so the correct action becomes the only possible action."
+          "text":"No. I design processes that work under pressure without relying on memory. If the process needs training to remain stable, it is not enforced."
         }
       },
       {
@@ -274,7 +288,7 @@
         "name":"What is the typical first step?",
         "acceptedAnswer":{
           "@type":"Answer",
-          "text":"A short diagnosis call to confirm fit, map the failure points, and define the minimum viable control layer to implement first."
+          "text":"A 20-minute diagnostic call to understand your situation, map where things are failing, and decide whether an on-site diagnostic makes sense."
         }
       }
     ]
@@ -305,10 +319,10 @@
 
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center space-x-8">
-          <a href="#symptoms" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Symptoms</a>
-          <a href="#solution" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Solution</a>
-          <a href="#roadmap" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Roadmap</a>
-          <a href="#faq" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">FAQ</a>
+          <a href="#situation" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Situation</a>
+          <a href="#how-i-work" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">How I Work</a>
+          <a href="#results" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Results</a>
+          <a href="#pricing" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Pricing</a>
           <a href="about.html" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">About</a>
           <a href="low-noise-leadership.html" class="text-slate-400 hover:text-white transition text-xs font-bold uppercase tracking-widest text-center">Book</a>
           <a href="mailto:dyczkowski.kamil@gmail.com" class="px-5 py-2 rounded bg-blue-700 text-white font-bold hover:bg-blue-600 transition text-xs uppercase tracking-wide">Contact</a>
@@ -336,10 +350,10 @@
     <!-- Mobile Menu Dropdown -->
     <div id="mobile-menu" class="hidden md:hidden bg-slate-950/95 backdrop-blur-xl border-b border-slate-800 absolute w-full left-0 top-20 shadow-2xl">
       <div class="px-6 py-8 space-y-6 flex flex-col">
-        <a href="#symptoms" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Symptoms</a>
-        <a href="#solution" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Solution</a>
-        <a href="#roadmap" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Roadmap</a>
-        <a href="#faq" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">FAQ</a>
+        <a href="#situation" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Situation</a>
+        <a href="#how-i-work" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">How I Work</a>
+        <a href="#results" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Results</a>
+        <a href="#pricing" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Pricing</a>
         <a href="about.html" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">About</a>
         <a href="low-noise-leadership.html" class="text-blue-400 hover:text-blue-300 font-bold uppercase tracking-widest text-sm border-b border-slate-800/50 pb-2" onclick="toggleMobileMenu()">Book</a>
         <a href="mailto:dyczkowski.kamil@gmail.com" class="text-slate-300 hover:text-white font-bold uppercase tracking-widest text-sm">Email Me</a>
@@ -351,270 +365,236 @@
   <!-- HERO -->
   <header id="top" class="pt-28 pb-14 relative z-10">
     <div class="max-w-5xl mx-auto px-4 text-center">
-      <div class="pill text-slate-500 mb-4">For operations-heavy SMBs & Warehouses</div>
+      <div class="pill text-slate-500 mb-4">For owner-led SMBs in the UK</div>
 
       <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight tracking-tight">
-        <span class="hero-line block"><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Revenue</span> is rising.</span>
-        <span class="hero-line block"><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Profit</span> is not.</span>
-        <span class="hero-line block">The <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">leak</span> is operational.</span>
+        <span class="hero-line block">Get your <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">operations</span> under control</span>
+        <span class="hero-line block">– before they collapse under growth</span>
       </h1>
 
-      <p class="mt-6 text-slate-400 text-base md:text-lg leading-relaxed max-w-4xl mx-auto">
-        If your warehouse still runs on paper, memory, and informal rules, growth creates chaos.
-        I install a control and enforcement layer that stops <strong class="text-white">inventory drift</strong>, <strong class="text-white">picking mistakes</strong>, and <strong class="text-white">rework</strong> - so time is recovered and margin returns.
+      <p class="mt-6 text-slate-400 text-base md:text-lg leading-relaxed max-w-4xl mx-auto fade-up">
+        I help small and mid-sized businesses in the UK fix messy processes and build pragmatic systems around them – so you can serve more customers without chaos, overtime and constant fire-fighting.
       </p>
 
-      <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
-        <a class="btn-primary" href="mailto:dyczkowski.kamil@gmail.com?subject=Warehouse%20Control%20-%20Discovery%20Call">Book a discovery call</a>
-        <a class="btn-ghost" href="#symptoms">See the failure patterns</a>
+      <p class="mt-4 text-slate-300 text-sm md:text-base leading-relaxed max-w-3xl mx-auto fade-up">
+        I don't start with software. I start with how work really happens on your floor – then design the process and, if needed, build a system that fits it.
+      </p>
+
+      <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center fade-up">
+        <a class="btn-primary" href="mailto:dyczkowski.kamil@gmail.com?subject=20-minute%20Diagnostic%20Call">Book a 20-minute diagnostic call</a>
       </div>
 
-      <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
-        <div class="glass rounded-xl p-5">
-          <div class="pill text-blue-400 mb-2">Target</div>
-          <div class="text-sm text-slate-300">Operations-heavy SMBs (Warehouse, Production, Service) moving from paper to control.</div>
-        </div>
-        <div class="glass rounded-xl p-5">
-          <div class="pill text-blue-400 mb-2">Outcome</div>
-          <div class="text-sm text-slate-300"><strong class="text-white">Operational immunity</strong>. Your business gains the <strong class="text-white">reputation</strong> of being reliable, and you gain the safety to scale without chaos. Time recovery is just the first step.</div>
-        </div>
-        <div class="glass rounded-xl p-5">
-          <div class="pill text-blue-400 mb-2">Mode</div>
-          <div class="text-sm text-slate-300">Long-term partnership or end-to-end system delivery.</div>
-        </div>
-      </div>
-
-      <div class="mt-8 text-xs text-slate-500">
-        Not training. Not workshops. Not reports. <span class="text-slate-300 font-bold">Enforced operational logic.</span>
-      </div>
+      <p class="mt-4 text-xs text-slate-500 fade-up">
+        Owner-led businesses only. No obligation, just a clear view of what's going wrong.
+      </p>
     </div>
   </header>
 
-  <!-- SYMPTOMS -->
-  <section id="symptoms" class="py-16 relative z-10 border-y border-slate-800/60 bg-slate-950/40 backdrop-blur-sm">
+  <!-- IS THIS YOUR SITUATION? -->
+  <section id="situation" class="py-16 relative z-10 border-y border-slate-800/60 bg-slate-950/40 backdrop-blur-sm">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center fade-up">
-        <h2 class="text-2xl md:text-3xl font-extrabold text-white">The operational failure patterns</h2>
-        <p class="text-slate-400 mt-3 max-w-3xl mx-auto">
-          These are not people problems. They are control gaps.
-        </p>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white">Is this your situation?</h2>
       </div>
 
       <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Block 1: Process Problem -->
         <div class="glass rounded-2xl p-7 stagger-item" data-delay="0">
-          <h3 class="text-white font-bold">Inventory drift</h3>
-          <p class="text-slate-400 text-sm mt-2">Stock levels in reality do not match the sheet. Time is spent searching, counting, arguing, and correcting.</p>
-          <p class="text-slate-300 text-sm mt-3"><span class="kbd">Leak</span> write-offs, emergency purchases, missed sales</p>
+          <div class="pill text-blue-400 mb-3">Diagnosis</div>
+          <h3 class="text-white font-bold text-lg mb-4">You have a process problem</h3>
+          <div class="text-slate-400 text-sm leading-relaxed space-y-3">
+            <p>You've been running your business for years with the same loyal people. They know the job, but the way work is done hasn't really changed since the 1990s.</p>
+            <p>Orders get printed. Someone walks the warehouse with a piece of paper and a pen, ticking what they managed to pick and circling what they couldn't find. Every extra customer means more chaos, more "emergency plans", more overtime – and a growing risk of sending the wrong item or missing something entirely.</p>
+            <p class="text-slate-300"><strong>Your real problem is not effort or loyalty. It's that the process no longer matches the volume and complexity of your business.</strong></p>
+          </div>
         </div>
 
+        <!-- Block 2: System Problem -->
         <div class="glass rounded-2xl p-7 stagger-item" data-delay="100">
-          <h3 class="text-white font-bold">Picking mistakes and rework</h3>
-          <p class="text-slate-400 text-sm mt-2">Wrong item, wrong quantity, wrong batch. The cost is not the mistake - it is the recovery loop.</p>
-          <p class="text-slate-300 text-sm mt-3"><span class="kbd">Leak</span> returns, customer friction, overtime</p>
-        </div>
-
-        <div class="glass rounded-2xl p-7 stagger-item" data-delay="200">
-          <h3 class="text-white font-bold">No enforced movement logic</h3>
-          <p class="text-slate-400 text-sm mt-2">Goods-in, relocations, adjustments, and write-offs happen, but not as controlled transactions.</p>
-          <p class="text-slate-300 text-sm mt-3"><span class="kbd">Leak</span> invisible shrink, broken traceability</p>
-        </div>
-
-        <div class="glass rounded-2xl p-7 stagger-item" data-delay="300">
-          <h3 class="text-white font-bold">Work runs on memory</h3>
-          <p class="text-slate-400 text-sm mt-2">One key person holds the rules in their head. When they are absent, quality collapses.</p>
-          <p class="text-slate-300 text-sm mt-3"><span class="kbd">Leak</span> fragility, missed handovers</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOLUTION -->
-  <section id="solution" class="py-16 relative z-10">
-    <div class="max-w-5xl mx-auto px-4">
-      <div class="text-center fade-up">
-        <h2 class="text-2xl md:text-3xl font-extrabold text-white">What I install: a control and enforcement layer</h2>
-        <p class="text-slate-400 mt-3 max-w-3xl mx-auto">
-          The goal is simple: correct actions become unavoidable. Exceptions become visible immediately.
-        </p>
-      </div>
-
-      <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="glass rounded-2xl p-7 stagger-item" data-delay="0">
-          <div class="pill text-blue-400 mb-2">Goods-in control</div>
-          <p class="text-slate-400 text-sm">Validated receiving, clear status, and enforced transaction rules.</p>
-        </div>
-        <div class="glass rounded-2xl p-7 stagger-item" data-delay="100">
-          <div class="pill text-blue-400 mb-2">Movement validation</div>
-          <p class="text-slate-400 text-sm">Relocations, picks, adjustments, write-offs as controlled events, not informal edits.</p>
-        </div>
-        <div class="glass rounded-2xl p-7 stagger-item" data-delay="200">
-          <div class="pill text-blue-400 mb-2">Exception visibility</div>
-          <p class="text-slate-400 text-sm">Alerts and dashboards that expose drift early, before it becomes cost.</p>
+          <div class="pill text-blue-400 mb-3">Diagnosis</div>
+          <h3 class="text-white font-bold text-lg mb-4">You have a system problem</h3>
+          <div class="text-slate-400 text-sm leading-relaxed space-y-3">
+            <p>You already know roughly what you want:</p>
+            <ul class="list-disc list-inside text-slate-400 space-y-1 ml-2">
+              <li>a self check-in kiosk and a client database for a clinic or salon,</li>
+              <li>a front-desk system for a workshop,</li>
+              <li>or a simple tool to track visits, jobs or bookings.</li>
+            </ul>
+            <p>You don't want another generic SaaS that almost fits and forces you to bend your process around it. You want a small, focused system that matches how you actually want to work – without paying enterprise-grade fees or waiting a year for delivery.</p>
+          </div>
         </div>
       </div>
 
-      <div class="mt-10 glass rounded-2xl p-8 fade-up">
-        <h3 class="text-white font-bold text-lg">No training dependency</h3>
-        <p class="text-slate-400 text-sm mt-2">
-          I do not sell workshops. If your process needs training to remain stable, it is not enforced.
-          Systems should constrain incorrect actions, not hope people remember rules under pressure.
+      <div class="mt-8 text-center fade-up">
+        <p class="text-slate-300 text-sm md:text-base max-w-3xl mx-auto">
+          In both cases, the pattern is the same: <strong class="text-white">the way you work and the tools you use are out of sync.</strong> That's where I come in.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- ROADMAP -->
-  <section id="roadmap" class="py-16 relative z-10 border-y border-slate-800/60 bg-slate-950/35">
+  <!-- HOW I WORK -->
+  <section id="how-i-work" class="py-16 relative z-10">
     <div class="max-w-5xl mx-auto px-4">
       <div class="text-center fade-up">
-        <h2 class="text-2xl md:text-3xl font-extrabold text-white">Roadmap: from paper to control</h2>
-        <p class="text-slate-400 mt-3 max-w-3xl mx-auto">
-          Two engagement modes. Same goal: measurable time recovery and fewer mistakes.
-        </p>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white">How I work</h2>
       </div>
 
       <div class="mt-10 space-y-6">
+        <!-- Step 1 -->
         <div class="glass rounded-2xl p-8 stagger-item" data-delay="0">
-          <div class="pill text-blue-400 mb-3">Phase 1</div>
-          <h3 class="text-white font-bold text-lg">On-site Deep Dive (The Audit)</h3>
-          <p class="text-slate-400 text-sm mt-2">I don't work from a desk. I spend 1-5 days on your floor, observing the actual process and interviewing your staff. I look for what really happens, not what <i>should</i> happen. The output is a ruthless, <strong class="text-white">detailed report</strong> identifying every leak and a <strong class="text-white">cost-benefit analysis</strong> of the solution.</p>
+          <div class="flex gap-5 items-start">
+            <div class="step-number">1</div>
+            <div>
+              <h3 class="text-white font-bold text-lg">I watch how work really happens</h3>
+              <p class="text-slate-400 text-sm mt-2 leading-relaxed">I don't start with a workshop or a slide deck. I spend up to five days on site, on your floor – following orders, stock, people and decisions through your actual day. I talk to the people who really do the work, not just the ones who write procedures.</p>
+            </div>
+          </div>
         </div>
 
-        <div class="glass rounded-2xl p-8 stagger-item" data-delay="150">
-          <div class="pill text-blue-400 mb-3">Phase 2</div>
-          <h3 class="text-white font-bold text-lg">The Decision & Blueprint</h3>
-          <p class="text-slate-400 text-sm mt-2">We review the audit together. You see exactly where the money is leaking and how much the fix will cost. We decide on the scope. Only then do we move to <strong class="text-white">implementation</strong>. No hidden costs, no vague promises.</p>
+        <!-- Step 2 -->
+        <div class="glass rounded-2xl p-8 stagger-item" data-delay="100">
+          <div class="flex gap-5 items-start">
+            <div class="step-number">2</div>
+            <div>
+              <h3 class="text-white font-bold text-lg">I map the leaks and failure points</h3>
+              <p class="text-slate-400 text-sm mt-2 leading-relaxed">Together we make visible where time, money and trust are leaking: searching, rework, wrong picks, missing information, fragile handovers, "only John knows how this is done". You get a clear picture of what is actually happening, not what's written in a manual.</p>
+            </div>
+          </div>
         </div>
 
+        <!-- Step 3 -->
+        <div class="glass rounded-2xl p-8 stagger-item" data-delay="200">
+          <div class="flex gap-5 items-start">
+            <div class="step-number">3</div>
+            <div>
+              <h3 class="text-white font-bold text-lg">I design a process that can survive growth</h3>
+              <p class="text-slate-400 text-sm mt-2 leading-relaxed">I redesign the process so that correct actions become the default and mistakes become hard to make. Rules are clear, handovers are explicit and you can scale work without doubling the chaos and overtime. If a better process alone is enough, we stop here.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
         <div class="glass rounded-2xl p-8 stagger-item" data-delay="300">
-          <div class="pill text-blue-400 mb-3">Phase 3</div>
-          <h3 class="text-white font-bold text-lg">Implementation & Enforcement</h3>
-          <p class="text-slate-400 text-sm mt-2">I install the <strong class="text-white">control layer</strong>. We move from paper/memory to <strong class="text-white">enforced logic</strong>. I stay until the system is stable and your team can operate it without errors.</p>
-        </div>
-      </div>
-
-      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="glass rounded-2xl p-7 stagger-item" data-delay="400">
-          <div class="pill text-slate-400 mb-2">Best fit</div>
-          <p class="text-slate-300 text-sm"><strong>Operations-heavy SMBs</strong> where paper and memory are now the bottleneck.</p>
-        </div>
-        <div class="glass rounded-2xl p-7 stagger-item" data-delay="500">
-          <div class="pill text-slate-400 mb-2">Outcome</div>
-          <p class="text-slate-300 text-sm"><strong>Operational immunity.</strong> The safety to scale without chaos.</p>
+          <div class="flex gap-5 items-start">
+            <div class="step-number">4</div>
+            <div>
+              <h3 class="text-white font-bold text-lg">If needed, I build the system around that process</h3>
+              <p class="text-slate-400 text-sm mt-2 leading-relaxed">Only if the process needs support from software do we talk about systems. I design and deliver a small, focused application that fits your operation: warehouse tools for pickers, simple reception/check-in systems, or internal tools for tracking work. <strong class="text-white">The process comes first. The system follows.</strong></p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PILOT PROGRAM OFFER -->
-  <section class="relative z-20 py-16 px-4 fade-up">
-    <div class="max-w-4xl mx-auto">
-      <div class="bg-blue-950/30 backdrop-blur-md border border-blue-500/40 rounded-2xl p-6 md:p-8 shadow-[0_0_40px_rgba(59,130,246,0.15)] relative overflow-hidden group">
-        
-        <!-- Active Status Indicator -->
-        <div class="absolute top-0 right-0 p-4">
-          <div class="flex items-center gap-2 px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full">
-            <span class="relative flex h-2 w-2">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-            </span>
-            <span class="text-[10px] font-mono font-bold text-blue-400 uppercase tracking-widest">Status: Open</span>
-          </div>
-        </div>
+  <!-- WHAT YOU GET -->
+  <section id="results" class="py-16 relative z-10 border-y border-slate-800/60 bg-slate-950/40 backdrop-blur-sm">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center fade-up">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white">What you get</h2>
+      </div>
 
-        <div class="flex flex-col md:flex-row gap-6 items-start">
-          <div class="flex-grow">
-            <h3 class="text-xl md:text-2xl font-bold text-white mb-2">
-              Q1 2026 Pilot Cohort
-            </h3>
-            <p class="text-slate-300 text-sm leading-relaxed mb-4">
-              I am opening <strong>3 spots</strong> for a high-intensity implementation at a preferential rate (-40%). 
-              <br class="hidden md:block"/>
-              In exchange, I will document the implementation process and results as an anonymized Case Study.
-            </p>
-            
-            <ul class="space-y-2 text-sm text-slate-400 font-mono">
-              <li class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                Full operational diagnosis
-              </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                Implementation of the Control Layer
-              </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                30-day post-implementation monitoring
-              </li>
-            </ul>
-          </div>
+      <div class="mt-10 glass rounded-2xl p-8 fade-up">
+        <ul class="space-y-4 text-slate-300 text-sm md:text-base leading-relaxed">
+          <li class="flex gap-3 items-start">
+            <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span>A brutally honest picture of how your operation really runs today.</span>
+          </li>
+          <li class="flex gap-3 items-start">
+            <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span>A process that your team can actually follow under pressure – not just when everyone is fresh and everything goes to plan.</span>
+          </li>
+          <li class="flex gap-3 items-start">
+            <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span>Fewer mistakes in picking, dispatch, booking or front-desk work – because the process makes errors hard, not because you told people to "be more careful".</span>
+          </li>
+          <li class="flex gap-3 items-start">
+            <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span>The option to have a simple, custom system built around your process, instead of bending your work around a generic tool.</span>
+          </li>
+          <li class="flex gap-3 items-start">
+            <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span>A way to measure whether things are getting better or worse – not just "it feels calmer" or "it feels worse".</span>
+          </li>
+        </ul>
 
-          <div class="flex-shrink-0 w-full md:w-auto mt-4 md:mt-0 flex flex-col gap-3">
-             <!-- Counter -->
-            <div class="text-center md:text-right mb-1">
-              <span class="text-4xl font-bold text-white font-mono">1<span class="text-slate-600">/3</span></span>
-              <div class="text-[10px] text-slate-500 uppercase tracking-widest">Spots taken</div>
-            </div>
-            
-            <a href="mailto:dyczkowski.kamil@gmail.com?subject=Pilot%20Program%20Application" class="w-full btn-primary text-center justify-center bg-blue-600 border-none hover:bg-blue-500 text-white shadow-glow">
-              Apply for Pilot
+        <p class="mt-6 text-slate-400 text-sm border-l-2 border-blue-500 pl-4">
+          I'm not interested in producing a pretty PDF that nobody implements. <strong class="text-white">I start where most consultants stop.</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT KAMIL (SHORT) -->
+  <section id="about-short" class="py-16 relative z-10">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center fade-up">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white">About Kamil</h2>
+      </div>
+
+      <div class="mt-10 glass rounded-2xl p-8 fade-up">
+        <div class="flex flex-col md:flex-row gap-8 items-start">
+          <div class="w-full md:w-[180px] flex-shrink-0">
+            <img src="kamil-dyczkowski-warehouse-consultant.jpg" alt="Kamil Dyczkowski" class="w-full rounded-lg border border-slate-700" />
+          </div>
+          <div class="text-slate-300 text-sm md:text-base leading-relaxed space-y-4">
+            <p>I have spent over 20 years on the operational frontline in manufacturing, warehouses and service businesses in the UK – in environments where mistakes cost real money and relationships. I work at the intersection of real-world operations and the systems that are supposed to support them.</p>
+            <p>My job is simple: understand how your work actually happens, design a process that can survive growth, and – only if needed – build a focused system around that process. <strong class="text-white">I start where most consultants stop: after the PDF report, when the real work of making your operation stable begins.</strong></p>
+            <a href="about.html" class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-bold text-sm mt-2">
+              Read the full story <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section id="faq" class="py-16 relative z-10">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-extrabold text-white text-center fade-up">FAQ</h2>
+  <!-- PRICING & GUARANTEE -->
+  <section id="pricing" class="py-16 relative z-10 border-y border-slate-800/60 bg-slate-950/40 backdrop-blur-sm">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center fade-up">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white">Pricing & guarantee</h2>
+      </div>
 
-      <div class="mt-10 space-y-4">
-        <details class="p-5 stagger-item" data-delay="0">
-          <summary class="flex items-center justify-between gap-4">
-            <span class="text-white font-bold text-sm">What do you need from me to start?</span>
-            <span class="pill text-slate-500">Expand</span>
-          </summary>
-          <div class="mt-3 text-sm text-slate-400 leading-relaxed">
-            Three lines: what you store, where mistakes happen most, and what still runs on paper or memory. That is enough to scope the first step.
-          </div>
-        </details>
+      <div class="mt-10 glass rounded-2xl p-8 fade-up">
+        <div class="text-slate-300 text-sm md:text-base leading-relaxed space-y-4">
+          <p>Most on-site diagnostics and process redesign projects for a single operation (for example, one warehouse or one front-of-house) start from <strong class="text-white">£1,500–£3,000</strong>, depending on size and complexity. This covers up to five days on site in your business and the design work needed to stabilise one core process.</p>
+          <p>Custom software and systems are quoted separately once we know how simple or complex your process needs to be. There is no obligation to commission a system – in many cases, a better process is enough.</p>
+        </div>
 
-        <details class="p-5 stagger-item" data-delay="100">
-          <summary class="flex items-center justify-between gap-4">
-            <span class="text-white font-bold text-sm">Do you implement end-to-end systems?</span>
-            <span class="pill text-slate-500">Expand</span>
-          </summary>
-          <div class="mt-3 text-sm text-slate-400 leading-relaxed">
-            Yes. Partnership is the operating model, end-to-end delivery is the objective. We install control first, then expand as constraints and volume evolve.
+        <div class="mt-8 glass rounded-xl p-6 border border-blue-500/30 bg-blue-950/20">
+          <h3 class="text-white font-bold text-lg mb-3">Simple guarantee on the diagnostic phase</h3>
+          <div class="text-slate-300 text-sm leading-relaxed space-y-3">
+            <p>Within those five days on site, if I cannot:</p>
+            <ul class="list-disc list-inside text-slate-400 space-y-1 ml-2">
+              <li>identify a concrete operational problem I can help you fix, or</li>
+              <li>design a realistic process and/or system for your situation, or</li>
+              <li>show a projected benefit that is clearly higher than my fee,</li>
+            </ul>
+            <p>I will not take the project forward – and <strong class="text-white">I will refund my fee for this diagnostic and design phase.</strong></p>
+            <p class="text-slate-500 text-xs mt-4">This guarantee covers my side of the table: if I misjudge the fit, you don't carry the risk. What I cannot guarantee is what your team does with a working process and system once I leave.</p>
           </div>
-        </details>
-
-        <details class="p-5 stagger-item" data-delay="200">
-          <summary class="flex items-center justify-between gap-4">
-            <span class="text-white font-bold text-sm">Do you do training or workshops?</span>
-            <span class="pill text-slate-500">Expand</span>
-          </summary>
-          <div class="mt-3 text-sm text-slate-400 leading-relaxed">
-            No. The system enforces the rules. People should not have to remember critical controls under pressure.
-          </div>
-        </details>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- FINAL CTA -->
   <footer id="contact" class="py-16 border-t border-slate-800 bg-slate-950 relative z-10">
     <div class="max-w-3xl mx-auto px-4 text-center">
-      <h2 class="text-2xl md:text-3xl font-extrabold text-white">Contact</h2>
-      <p class="text-slate-400 mt-3 text-sm max-w-xl mx-auto">
-        Send a short description of the leak: inventory drift, picking mistakes, write-offs, or missing traceability. I will tell you if this is solvable and what the first control layer should be.
+      <h2 class="text-2xl md:text-3xl font-extrabold text-white">Check if this makes sense for your business</h2>
+      <p class="text-slate-400 mt-4 text-sm max-w-xl mx-auto leading-relaxed">
+        I only take on a small number of projects at a time. If you recognise your situation on this page and want to see whether I can actually help, the next step is simple:
       </p>
 
+      <ul class="mt-4 text-slate-300 text-sm space-y-1">
+        <li>– Book a 20-minute diagnostic call, or</li>
+        <li>– Send me a short email describing what is going wrong.</li>
+      </ul>
+
       <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center items-center">
-        <a class="btn-primary" href="mailto:dyczkowski.kamil@gmail.com?subject=Warehouse%20Control%20-%20Discovery%20Call">Email me</a>
+        <a class="btn-primary" href="mailto:dyczkowski.kamil@gmail.com?subject=20-minute%20Diagnostic%20Call">Book a 20-minute diagnostic call</a>
         
         <!-- CLICK-TO-REVEAL PHONE BUTTON -->
         <a class="btn-ghost flex items-center gap-2 cursor-pointer w-[160px] justify-center" 
@@ -625,7 +605,15 @@
           </svg>
           <span class="font-mono">Call direct</span>
         </a>
+      </div>
 
+      <div class="mt-8 text-slate-400 text-sm max-w-md mx-auto">
+        <p class="font-bold text-slate-300 mb-2">In the call, we will:</p>
+        <ul class="text-left space-y-1">
+          <li>– map where your current process or system is failing,</li>
+          <li>– estimate roughly what it is costing you,</li>
+          <li>– decide whether it makes sense to move to an on-site diagnostic.</li>
+        </ul>
       </div>
 
       <p class="mt-10 text-[11px] text-slate-600 font-mono uppercase tracking-widest">
