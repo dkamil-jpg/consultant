@@ -886,6 +886,61 @@
       if(m) m.classList.add('hidden');
     }
 
+    // EMAIL FORM FUNCTIONS
+    function openEmailForm() {
+      document.getElementById('email-modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeEmailForm() {
+      document.getElementById('email-modal').classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    function submitContactForm(event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+      
+      // Build email body
+      const name = formData.get('name');
+      const email = formData.get('email');
+      const business = formData.get('business');
+      const team = formData.get('team');
+      const problem = formData.get('problem');
+      const symptoms = formData.get('symptoms');
+      const tried = formData.get('tried');
+      const constraints = formData.get('constraints');
+      
+      const subject = encodeURIComponent('Website Enquiry from ' + name);
+      const body = encodeURIComponent(
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n\n' +
+        'Business: ' + business + '\n' +
+        'Team: ' + (team || 'Not specified') + '\n\n' +
+        'What is going wrong:\n' + problem + '\n\n' +
+        'Where it shows up:\n' + (symptoms || 'Not specified') + '\n\n' +
+        'Already tried:\n' + (tried || 'Not specified') + '\n\n' +
+        'Constraints/deadlines: ' + (constraints || 'None specified')
+      );
+      
+      // Open mailto link
+      window.location.href = 'mailto:dyczkowski.kamil@gmail.com?subject=' + subject + '&body=' + body;
+      
+      // Close the modal after a short delay
+      setTimeout(() => {
+        closeEmailForm();
+        form.reset();
+      }, 500);
+    }
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeEmailForm();
+      }
+    });
+
     // CONSENT LOGIC
     (function initConsent() {
         const banner = document.getElementById('cookie-banner');
