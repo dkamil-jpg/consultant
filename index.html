@@ -593,7 +593,7 @@
         <li>– Send me a short email describing what is going wrong.</li>
       </ul>
 
-      <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center items-center">
+      <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
         <button class="btn-primary" onclick="toggleCalendar()">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
@@ -601,14 +601,16 @@
           Book a diagnostic call
         </button>
         
+        <span class="text-slate-600 text-sm hidden sm:block">or</span>
+        
         <!-- CLICK-TO-REVEAL PHONE BUTTON -->
-        <a class="btn-ghost flex items-center gap-2 cursor-pointer w-[160px] justify-center" 
+        <a class="btn-primary bg-transparent border border-slate-600 text-white hover:bg-slate-800 hover:border-slate-500 flex items-center gap-2 cursor-pointer" 
            href="#"
            onclick="event.preventDefault(); this.querySelector('span').innerText = '07403 874868'; this.href = 'tel:+447403874868'; window.location.href='tel:+447403874868';">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
           </svg>
-          <span class="font-mono">Call direct</span>
+          <span>Call direct</span>
         </a>
       </div>
 
