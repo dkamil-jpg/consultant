@@ -381,7 +381,7 @@
       </p>
 
       <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center fade-up">
-        <a class="btn-primary" href="mailto:dyczkowski.kamil@gmail.com?subject=20-minute%20Diagnostic%20Call">Book a 20-minute diagnostic call</a>
+        <a class="btn-primary" href="#calendar-section" onclick="openCalendar()">Book a diagnostic call</a>
       </div>
 
       <p class="mt-4 text-xs text-slate-500 fade-up">
@@ -589,12 +589,17 @@
       </p>
 
       <ul class="mt-4 text-slate-300 text-sm space-y-1">
-        <li>– Book a 20-minute diagnostic call, or</li>
+        <li>– Book a diagnostic call, or</li>
         <li>– Send me a short email describing what is going wrong.</li>
       </ul>
 
       <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center items-center">
-        <a class="btn-primary" href="mailto:dyczkowski.kamil@gmail.com?subject=20-minute%20Diagnostic%20Call">Book a 20-minute diagnostic call</a>
+        <button class="btn-primary" onclick="toggleCalendar()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+          </svg>
+          Book a diagnostic call
+        </button>
         
         <!-- CLICK-TO-REVEAL PHONE BUTTON -->
         <a class="btn-ghost flex items-center gap-2 cursor-pointer w-[160px] justify-center" 
@@ -605,6 +610,31 @@
           </svg>
           <span class="font-mono">Call direct</span>
         </a>
+      </div>
+
+      <!-- GOOGLE CALENDAR SECTION -->
+      <div id="calendar-section" class="mt-10 hidden">
+        <div class="glass rounded-2xl p-6 max-w-3xl mx-auto">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-white font-bold text-lg flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-blue-400">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+              </svg>
+              Schedule a diagnostic call
+            </h3>
+            <button onclick="toggleCalendar()" class="text-slate-400 hover:text-white transition p-2 rounded-lg hover:bg-slate-800">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="rounded-xl overflow-hidden bg-white">
+            <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0j7g9qmPFf3-d9vY5Z0I5h2qRFTq2-K5bVUCqL5hN8rJk1bM_Q5wTt3gWyK8vM1nL7pR4jF?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+          </div>
+          <p class="text-slate-500 text-xs mt-4 text-center">
+            Select a convenient time slot from the calendar above. You'll receive a confirmation email with meeting details.
+          </p>
+        </div>
       </div>
 
       <div class="mt-8 text-slate-400 text-sm max-w-md mx-auto">
@@ -689,6 +719,26 @@
             banner.classList.add('hidden');
         });
     })();
+
+    // CALENDAR TOGGLE FUNCTION
+    function toggleCalendar() {
+      const calendarSection = document.getElementById('calendar-section');
+      if (calendarSection.classList.contains('hidden')) {
+        calendarSection.classList.remove('hidden');
+        calendarSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        calendarSection.classList.add('hidden');
+      }
+    }
+
+    // OPEN CALENDAR (from hero CTA) - scrolls down and opens
+    function openCalendar() {
+      const calendarSection = document.getElementById('calendar-section');
+      calendarSection.classList.remove('hidden');
+      setTimeout(() => {
+        calendarSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 100);
+    }
 
     // SCROLL ANIMATIONS - Elegant fade-in on scroll
     (function initScrollAnimations() {
