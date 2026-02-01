@@ -409,6 +409,104 @@
     </div>
   </footer>
 
+  <!-- EMAIL FORM MODAL -->
+  <div id="email-modal" class="fixed inset-0 z-[70] hidden">
+    <div class="absolute inset-0 bg-slate-950/90 backdrop-blur-sm" onclick="closeEmailForm()"></div>
+    <div class="relative min-h-screen flex items-center justify-center p-4">
+      <div class="glass-card rounded-2xl p-6 md:p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto relative">
+        <button onclick="closeEmailForm()" class="absolute top-4 right-4 text-slate-400 hover:text-white transition p-2 rounded-lg hover:bg-slate-800">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        
+        <h3 class="text-white font-bold text-xl mb-2 flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-400">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+          </svg>
+          Send me a message
+        </h3>
+        <p class="text-slate-400 text-sm mb-6">Fill out the form below and I'll get back to you.</p>
+        
+        <!-- Success message (hidden by default) -->
+        <div id="form-success" class="hidden bg-green-900/30 border border-green-500/50 rounded-xl p-6 text-center">
+          <svg class="w-12 h-12 text-green-400 mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+          </svg>
+          <h4 class="text-white font-bold text-lg mb-2">Message sent!</h4>
+          <p class="text-slate-400 text-sm">Thank you for reaching out. I'll review your message and get back to you soon.</p>
+          <button onclick="closeEmailForm()" class="mt-4 btn-primary">Close</button>
+        </div>
+        
+        <form id="contact-form" onsubmit="submitContactForm(event)">
+          <input type="hidden" name="access_key" value="25fa5e80-82e4-438f-828e-31e91925debb">
+          <input type="hidden" name="subject" value="Website Enquiry - Business Solutions & Systems">
+          <input type="hidden" name="from_name" value="BSS Website">
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+          
+          <div class="space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-slate-300 text-sm font-medium mb-1">Your name *</label>
+                <input type="text" name="name" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition" placeholder="John Smith">
+              </div>
+              <div>
+                <label class="block text-slate-300 text-sm font-medium mb-1">Email *</label>
+                <input type="email" name="email" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition" placeholder="john@company.com">
+              </div>
+            </div>
+            
+            <div>
+              <label class="block text-slate-300 text-sm font-medium mb-1">What does your business do? *</label>
+              <input type="text" name="business" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition" placeholder="e.g. B2B distribution warehouse, 15 staff">
+            </div>
+            
+            <div>
+              <label class="block text-slate-300 text-sm font-medium mb-1">Team size & who's involved in the workflow</label>
+              <input type="text" name="team" class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition" placeholder="e.g. 8 warehouse staff, 2 office">
+            </div>
+            
+            <div>
+              <label class="block text-slate-300 text-sm font-medium mb-1">What is going wrong? *</label>
+              <textarea name="problem" required rows="3" class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition resize-none" placeholder="Describe the problem in plain terms..."></textarea>
+            </div>
+            
+            <div>
+              <label class="block text-slate-300 text-sm font-medium mb-1">Where does it show up day to day?</label>
+              <textarea name="symptoms" rows="2" class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition resize-none" placeholder="e.g. wrong picks, stock discrepancies, customer complaints..."></textarea>
+            </div>
+            
+            <div>
+              <label class="block text-slate-300 text-sm font-medium mb-1">What have you already tried?</label>
+              <textarea name="tried" rows="2" class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition resize-none" placeholder="e.g. New procedures, staff training, spreadsheets..."></textarea>
+            </div>
+            
+            <div>
+              <label class="block text-slate-300 text-sm font-medium mb-1">Any constraints or deadlines?</label>
+              <input type="text" name="constraints" class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition" placeholder="e.g. Peak season in October, budget limit...">
+            </div>
+          </div>
+          
+          <div class="mt-6 flex gap-4">
+            <button type="submit" id="submit-btn" class="btn-primary flex-1">
+              <svg id="send-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+              </svg>
+              <svg id="loading-icon" class="hidden animate-spin w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              <span id="btn-text">Send message</span>
+            </button>
+            <button type="button" onclick="closeEmailForm()" class="btn-primary bg-transparent border border-slate-600 text-white hover:bg-slate-800 hover:border-slate-500">
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <!-- COOKIE CONSENT BANNER -->
   <div id="cookie-banner" class="fixed bottom-0 left-0 w-full z-[60] hidden fade-in">
     <div class="glass-panel border-t border-slate-700/50 p-4">
