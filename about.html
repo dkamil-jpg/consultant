@@ -445,45 +445,25 @@
           <input type="checkbox" name="botcheck" class="hidden" style="display:none">
           
           <div class="space-y-4">
+            <div>
+              <label class="block text-slate-300 text-sm font-medium mb-1">Your name *</label>
+              <input type="text" name="name" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition" placeholder="John Smith">
+            </div>
+            
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label class="block text-slate-300 text-sm font-medium mb-1">Your name *</label>
-                <input type="text" name="name" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition" placeholder="John Smith">
-              </div>
               <div>
                 <label class="block text-slate-300 text-sm font-medium mb-1">Email *</label>
                 <input type="email" name="email" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition" placeholder="john@company.com">
               </div>
+              <div>
+                <label class="block text-slate-300 text-sm font-medium mb-1">Phone *</label>
+                <input type="tel" name="phone" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition" placeholder="+44 7xxx xxxxxx">
+              </div>
             </div>
             
             <div>
-              <label class="block text-slate-300 text-sm font-medium mb-1">What does your business do? *</label>
-              <input type="text" name="business" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition" placeholder="e.g. B2B distribution warehouse, 15 staff">
-            </div>
-            
-            <div>
-              <label class="block text-slate-300 text-sm font-medium mb-1">Team size & who's involved in the workflow</label>
-              <input type="text" name="team" class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition" placeholder="e.g. 8 warehouse staff, 2 office">
-            </div>
-            
-            <div>
-              <label class="block text-slate-300 text-sm font-medium mb-1">What is going wrong? *</label>
-              <textarea name="problem" required rows="3" class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition resize-none" placeholder="Describe the problem in plain terms..."></textarea>
-            </div>
-            
-            <div>
-              <label class="block text-slate-300 text-sm font-medium mb-1">Where does it show up day to day?</label>
-              <textarea name="symptoms" rows="2" class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition resize-none" placeholder="e.g. wrong picks, stock discrepancies, customer complaints..."></textarea>
-            </div>
-            
-            <div>
-              <label class="block text-slate-300 text-sm font-medium mb-1">What have you already tried?</label>
-              <textarea name="tried" rows="2" class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition resize-none" placeholder="e.g. New procedures, staff training, spreadsheets..."></textarea>
-            </div>
-            
-            <div>
-              <label class="block text-slate-300 text-sm font-medium mb-1">Any constraints or deadlines?</label>
-              <input type="text" name="constraints" class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition" placeholder="e.g. Peak season in October, budget limit...">
+              <label class="block text-slate-300 text-sm font-medium mb-1">Briefly describe what your business does, how many people you employ, and where you see the need for intervention. *</label>
+              <textarea name="message" required rows="6" class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition resize-none" placeholder="e.g. We run a B2B distribution warehouse with 15 staff. Stock accuracy is drifting, picks are inconsistent, and we're losing time on rework..."></textarea>
             </div>
           </div>
           
