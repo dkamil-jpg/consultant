@@ -1,0 +1,6 @@
+# Robots.txt for kamildyczkowski.com
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://kamildyczkowski.com/sitemap.xml
